@@ -1,0 +1,303 @@
+/* High Contrast Theme */
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* Focus styles */
+*:focus {
+    outline: 3px solid #000000;
+    outline-offset: 2px;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-bottom: 2px solid #000000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-logo {
+    color: #000000;
+}
+
+.nav-menu a {
+    color: #000000;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+    background: #000000;
+}
+
+.hamburger span {
+    background-color: #000000;
+}
+
+/* Theme Switcher */
+.theme-btn {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.theme-btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.theme-btn.active {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Theme Dropdown */
+.theme-toggle-btn {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.theme-toggle-btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.theme-dropdown-menu {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #000000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.theme-option {
+    color: #000000;
+}
+
+.theme-option:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.theme-option.active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.theme-toggle-btn .theme-text,
+.theme-toggle-btn .dropdown-arrow {
+    color: #000000;
+}
+
+.theme-toggle-btn:hover .theme-text,
+.theme-toggle-btn:hover .dropdown-arrow {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    background: #ffffff;
+}
+
+.hero-title {
+    color: #000000;
+}
+
+.hero-subtitle {
+    color: #000000;
+}
+
+.btn-primary {
+    background: #000000;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #333333;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.btn-secondary:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Product Showcase */
+.product-showcase {
+    background: #ffffff;
+}
+
+.section-title {
+    color: #000000;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #000000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    background: #000000;
+}
+
+.product-card h3 {
+    color: #000000;
+}
+
+.product-card p {
+    color: #000000;
+}
+
+/* Features Section */
+.features {
+    background: #f8f8f8;
+}
+
+.feature-text h2 {
+    color: #000000;
+}
+
+.feature-text p {
+    color: #000000;
+}
+
+.feature-list li {
+    color: #000000;
+}
+
+.feature-list li::before {
+    color: #000000;
+}
+
+.feature-visual {
+    background: #000000;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    color: #ffffff;
+}
+
+.footer-section h4 {
+    color: #ffffff;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+}
+
+.footer-section ul li a:hover {
+    color: #000000;
+    background: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ffffff;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .nav-menu {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .nav-menu a:hover {
+        background: #000000;
+        color: #ffffff;
+    }
+}
+
+/* Product Carousel */
+.product-carousel-section {
+    background: #ffffff;
+}
+
+.carousel-wrapper {
+    background: #ffffff;
+    border: 2px solid #000000;
+}
+
+.carousel-info h3 {
+    color: #000000;
+}
+
+.carousel-info p {
+    color: #000000;
+}
+
+.feature-tag {
+    background: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+.carousel-btn {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+
+.carousel-btn:hover {
+    background: #333333;
+}
+
+.carousel-prev,
+.carousel-next {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: #f0f0f0;
+}
+
+.indicator {
+    background: #cccccc;
+    border: 1px solid #000000;
+}
+
+.indicator.active {
+    background: #000000;
+}
+
+/* Custom Solution Styling */
+.custom-solution .carousel-info h3 {
+    background: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #000000;
+}
+
+.custom-preview {
+    background: #000000 !important;
+}
+
+.custom-icon {
+    color: #ffffff !important;
+}
+
+.contact-btn {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+
+.contact-btn:hover {
+    background: #333333 !important;
+    transform: translateY(-2px) scale(1.05);
+}

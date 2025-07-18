@@ -4,12 +4,284 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Just Soft Art</title>
-        <link rel="stylesheet" href="./styles.css">
-        <link rel="icon" href="./jsa-favicon.svg" type="image/x-icon">
+        <meta name="description" content="Just Soft Art - Digital art and software development">
+        <link rel="stylesheet" href="./base.css">
+        <link rel="stylesheet" href="./themes/light.css" id="theme-stylesheet">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/jsa-dark-favicon.png?v=1">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/jsa-dark-favicon.png?v=1">
+        <link rel="shortcut icon" href="./assets/img/jsa-dark-favicon.png?v=1">
+        <link rel="apple-touch-icon" href="./assets/img/jsa-dark-favicon.png?v=1">
     </head>
     <body>
-        <h1>Hello world! Justsoft.art is back!!!</h1>
-        <h4 style="color: gray;">Work in progress... Stay tuned.</h4>
-        <!--h4 style="color: gray;">Call Victor Corveleyn in case of questions.</h4-->
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./assets/img/homeicon/jsa-light-homeicon.svg" alt="JSA" class="logo-icon" id="logo-icon">
+                    <span>Just Soft Art</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <div class="theme-dropdown" id="theme-dropdown">
+                        <button class="theme-toggle-btn" id="theme-toggle-btn">
+                            <span class="theme-icon">☀️</span>
+                            <span class="theme-text">Light</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="theme-dropdown-menu" id="theme-dropdown-menu">
+                            <button class="theme-option active" data-theme="light">
+                                <span class="theme-option-icon">☀️</span>
+                                <span>Light</span>
+                            </button>
+                            <button class="theme-option" data-theme="dark">
+                                <span class="theme-option-icon">🌙</span>
+                                <span>Dark</span>
+                            </button>
+                            <button class="theme-option" data-theme="high-contrast">
+                                <span class="theme-option-icon">⚫</span>
+                                <span>Contrast</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Think Different.<br>Create Beautiful.</h1>
+                <p class="hero-subtitle">Experience the future of digital art and software development with Just Soft Art.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Learn More</button>
+                    <button class="btn-secondary">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section class="product-showcase">
+            <div class="container">
+                <h2 class="section-title">Our Latest Work</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Creative Solutions</h3>
+                        <p>Innovative digital experiences that push boundaries.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Software Development</h3>
+                        <p>Clean, efficient code that powers your vision.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h3>Digital Art</h3>
+                        <p>Stunning visuals that captivate and inspire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Carousel Section -->
+        <section class="product-carousel-section">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="carousel-track">
+                            <!-- Product 1 -->
+                            <div class="carousel-slide active">
+                                <div class="carousel-content">
+                                    <div class="carousel-image">
+                                        <div class="product-preview"></div>
+                                    </div>
+                                    <div class="carousel-info">
+                                        <h3>Web Application Suite</h3>
+                                        <p>A comprehensive web application platform built with modern technologies. Features responsive design, real-time data processing, and seamless user experience.</p>
+                                        <div class="carousel-features">
+                                            <span class="feature-tag">React</span>
+                                            <span class="feature-tag">Node.js</span>
+                                            <span class="feature-tag">MongoDB</span>
+                                        </div>
+                                        <button class="carousel-btn">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product 2 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-content">
+                                    <div class="carousel-image">
+                                        <div class="product-preview"></div>
+                                    </div>
+                                    <div class="carousel-info">
+                                        <h3>Mobile App Design</h3>
+                                        <p>Stunning mobile application designs that combine beautiful aesthetics with intuitive user experience. Optimized for both iOS and Android platforms.</p>
+                                        <div class="carousel-features">
+                                            <span class="feature-tag">UI/UX</span>
+                                            <span class="feature-tag">Figma</span>
+                                            <span class="feature-tag">Prototyping</span>
+                                        </div>
+                                        <button class="carousel-btn">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product 3 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-content">
+                                    <div class="carousel-image">
+                                        <div class="product-preview"></div>
+                                    </div>
+                                    <div class="carousel-info">
+                                        <h3>Brand Identity System</h3>
+                                        <p>Complete brand identity packages including logo design, color palettes, typography, and brand guidelines for consistent visual communication.</p>
+                                        <div class="carousel-features">
+                                            <span class="feature-tag">Branding</span>
+                                            <span class="feature-tag">Logo Design</span>
+                                            <span class="feature-tag">Guidelines</span>
+                                        </div>
+                                        <button class="carousel-btn">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product 4 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-content">
+                                    <div class="carousel-image">
+                                        <div class="product-preview"></div>
+                                    </div>
+                                    <div class="carousel-info">
+                                        <h3>E-Commerce Platform</h3>
+                                        <p>Full-featured e-commerce solution with payment integration, inventory management, and analytics dashboard. Built for scalability and performance.</p>
+                                        <div class="carousel-features">
+                                            <span class="feature-tag">E-Commerce</span>
+                                            <span class="feature-tag">Payment</span>
+                                            <span class="feature-tag">Analytics</span>
+                                        </div>
+                                        <button class="carousel-btn">Learn More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product 5 - Custom Solutions -->
+                            <div class="carousel-slide">
+                                <div class="carousel-content custom-solution">
+                                    <div class="carousel-image">
+                                        <div class="product-preview"></div>
+                                    </div>
+                                    <div class="carousel-info">
+                                        <h3>Something Unique in Mind?</h3>
+                                        <p>Don't see exactly what you're looking for? We love tackling unique challenges! From custom software solutions to innovative digital experiences, we bring your wildest ideas to life.</p>
+                                        <div class="carousel-features">
+                                            <span class="feature-tag">Custom Solutions</span>
+                                            <span class="feature-tag">Innovation</span>
+                                            <span class="feature-tag">Consultation</span>
+                                        </div>
+                                        <button class="carousel-btn contact-btn">Let's Talk!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Navigation -->
+                    <div class="carousel-nav">
+                        <button class="carousel-prev" id="carousel-prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="carousel-next" id="carousel-next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators" id="carousel-indicators">
+                        <button class="indicator active" data-slide="0"></button>
+                        <button class="indicator" data-slide="1"></button>
+                        <button class="indicator" data-slide="2"></button>
+                        <button class="indicator" data-slide="3"></button>
+                        <button class="indicator" data-slide="4"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2>Designed for Excellence</h2>
+                        <p>Every pixel matters. Every line of code counts. We craft digital experiences with the same attention to detail that defines great design.</p>
+                        <ul class="feature-list">
+                            <li>Pixel-perfect design</li>
+                            <li>Performance optimized</li>
+                            <li>User-centered approach</li>
+                            <li>Future-ready technology</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Digital Art</a></li>
+                            <li><a href="#">UI/UX Design</a></li>
+                            <li><a href="#">Consulting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Just Soft Art. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="./scripts.js"></script>
     </body>
 </html>
