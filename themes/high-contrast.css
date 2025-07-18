@@ -55,7 +55,7 @@ body {
 .theme-toggle-btn {
     background: #ffffff;
     color: #000000;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
 }
 
 .theme-toggle-btn:hover {
@@ -64,9 +64,8 @@ body {
 }
 
 .theme-dropdown-menu {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #000000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    border: 3px solid #000000;
 }
 
 .theme-option {
@@ -90,6 +89,49 @@ body {
 
 .theme-toggle-btn:hover .theme-text,
 .theme-toggle-btn:hover .dropdown-arrow {
+    color: #ffffff;
+}
+
+/* Language Dropdown */
+.language-toggle-btn {
+    background: #ffffff;
+    color: #000000;
+    border: 3px solid #000000;
+}
+
+.language-toggle-btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.language-dropdown-menu {
+    background: #ffffff;
+    border: 3px solid #000000;
+}
+
+.language-option {
+    color: #000000;
+    border: 1px solid #000000;
+    margin: 1px;
+}
+
+.language-option:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.language-option.active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.language-toggle-btn .language-text,
+.language-toggle-btn .dropdown-arrow {
+    color: #000000;
+}
+
+.language-toggle-btn:hover .language-text,
+.language-toggle-btn:hover .dropdown-arrow {
     color: #ffffff;
 }
 
@@ -208,14 +250,24 @@ body {
 }
 
 /* Mobile Menu */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .nav-menu {
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.98) !important;
+        border-left: 3px solid #000000;
+        box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-menu a {
+        color: #000000 !important;
+        font-weight: 600 !important;
+        border: 2px solid transparent !important;
     }
     
     .nav-menu a:hover {
-        background: #000000;
-        color: #ffffff;
+        background: #000000 !important;
+        color: #ffffff !important;
+        border: 2px solid #000000 !important;
+        transform: translateY(-2px) !important;
     }
 }
 
