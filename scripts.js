@@ -535,9 +535,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentScrollY = window.scrollY;
         
         if (navbar) {
-            // Ensure navbar is always visible
-            navbar.style.position = 'fixed';
-            navbar.style.top = '0';
+            // Keep navbar sticky (don't override CSS position)
+            // Remove the position override to let CSS sticky work
             navbar.style.zIndex = '9999';
             navbar.style.opacity = '1';
             navbar.style.visibility = 'visible';
