@@ -3,11 +3,25 @@ body {
     color: #000000;
     background-color: #ffffff;
     
-    /* CSS Custom Properties for Forms */
+    /* Theme-aware color variables */
     --text-primary: #000000;
     --text-secondary: #000000;
+    --text-muted: #000000;
+    --background-primary: #ffffff;
+    --background-secondary: #ffffff;
+    --background-elevated: #ffffff;
+    --border-primary: #000000;
+    --border-secondary: #000000;
+    --accent-primary: #000000;
+    --accent-secondary: #000000;
+    --accent-tertiary: #000000;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.5);
+    --overlay-background: rgba(0, 0, 0, 0.8);
+    
+    /* CSS Custom Properties for Forms */
     --text-placeholder: #666666;
-    --card-background: rgba(255, 255, 255, 0.95);
+    --card-background: #ffffff;
     --border-color: #000000;
     --input-background: #ffffff;
     --input-border: #000000;
@@ -15,6 +29,10 @@ body {
     --accent-color: #000000;
     --focus-ring: rgba(0, 0, 0, 0.3);
     --shadow-color: rgba(0, 0, 0, 0.3);
+    
+    /* Override any semi-transparent backgrounds */
+    --background-elevated: #ffffff;
+    --card-background: #ffffff;
 }
 
 /* Focus styles */
@@ -365,4 +383,142 @@ body {
 .contact-btn:hover {
     background: #333333 !important;
     transform: translateY(-2px) scale(1.05);
+}
+
+/* High-contrast specific overrides for gradients and fancy elements */
+.global-reach-hero .hero-title {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: #000000 !important;
+}
+
+.global-stats .stat-number {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: #000000 !important;
+}
+
+.global-stats .stat-label {
+    color: #000000 !important;
+}
+
+.global-stats .stat-item {
+    background: #ffffff !important;
+    border: 3px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.global-info-section .info-section {
+    background: #ffffff !important;
+    border: 3px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.global-info-section .info-section h2 {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: #000000 !important;
+}
+
+.global-info-section .info-section p {
+    color: #000000 !important;
+}
+
+.story-card {
+    background: #ffffff !important;
+    border: 3px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.story-card h4 {
+    color: #000000 !important;
+}
+
+.story-card p {
+    color: #000000 !important;
+}
+
+.story-tags span {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+
+.benefit-item {
+    background: #ffffff !important;
+    border: 3px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.benefit-item h4 {
+    color: #000000 !important;
+}
+
+.benefit-item p {
+    color: #000000 !important;
+}
+
+.benefit-icon {
+    color: #000000 !important;
+}
+
+.region-stats span {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+
+.map-control-btn {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 3px solid #000000 !important;
+}
+
+.map-control-btn:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.global-cta {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+.global-cta h2 {
+    color: #ffffff !important;
+}
+
+.global-cta p {
+    color: #ffffff !important;
+}
+
+.global-reach-hero {
+    background: #ffffff !important;
+}
+
+.world-map-section {
+    background: #ffffff !important;
+}
+
+.world-map-section .world-map-container {
+    background: #ffffff !important;
+    border: 3px solid #000000 !important;
+}
+
+.region-card::before {
+    background: #000000 !important;
+}
+
+.region-card {
+    background: #ffffff !important;
+    border: 3px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.region-card h3 {
+    color: #000000 !important;
+}
+
+.region-card p {
+    color: #000000 !important;
 }

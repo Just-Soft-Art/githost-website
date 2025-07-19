@@ -623,3 +623,595 @@ function scrollToTop(event) {
         behavior: 'smooth'
     });
 }
+
+// ============================================================
+// World Map Interactive Visualization
+// ============================================================
+
+class WorldMapVisualization {
+    constructor() {
+        this.canvas = null;
+        this.ctx = null;
+        this.container = null;
+        this.isActive = false;
+        this.animationId = null;
+        this.dots = [];
+        this.connections = [];
+        this.mousePos = { x: 0, y: 0 };
+        this.time = 0;
+        this.animationPaused = false;
+        this.connectionsVisible = true;
+        
+        // City coordinates (approximate screen positions)
+        this.cities = [
+            { name: 'New York', x: 0.25, y: 0.35, clients: 45 },
+            { name: 'London', x: 0.48, y: 0.28, clients: 67 },
+            { name: 'Tokyo', x: 0.85, y: 0.4, clients: 32 },
+            { name: 'Sydney', x: 0.88, y: 0.75, clients: 23 },
+            { name: 'São Paulo', x: 0.35, y: 0.7, clients: 18 },
+            { name: 'Dubai', x: 0.58, y: 0.45, clients: 29 },
+            { name: 'Singapore', x: 0.78, y: 0.6, clients: 41 },
+            { name: 'Berlin', x: 0.52, y: 0.25, clients: 35 },
+            { name: 'Toronto', x: 0.22, y: 0.3, clients: 27 },
+            { name: 'Mumbai', x: 0.68, y: 0.48, clients: 39 },
+            { name: 'Los Angeles', x: 0.15, y: 0.42, clients: 52 },
+            { name: 'Stockholm', x: 0.52, y: 0.18, clients: 21 },
+            { name: 'Cape Town', x: 0.52, y: 0.8, clients: 16 },
+            { name: 'Seoul', x: 0.83, y: 0.38, clients: 28 },
+            { name: 'Kyiv', x: 0.56, y: 0.25, clients: 19 },
+            { name: 'Mexico City', x: 0.18, y: 0.48, clients: 24 },
+            { name: 'Cairo', x: 0.55, y: 0.42, clients: 15 },
+            { name: 'Bangkok', x: 0.75, y: 0.52, clients: 33 },
+            { name: 'Lagos', x: 0.48, y: 0.58, clients: 12 },
+            { name: 'Vancouver', x: 0.12, y: 0.25, clients: 22 }
+        ];
+        
+        this.init();
+    }
+    
+    init() {
+        // Check if we're on the about page
+        const isAboutPage = window.location.pathname.includes('about.html');
+        
+        if (isAboutPage) {
+            this.initAboutPage();
+        } else {
+            this.initContactPage();
+        }
+    }
+    
+    initAboutPage() {
+        // Get DOM elements for about page
+        this.container = document.getElementById('world-map-container');
+        this.canvas = document.getElementById('world-map-canvas');
+        
+        console.log('About Page Init:', {
+            container: this.container,
+            canvas: this.canvas
+        });
+        
+        if (!this.container || !this.canvas) {
+            console.warn('World map elements not found on about page');
+            return;
+        }
+        
+        this.ctx = this.canvas.getContext('2d');
+        
+        // Setup controls
+        this.setupControls();
+        
+        // Canvas event listeners
+        this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+        this.canvas.addEventListener('click', (e) => this.handleCanvasClick(e));
+        
+        // Window resize
+        window.addEventListener('resize', () => this.handleResize());
+        
+        // Theme change listener
+        this.setupThemeListener();
+        
+        // Initialize immediately
+        this.isActive = true;
+        this.setupCanvas();
+        this.generateDots();
+        this.startAnimation();
+    }
+    
+    initContactPage() {
+        // Legacy contact page code - About page now has the world map
+        console.log('Contact page - About page now contains the interactive world map');
+    }
+    
+    setupControls() {
+        const resetBtn = document.getElementById('reset-view');
+        const toggleConnectionsBtn = document.getElementById('toggle-connections');
+        const toggleAnimationBtn = document.getElementById('toggle-animation');
+        
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => this.resetView());
+        }
+        
+        if (toggleConnectionsBtn) {
+            toggleConnectionsBtn.addEventListener('click', () => this.toggleConnections());
+        }
+        
+        if (toggleAnimationBtn) {
+            toggleAnimationBtn.addEventListener('click', () => this.toggleAnimation());
+        }
+    }
+    
+    setupThemeListener() {
+        // Listen for theme changes using MutationObserver to watch for attribute changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+                    // Theme changed, regenerate dots with new colors
+                    setTimeout(() => {
+                        this.generateDots();
+                    }, 100); // Small delay to ensure theme styles are loaded
+                }
+            });
+        });
+        
+        // Observe the document element for theme changes
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+        
+        // Also listen for stylesheet changes (alternative theme switching method)
+        const themeStylesheet = document.getElementById('theme-stylesheet');
+        if (themeStylesheet) {
+            themeStylesheet.addEventListener('load', () => {
+                setTimeout(() => {
+                    this.generateDots();
+                }, 100);
+            });
+        }
+    }
+    
+    resetView() {
+        this.generateDots();
+        console.log('View reset');
+    }
+    
+    toggleConnections() {
+        this.connectionsVisible = !this.connectionsVisible;
+        const btn = document.getElementById('toggle-connections');
+        if (btn) {
+            btn.textContent = this.connectionsVisible ? '🔗 Hide Connections' : '🔗 Show Connections';
+        }
+        console.log('Connections toggled:', this.connectionsVisible);
+    }
+    
+    toggleAnimation() {
+        this.animationPaused = !this.animationPaused;
+        const btn = document.getElementById('toggle-animation');
+        if (btn) {
+            btn.textContent = this.animationPaused ? '▶️ Resume Animation' : '⏸️ Pause Animation';
+        }
+        console.log('Animation toggled:', !this.animationPaused);
+    }
+    
+    handleResize() {
+        if (this.isActive) {
+            this.setupCanvas();
+            this.generateDots();
+        }
+    }
+    
+    
+    setupCanvas() {
+        if (!this.canvas || !this.ctx) return;
+        
+        const rect = this.canvas.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+        
+        this.canvas.width = rect.width * dpr;
+        this.canvas.height = rect.height * dpr;
+        
+        this.ctx.scale(dpr, dpr);
+        this.canvas.style.width = rect.width + 'px';
+        this.canvas.style.height = rect.height + 'px';
+        
+        this.width = rect.width;
+        this.height = rect.height;
+    }
+    
+    generateDots() {
+        this.dots = [];
+        this.connections = [];
+        
+        // Create city dots
+        this.cities.forEach((city, index) => {
+            const dot = {
+                id: index,
+                x: city.x * this.width,
+                y: city.y * this.height,
+                originalX: city.x * this.width,
+                originalY: city.y * this.height,
+                radius: 4 + (city.clients / 10),
+                color: this.getThemeColor('accent-primary'),
+                pulsePhase: Math.random() * Math.PI * 2,
+                clients: city.clients,
+                name: city.name,
+                isHovered: false,
+                connections: []
+            };
+            this.dots.push(dot);
+        });
+        
+        // Generate connections between nearby cities
+        this.dots.forEach((dot1, i) => {
+            this.dots.forEach((dot2, j) => {
+                if (i !== j) {
+                    const distance = this.getDistance(dot1, dot2);
+                    const maxDistance = Math.min(this.width, this.height) * 0.4;
+                    
+                    if (distance < maxDistance && Math.random() > 0.6) {
+                        const connection = {
+                            from: dot1,
+                            to: dot2,
+                            opacity: 0.3,
+                            flowOffset: Math.random() * 100,
+                            active: false
+                        };
+                        this.connections.push(connection);
+                        dot1.connections.push(connection);
+                        dot2.connections.push(connection);
+                    }
+                }
+            });
+        });
+        
+        // Add some random floating dots for ambiance
+        for (let i = 0; i < 30; i++) {
+            this.dots.push({
+                id: this.cities.length + i,
+                x: Math.random() * this.width,
+                y: Math.random() * this.height,
+                originalX: Math.random() * this.width,
+                originalY: Math.random() * this.height,
+                radius: 1 + Math.random() * 2,
+                color: this.getThemeColor('text-secondary'),
+                pulsePhase: Math.random() * Math.PI * 2,
+                opacity: 0.3 + Math.random() * 0.4,
+                isFloating: true,
+                drift: {
+                    x: (Math.random() - 0.5) * 0.5,
+                    y: (Math.random() - 0.5) * 0.5
+                }
+            });
+        }
+    }
+    
+    startAnimation() {
+        if (!this.isActive) return;
+        
+        this.animate();
+    }
+    
+    animate() {
+        if (!this.isActive || !this.ctx || this.animationPaused) {
+            if (!this.animationPaused) return;
+            // Continue animation loop even when paused to keep checking state
+            this.animationId = requestAnimationFrame(() => this.animate());
+            return;
+        }
+        
+        this.time += 0.016; // ~60fps
+        
+        // Clear canvas
+        this.ctx.clearRect(0, 0, this.width, this.height);
+        
+        // Draw background grid
+        this.drawGrid();
+        
+        // Update and draw connections
+        this.updateConnections();
+        if (this.connectionsVisible) {
+            this.drawConnections();
+        }
+        
+        // Update and draw dots
+        this.updateDots();
+        this.drawDots();
+        
+        // Draw UI elements
+        this.drawTooltips();
+        
+        this.animationId = requestAnimationFrame(() => this.animate());
+    }
+    
+    drawGrid() {
+        const gridSize = 50;
+        const opacity = 0.1;
+        
+        this.ctx.strokeStyle = this.getThemeColor('border-primary', opacity);
+        this.ctx.lineWidth = 1;
+        
+        // Vertical lines
+        for (let x = 0; x <= this.width; x += gridSize) {
+            this.ctx.beginPath();
+            this.ctx.moveTo(x, 0);
+            this.ctx.lineTo(x, this.height);
+            this.ctx.stroke();
+        }
+        
+        // Horizontal lines
+        for (let y = 0; y <= this.height; y += gridSize) {
+            this.ctx.beginPath();
+            this.ctx.moveTo(0, y);
+            this.ctx.lineTo(this.width, y);
+            this.ctx.stroke();
+        }
+    }
+    
+    updateDots() {
+        this.dots.forEach(dot => {
+            // Pulse animation
+            dot.pulsePhase += 0.02;
+            
+            // Floating dots movement
+            if (dot.isFloating) {
+                dot.x += dot.drift.x;
+                dot.y += dot.drift.y;
+                
+                // Wrap around screen
+                if (dot.x < 0) dot.x = this.width;
+                if (dot.x > this.width) dot.x = 0;
+                if (dot.y < 0) dot.y = this.height;
+                if (dot.y > this.height) dot.y = 0;
+            }
+            
+            // Mouse interaction
+            const mouseDistance = this.getDistance(dot, this.mousePos);
+            if (mouseDistance < 100 && !dot.isFloating) {
+                dot.isHovered = true;
+                // Activate connections
+                dot.connections.forEach(conn => {
+                    conn.active = true;
+                });
+            } else {
+                dot.isHovered = false;
+                if (!dot.isFloating) {
+                    dot.connections.forEach(conn => {
+                        conn.active = false;
+                    });
+                }
+            }
+        });
+    }
+    
+    updateConnections() {
+        this.connections.forEach(connection => {
+            connection.flowOffset += 2;
+            if (connection.flowOffset > 100) {
+                connection.flowOffset = 0;
+            }
+        });
+    }
+    
+    drawDots() {
+        this.dots.forEach(dot => {
+            const pulseScale = 1 + Math.sin(dot.pulsePhase) * 0.2;
+            const radius = dot.radius * (dot.isHovered ? 1.5 : 1) * pulseScale;
+            
+            // Outer glow
+            if (!dot.isFloating) {
+                const gradient = this.ctx.createRadialGradient(
+                    dot.x, dot.y, 0,
+                    dot.x, dot.y, radius * 3
+                );
+                gradient.addColorStop(0, this.getThemeColor('accent-primary', 0.3));
+                gradient.addColorStop(1, 'transparent');
+                
+                this.ctx.fillStyle = gradient;
+                this.ctx.beginPath();
+                this.ctx.arc(dot.x, dot.y, radius * 3, 0, Math.PI * 2);
+                this.ctx.fill();
+            }
+            
+            // Main dot
+            this.ctx.fillStyle = dot.color || this.getThemeColor('accent-primary');
+            this.ctx.globalAlpha = dot.opacity || 1;
+            this.ctx.beginPath();
+            this.ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
+            this.ctx.fill();
+            this.ctx.globalAlpha = 1;
+            
+            // Client count indicator for city dots
+            if (!dot.isFloating && dot.clients && dot.isHovered) {
+                // Use theme-appropriate text color
+                this.ctx.fillStyle = this.getHoverTextColor();
+                this.ctx.font = '12px system-ui';
+                this.ctx.textAlign = 'center';
+                
+                this.ctx.fillText(
+                    `${dot.clients} clients`,
+                    dot.x,
+                    dot.y - radius - 15
+                );
+                this.ctx.fillText(
+                    dot.name,
+                    dot.x,
+                    dot.y - radius - 30
+                );
+            }
+        });
+    }
+    
+    drawConnections() {
+        this.connections.forEach(connection => {
+            const opacity = connection.active ? 0.8 : 0.2;
+            const lineWidth = connection.active ? 2 : 1;
+            
+            // Create gradient for the connection line
+            const gradient = this.ctx.createLinearGradient(
+                connection.from.x, connection.from.y,
+                connection.to.x, connection.to.y
+            );
+            gradient.addColorStop(0, this.getThemeColor('accent-primary', opacity));
+            gradient.addColorStop(0.5, this.getThemeColor('accent-secondary', opacity * 1.5));
+            gradient.addColorStop(1, this.getThemeColor('accent-primary', opacity));
+            
+            this.ctx.strokeStyle = gradient;
+            this.ctx.lineWidth = lineWidth;
+            this.ctx.setLineDash([5, 5]);
+            this.ctx.lineDashOffset = -connection.flowOffset;
+            
+            this.ctx.beginPath();
+            this.ctx.moveTo(connection.from.x, connection.from.y);
+            this.ctx.lineTo(connection.to.x, connection.to.y);
+            this.ctx.stroke();
+            
+            this.ctx.setLineDash([]);
+        });
+    }
+    
+    drawTooltips() {
+        // Draw mouse interaction area
+        if (this.mousePos.x > 0 && this.mousePos.y > 0) {
+            const nearDot = this.dots.find(dot => 
+                !dot.isFloating && this.getDistance(dot, this.mousePos) < 100
+            );
+            
+            if (nearDot) {
+                this.ctx.strokeStyle = this.getThemeColor('accent-primary', 0.5);
+                this.ctx.lineWidth = 1;
+                this.ctx.setLineDash([2, 2]);
+                this.ctx.beginPath();
+                this.ctx.arc(this.mousePos.x, this.mousePos.y, 100, 0, Math.PI * 2);
+                this.ctx.stroke();
+                this.ctx.setLineDash([]);
+            }
+        }
+    }
+    
+    handleMouseMove(e) {
+        const rect = this.canvas.getBoundingClientRect();
+        this.mousePos.x = e.clientX - rect.left;
+        this.mousePos.y = e.clientY - rect.top;
+    }
+    
+    handleCanvasClick(e) {
+        const rect = this.canvas.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const clickY = e.clientY - rect.top;
+        
+        // Check if click is on a city dot
+        const clickedDot = this.dots.find(dot => 
+            !dot.isFloating && this.getDistance({ x: clickX, y: clickY }, dot) < dot.radius + 10
+        );
+        
+        if (clickedDot) {
+            // Create ripple effect
+            this.createRipple(clickedDot.x, clickedDot.y);
+        }
+    }
+    
+    createRipple(x, y) {
+        let rippleRadius = 0;
+        const maxRadius = 50;
+        
+        const animateRipple = () => {
+            if (rippleRadius < maxRadius) {
+                this.ctx.strokeStyle = this.getThemeColor('accent-primary', 1 - rippleRadius / maxRadius);
+                this.ctx.lineWidth = 2;
+                this.ctx.beginPath();
+                this.ctx.arc(x, y, rippleRadius, 0, Math.PI * 2);
+                this.ctx.stroke();
+                
+                rippleRadius += 2;
+                requestAnimationFrame(animateRipple);
+            }
+        };
+        
+        animateRipple();
+    }
+    
+    getDistance(point1, point2) {
+        const dx = point1.x - point2.x;
+        const dy = point1.y - point2.y;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+    
+    getThemeColor(colorVar, opacity = 1) {
+        // Get CSS custom property value
+        const root = document.documentElement;
+        const colorValue = getComputedStyle(root).getPropertyValue(`--${colorVar}`).trim();
+        
+        // If no value found, wait a bit and try again (theme might be loading)
+        if (!colorValue) {
+            const fallbackColors = {
+                'accent-primary': '#6571ff',
+                'accent-secondary': '#9333ea',
+                'text-primary': '#1a1a1a',
+                'text-secondary': '#666666',
+                'border-primary': '#e5e5e5'
+            };
+            const fallback = fallbackColors[colorVar] || '#6571ff';
+            return this.hexToRgba(fallback, opacity);
+        }
+        
+        // Convert hex to rgba if needed
+        if (colorValue.startsWith('#')) {
+            return this.hexToRgba(colorValue, opacity);
+        }
+        
+        // If already rgb/rgba, modify opacity
+        if (colorValue.startsWith('rgb')) {
+            const values = colorValue.match(/\d+/g);
+            if (values && values.length >= 3) {
+                return `rgba(${values[0]}, ${values[1]}, ${values[2]}, ${opacity})`;
+            }
+        }
+        
+        // Fallback
+        return `rgba(101, 113, 255, ${opacity})`;
+    }
+    
+    getHoverTextColor() {
+        // Get theme attribute from document element
+        const themeAttribute = document.documentElement.getAttribute('data-theme');
+        
+        // Also check the stylesheet href as backup
+        const themeStylesheet = document.getElementById('theme-stylesheet');
+        const stylesheetHref = themeStylesheet ? themeStylesheet.href : '';
+        
+        // Debug logging
+        console.log('Current theme attribute:', themeAttribute);
+        console.log('Stylesheet href:', stylesheetHref);
+        
+        // Check for dark theme
+        const isDark = themeAttribute === 'dark' || stylesheetHref.includes('dark.css');
+        const isHighContrast = themeAttribute === 'high-contrast' || stylesheetHref.includes('high-contrast.css');
+        
+        if (isDark) {
+            console.log('Using white text for dark theme');
+            return '#FFFFFF'; // White text for dark theme
+        } else if (isHighContrast) {
+            console.log('Using black text for high-contrast theme');
+            return '#000000'; // Black text for high-contrast theme (white background)
+        } else {
+            console.log('Using black text for light theme');
+            return '#000000'; // Black text for light theme
+        }
+    }
+    
+    hexToRgba(hex, opacity) {
+        const cleanHex = hex.replace('#', '');
+        const r = parseInt(cleanHex.slice(0, 2), 16);
+        const g = parseInt(cleanHex.slice(2, 4), 16);
+        const b = parseInt(cleanHex.slice(4, 6), 16);
+        return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    }
+}
+
+// Initialize World Map when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Small delay to ensure all elements are rendered
+    setTimeout(() => {
+        new WorldMapVisualization();
+    }, 100);
+});
