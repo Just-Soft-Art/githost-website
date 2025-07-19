@@ -574,3 +574,52 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call
     updateNavbar();
 });
+
+// Scroll indicator functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function() {
+            // Find the next section after the hero
+            const heroSection = scrollIndicator.closest('section');
+            const nextSection = heroSection.nextElementSibling;
+            
+            if (nextSection) {
+                nextSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+        
+        // Hide scroll indicator when user scrolls past the hero section
+        function handleScrollIndicator() {
+            const heroSection = scrollIndicator.closest('section');
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const scrollPosition = window.pageYOffset;
+            
+            if (scrollPosition > heroBottom - window.innerHeight * 0.5) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.pointerEvents = 'none';
+            } else {
+                scrollIndicator.style.opacity = '1';
+                scrollIndicator.style.pointerEvents = 'auto';
+            }
+        }
+        
+        window.addEventListener('scroll', handleScrollIndicator, { passive: true });
+        
+        // Initial call
+        handleScrollIndicator();
+    }
+});
+
+// Scroll to top function for services page
+function scrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
