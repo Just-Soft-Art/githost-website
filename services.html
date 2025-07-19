@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Services - Just Soft Art</title>
+        <meta name="description" content="Professional software development, design, and consulting services by Just Soft Art">
+        <link rel="stylesheet" href="./base.css">
+        <link rel="stylesheet" href="./themes/light.css" id="theme-stylesheet">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/jsa-dark-favicon.png?v=1">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/jsa-dark-favicon.png?v=1">
+        <link rel="shortcut icon" href="./assets/img/jsa-dark-favicon.png?v=1">
+        <link rel="apple-touch-icon" href="./assets/img/jsa-dark-favicon.png?v=1">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="./assets/img/homeicon/jsa-light-homeicon.svg" alt="JSA" class="logo-icon" id="logo-icon">
+                    <span>Just Soft Art</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <div class="theme-dropdown" id="theme-dropdown">
+                        <button class="theme-toggle-btn" id="theme-toggle-btn">
+                            <span class="theme-icon">☀️</span>
+                            <span class="theme-text">Light</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="theme-dropdown-menu" id="theme-dropdown-menu">
+                            <button class="theme-option active" data-theme="light">
+                                <span class="theme-option-icon">☀️</span>
+                                <span>Light</span>
+                            </button>
+                            <button class="theme-option" data-theme="dark">
+                                <span class="theme-option-icon">🌙</span>
+                                <span>Dark</span>
+                            </button>
+                            <button class="theme-option" data-theme="high-contrast">
+                                <span class="theme-option-icon">⚫</span>
+                                <span>Contrast</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="language-dropdown" id="language-dropdown">
+                        <button class="language-toggle-btn" id="language-toggle-btn">
+                            <span class="language-icon">🇬🇧</span>
+                            <span class="language-text">EN</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="language-dropdown-menu" id="language-dropdown-menu">
+                            <div class="language-grid">
+                                <button class="language-option active" data-language="en" data-flag="🇬🇧">
+                                    <span class="language-flag">🇬🇧</span>
+                                    <span class="language-name">English</span>
+                                    <span class="language-code">EN</span>
+                                </button>
+                                <button class="language-option" data-language="de" data-flag="🇩🇪">
+                                    <span class="language-flag">🇩🇪</span>
+                                    <span class="language-name">German</span>
+                                    <span class="language-code">DE</span>
+                                </button>
+                                <button class="language-option" data-language="fr" data-flag="🇫🇷">
+                                    <span class="language-flag">🇫🇷</span>
+                                    <span class="language-name">French</span>
+                                    <span class="language-code">FR</span>
+                                </button>
+                                <button class="language-option" data-language="it" data-flag="🇮🇹">
+                                    <span class="language-flag">🇮🇹</span>
+                                    <span class="language-name">Italian</span>
+                                    <span class="language-code">IT</span>
+                                </button>
+                                <button class="language-option" data-language="es" data-flag="🇪🇸">
+                                    <span class="language-flag">🇪🇸</span>
+                                    <span class="language-name">Spanish</span>
+                                    <span class="language-code">ES</span>
+                                </button>
+                                <button class="language-option" data-language="pl" data-flag="🇵🇱">
+                                    <span class="language-flag">🇵🇱</span>
+                                    <span class="language-name">Polish</span>
+                                    <span class="language-code">PL</span>
+                                </button>
+                                <button class="language-option" data-language="ro" data-flag="🇷🇴">
+                                    <span class="language-flag">🇷🇴</span>
+                                    <span class="language-name">Romanian</span>
+                                    <span class="language-code">RO</span>
+                                </button>
+                                <button class="language-option" data-language="nl" data-flag="🇳🇱">
+                                    <span class="language-flag">🇳🇱</span>
+                                    <span class="language-name">Dutch</span>
+                                    <span class="language-code">NL</span>
+                                </button>
+                                <button class="language-option" data-language="ua" data-flag="🇺🇦">
+                                    <span class="language-flag">🇺🇦</span>
+                                    <span class="language-name">Ukrainian</span>
+                                    <span class="language-code">UA</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Services Hero Section -->
+        <section class="hero services-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Our Services</h1>
+                <p class="hero-subtitle">Comprehensive solutions to transform your business through technology and exceptional design.</p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services-section">
+            <div class="container">
+                <div class="services-grid">
+                    <!-- Service 1: Custom Software Development -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Custom Software Development</h3>
+                        <p>Tailored solutions for your business challenges: CRM systems, ERP platforms, and custom business applications designed to streamline your operations and drive growth.</p>
+                        <ul class="service-features">
+                            <li>Enterprise Resource Planning (ERP)</li>
+                            <li>Customer Relationship Management (CRM)</li>
+                            <li>Business Intelligence Platforms</li>
+                            <li>Workflow Automation Systems</li>
+                            <li>API Development & Integration</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Get Started</a>
+                    </div>
+
+                    <!-- Service 2: Web & Mobile Development -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                <line x1="2" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="8" cy="5" r="1" fill="currentColor"/>
+                                <circle cx="12" cy="5" r="1" fill="currentColor"/>
+                                <circle cx="16" cy="5" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Web & Mobile Development</h3>
+                        <p>Modern websites, Single Page Applications (SPA), Progressive Web Apps (PWA), and native mobile applications that deliver exceptional user experiences across all devices.</p>
+                        <ul class="service-features">
+                            <li>Responsive Web Applications</li>
+                            <li>Progressive Web Apps (PWA)</li>
+                            <li>Single Page Applications (SPA)</li>
+                            <li>Native Mobile Development</li>
+                            <li>Cross-Platform Solutions</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Get Started</a>
+                    </div>
+
+                    <!-- Service 3: UI/UX Design -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L3 7V17C3 17.55 3.45 18 4 18H20C20.55 18 21 17.55 21 17V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>Interface design, prototyping, and user experience audits that create intuitive and engaging digital experiences that users love and businesses depend on.</p>
+                        <ul class="service-features">
+                            <li>User Experience Research</li>
+                            <li>Interactive Prototyping</li>
+                            <li>Design Systems</li>
+                            <li>Usability Testing</li>
+                            <li>Accessibility Compliance</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">Sketch</span>
+                            <span class="tech-tag">Principle</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Get Started</a>
+                    </div>
+
+                    <!-- Service 4: E-commerce Solutions -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
+                                <path d="M1 1H5L7.68 14.39C7.77 14.8 8.08 15.08 8.5 15.08H19.4C19.82 15.08 20.13 14.8 20.22 14.39L22 5H6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>E-commerce Solutions</h3>
+                        <p>Complete online store development, booking systems, and payment processing solutions that drive sales and provide seamless shopping experiences for your customers.</p>
+                        <ul class="service-features">
+                            <li>Online Store Development</li>
+                            <li>Payment Gateway Integration</li>
+                            <li>Inventory Management</li>
+                            <li>Booking & Reservation Systems</li>
+                            <li>Multi-vendor Marketplaces</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">Shopify</span>
+                            <span class="tech-tag">WooCommerce</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">PayPal</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Get Started</a>
+                    </div>
+
+                    <!-- Service 5: AI & Automation -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 16V8C21 5.79 19.21 4 17 4H7C4.79 4 3 5.79 3 8V16C3 18.21 4.79 20 7 20H17C19.21 20 21 18.21 21 16Z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>AI & Automation</h3>
+                        <p>AI integration, task automation, intelligent chatbots, and content generation solutions that enhance productivity and create smarter business processes.</p>
+                        <ul class="service-features">
+                            <li>Artificial Intelligence Integration</li>
+                            <li>Business Process Automation</li>
+                            <li>Intelligent Chatbots</li>
+                            <li>Content Generation Systems</li>
+                            <li>Machine Learning Solutions</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Get Started</a>
+                    </div>
+
+                    <!-- Service 6: IT Consulting & CTO-as-a-Service -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M17 21V19C17 17.9 16.1 17 15 17H9C7.9 17 7 17.9 7 19V21" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M22 21V19C22 18.13 21.49 17.4 20.74 17.06" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 3.13C16.75 3.47 17.26 4.2 17.26 5.07S16.75 6.67 16 7.01" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>IT Consulting & CTO-as-a-Service</h3>
+                        <p>Strategic technology consulting, technical leadership, and comprehensive support for startups and SMBs looking to scale their technology infrastructure effectively.</p>
+                        <ul class="service-features">
+                            <li>Technology Strategy Consulting</li>
+                            <li>Architecture & Code Reviews</li>
+                            <li>Team Leadership & Mentoring</li>
+                            <li>Startup Technical Support</li>
+                            <li>Digital Transformation</li>
+                        </ul>
+                        <div class="service-tech">
+                            <span class="tech-tag">Strategy</span>
+                            <span class="tech-tag">Leadership</span>
+                            <span class="tech-tag">Mentoring</span>
+                            <span class="tech-tag">Planning</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="services-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Business?</h2>
+                    <p>Let's discuss how our services can help you achieve your goals and drive innovation in your industry.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn-primary">Start Your Project</a>
+                        <a href="#" class="btn-secondary">Schedule Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">Digital Art</a></li>
+                            <li><a href="services.html">UI/UX Design</a></li>
+                            <li><a href="services.html">Consulting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Just Soft Art. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="./scripts.js"></script>
+    </body>
+</html>

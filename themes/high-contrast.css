@@ -2,6 +2,19 @@
 body {
     color: #000000;
     background-color: #ffffff;
+    
+    /* CSS Custom Properties for Forms */
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --text-placeholder: #666666;
+    --card-background: rgba(255, 255, 255, 0.95);
+    --border-color: #000000;
+    --input-background: #ffffff;
+    --input-border: #000000;
+    --input-focus-background: #ffffcc;
+    --accent-color: #000000;
+    --focus-ring: rgba(0, 0, 0, 0.3);
+    --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Focus styles */
