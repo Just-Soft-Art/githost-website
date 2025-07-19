@@ -5,6 +5,48 @@
     box-sizing: border-box;
 }
 
+/* CSS Custom Properties for Common Values */
+:root {
+    /* Common RGBA colors */
+    --rgba-black-01: rgba(0, 0, 0, 0.1);
+    --rgba-black-02: rgba(0, 0, 0, 0.2);
+    --rgba-black-015: rgba(0, 0, 0, 0.15);
+    --rgba-white-005: rgba(255, 255, 255, 0.05);
+    --rgba-white-008: rgba(255, 255, 255, 0.8);
+    --rgba-white-098: rgba(255, 255, 255, 0.98);
+    --rgba-blue-01: rgba(0, 122, 255, 0.1);
+    --rgba-blue-005: rgba(0, 122, 255, 0.05);
+    --rgba-blue-03: rgba(0, 122, 255, 0.3);
+    
+    /* Common spacing values */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    
+    /* Common border radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-pill: 980px;
+    
+    /* Animation timing */
+    --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Performance Utility Classes */
+.gpu-accelerated {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
 /* Performance optimizations for 60fps */
 *, *::before, *::after {
     transform-style: preserve-3d;
@@ -59,12 +101,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--rgba-white-008);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--rgba-black-01);
     z-index: 9999;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s var(--ease-smooth);
     will-change: background-color, backdrop-filter;
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
@@ -173,6 +215,8 @@ body {
     border-radius: 6px;
     font-size: 12px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
     transition: all 0.3s ease;
     font-weight: 500;
 }
@@ -197,6 +241,7 @@ body {
     border-radius: 8px;
     font-size: 14px;
     cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
     min-width: 100px;
@@ -261,6 +306,7 @@ body {
     background: none;
     font-size: 14px;
     cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
     text-align: left;
 }
@@ -294,6 +340,7 @@ body {
     border-radius: 8px;
     font-size: 14px;
     cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
     min-width: 80px;
@@ -358,6 +405,7 @@ body {
     background: none;
     font-size: 13px;
     cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
     text-align: left;
     width: 100%;
@@ -471,13 +519,15 @@ body {
 }
 
 .btn-primary, .btn-secondary {
-    padding: 12px 24px;
-    border-radius: 980px;
-    font-size: 16px;
+    padding: 12px var(--spacing-md);
+    border-radius: var(--radius-pill);
+    font-size: var(--spacing-sm);
     font-weight: 500;
     border: none;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s var(--ease-smooth);
     min-width: 120px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -518,7 +568,7 @@ body {
 .product-card {
     text-align: center;
     padding: 40px 20px;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     will-change: transform;
 }
@@ -530,8 +580,8 @@ body {
 .product-image {
     width: 100%;
     height: 200px;
-    border-radius: 12px;
-    margin-bottom: 24px;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
 }
 
 .product-card h3 {
@@ -563,12 +613,12 @@ body {
 .carousel-wrapper {
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 60px var(--rgba-black-01);
 }
 
 .carousel-track {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.8s var(--ease-smooth);
     will-change: transform;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
@@ -600,9 +650,9 @@ body {
 .product-preview {
     width: 100%;
     height: 300px;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px var(--rgba-black-015);
     position: relative;
     overflow: hidden;
 }
@@ -615,7 +665,7 @@ body {
     right: 20px;
     bottom: 20px;
     border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
 }
 
 .carousel-info {
@@ -644,21 +694,23 @@ body {
 }
 
 .feature-tag {
-    padding: 8px 16px;
+    padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--rgba-black-01);
 }
 
 .carousel-btn {
-    padding: 12px 32px;
+    padding: var(--spacing-md) var(--spacing-lg);
     border-radius: 25px;
-    font-size: 16px;
+    font-size: var(--spacing-sm);
     font-weight: 600;
     border: none;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s var(--ease-smooth);
     transform: translate3d(0, 0, 0);
     will-change: transform, box-shadow;
     backface-visibility: hidden;
@@ -666,7 +718,7 @@ body {
 
 .carousel-btn:hover {
     transform: translate3d(0, -2px, 0);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px var(--rgba-black-02);
 }
 
 /* Carousel Navigation */
@@ -691,10 +743,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s var(--ease-smooth);
     pointer-events: auto;
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 var(--spacing-xs) var(--spacing-lg) var(--rgba-black-01);
     will-change: transform;
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
@@ -717,17 +769,17 @@ body {
 .carousel-indicators {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: var(--spacing-md);
     margin-top: 40px;
 }
 
 .indicator {
-    width: 12px;
-    height: 12px;
+    width: var(--spacing-md);
+    height: var(--spacing-md);
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s var(--ease-smooth);
     opacity: 0.3;
     will-change: transform, opacity;
     backface-visibility: hidden;
@@ -1459,13 +1511,26 @@ html {
 .contact-methods {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: var(--spacing-lg);
 }
 
 .contact-method {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm);
+    margin: calc(var(--spacing-sm) * -1);
+}
+
+.contact-method:hover {
+    background: var(--rgba-blue-005);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--rgba-black-01);
 }
 
 .contact-icon {
@@ -1475,8 +1540,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 122, 255, 0.1);
-    border-radius: 16px;
+    background: var(--rgba-blue-01);
+    border-radius: var(--radius-lg);
 }
 
 .contact-details h4 {
@@ -1491,24 +1556,24 @@ html {
 }
 
 .contact-form-container {
-    background: var(--card-background, rgba(255, 255, 255, 0.05));
-    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
-    border-radius: 24px;
-    padding: 48px;
+    background: var(--card-background, var(--rgba-white-005));
+    border: 1px solid var(--border-color, var(--rgba-black-01));
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px var(--shadow-color, rgba(0, 0, 0, 0.1));
+    box-shadow: 0 var(--spacing-xs) var(--spacing-lg) var(--shadow-color, var(--rgba-black-01));
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--spacing-md);
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--spacing-xs);
 }
 
 .form-group label {
@@ -1520,10 +1585,10 @@ html {
 .form-group input,
 .form-group select,
 .form-group textarea {
-    padding: 16px;
-    border: 2px solid var(--input-border, rgba(0, 0, 0, 0.2));
-    border-radius: 12px;
-    background: var(--input-background, rgba(255, 255, 255, 0.8));
+    padding: var(--spacing-sm);
+    border: 2px solid var(--input-border, var(--rgba-black-02));
+    border-radius: var(--radius-md);
+    background: var(--input-background, var(--rgba-white-008));
     font-family: inherit;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -1540,8 +1605,8 @@ html {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-color, #007aff);
-    background: var(--input-focus-background, rgba(0, 122, 255, 0.05));
-    box-shadow: 0 0 0 3px var(--focus-ring, rgba(0, 122, 255, 0.1));
+    background: var(--input-focus-background, var(--rgba-blue-005));
+    box-shadow: 0 0 0 3px var(--focus-ring, var(--rgba-blue-01));
 }
 
 .form-group textarea {
@@ -1552,16 +1617,16 @@ html {
 /* Simple and natural select styling - must come after general form rules */
 .contact-form .form-group select {
     cursor: pointer;
-    padding-left: 16px !important;
-    padding-right: 48px !important;
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
+    padding-left: var(--spacing-sm) !important;
+    padding-right: var(--spacing-xl) !important;
+    padding-top: var(--spacing-sm) !important;
+    padding-bottom: var(--spacing-sm) !important;
 }
 
 .form-submit {
-    margin-top: 16px;
+    margin-top: var(--spacing-sm);
     align-self: flex-start;
-    padding: 16px 32px;
+    padding: var(--spacing-sm) var(--spacing-lg);
     font-size: 1.125rem;
     font-weight: 600;
 }
@@ -1589,6 +1654,8 @@ html {
         flex-direction: column;
         text-align: center;
         gap: 12px;
+        padding: var(--spacing-md);
+        margin: 0;
     }
     
     .contact-hero {
@@ -1639,26 +1706,26 @@ html {
 }
 
 .service-card {
-    background: var(--card-background, rgba(255, 255, 255, 0.05));
-    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
-    border-radius: 24px;
-    padding: 48px 32px;
+    background: var(--card-background, var(--rgba-white-005));
+    border: 1px solid var(--border-color, var(--rgba-black-01));
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl) var(--spacing-lg);
     text-align: center;
     transition: all 0.3s ease;
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px var(--shadow-color, rgba(0, 0, 0, 0.1));
+    box-shadow: 0 var(--spacing-xs) var(--spacing-lg) var(--shadow-color, var(--rgba-black-01));
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 16px 48px var(--shadow-color, rgba(0, 0, 0, 0.15));
+    box-shadow: 0 var(--spacing-sm) var(--spacing-xl) var(--shadow-color, var(--rgba-black-015));
     border-color: var(--accent-color, #007aff);
 }
 
 .service-icon {
     width: 80px;
     height: 80px;
-    margin: 0 auto 24px;
+    margin: 0 auto var(--spacing-md);
     background: linear-gradient(135deg, var(--accent-color, #007aff) 0%, #5856d6 100%);
     border-radius: 20px;
     display: flex;
@@ -1707,16 +1774,16 @@ html {
 .service-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: var(--spacing-xs);
     justify-content: center;
-    margin: 24px 0;
+    margin: var(--spacing-md) 0;
 }
 
 .tech-tag {
     background: var(--accent-color, #007aff);
     color: white;
-    padding: 6px 12px;
-    border-radius: 16px;
+    padding: 6px var(--spacing-md);
+    border-radius: var(--spacing-sm);
     font-size: 0.75rem;
     font-weight: 500;
 }
@@ -1726,16 +1793,16 @@ html {
     background: linear-gradient(135deg, var(--accent-color, #007aff) 0%, #5856d6 100%);
     color: white;
     padding: 14px 28px;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    margin-top: 16px;
+    margin-top: var(--spacing-sm);
 }
 
 .service-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 122, 255, 0.3);
+    box-shadow: 0 var(--spacing-xs) var(--spacing-md) var(--rgba-blue-03);
 }
 
 .services-cta {
