@@ -41,13 +41,16 @@ const themes = {
         icon: '🌙',
         href: './themes/dark.css',
         logoIcon: './assets/img/homeicon/jsa-dark-homeicon.svg'
-    },
+    }
+    // Temporarily disabled high-contrast theme
+    /*
     'high-contrast': {
         name: 'Contrast',
         icon: '⚫',
         href: './themes/high-contrast.css',
         logoIcon: './assets/img/homeicon/jsa-hc-homeicon.svg'
     }
+    */
 };
 
 // Set theme function
@@ -123,15 +126,15 @@ function toggleDropdown() {
 
 // Language management
 const languages = {
-    en: { name: 'English', code: 'EN', flag: '🇬🇧' },
-    de: { name: 'German', code: 'DE', flag: '🇩🇪' },
-    fr: { name: 'French', code: 'FR', flag: '🇫🇷' },
-    it: { name: 'Italian', code: 'IT', flag: '🇮🇹' },
-    es: { name: 'Spanish', code: 'ES', flag: '🇪🇸' },
-    pl: { name: 'Polish', code: 'PL', flag: '🇵🇱' },
-    ro: { name: 'Romanian', code: 'RO', flag: '🇷🇴' },
-    nl: { name: 'Dutch', code: 'NL', flag: '🇳🇱' },
-    ua: { name: 'Ukrainian', code: 'UA', flag: '🇺🇦' }
+    en: { name: 'English', code: 'EN' },
+    de: { name: 'German', code: 'DE' },
+    fr: { name: 'French', code: 'FR' },
+    it: { name: 'Italian', code: 'IT' },
+    es: { name: 'Spanish', code: 'ES' },
+    pl: { name: 'Polish', code: 'PL' },
+    ro: { name: 'Romanian', code: 'RO' },
+    nl: { name: 'Dutch', code: 'NL' },
+    ua: { name: 'Ukrainian', code: 'UA' }
 };
 
 // Set language function
@@ -140,10 +143,8 @@ function setLanguage(languageCode) {
     if (!language || !languageToggleBtn) return;
     
     // Update toggle button
-    const languageIcon = languageToggleBtn?.querySelector('.language-icon');
     const languageText = languageToggleBtn?.querySelector('.language-text');
     
-    if (languageIcon) languageIcon.textContent = language.flag;
     if (languageText) languageText.textContent = language.code;
     
     // Update active state
