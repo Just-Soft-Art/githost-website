@@ -11,6 +11,7 @@ body {
     --background-primary: #000000;
     --background-secondary: #1c1c1e;
     --background-elevated: rgba(28, 28, 30, 0.8);
+    --background-hover: rgba(10, 132, 255, 0.2);
     --border-primary: rgba(255, 255, 255, 0.2);
     --border-secondary: rgba(255, 255, 255, 0.1);
     --accent-primary: #40a9ff;

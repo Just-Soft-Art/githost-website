@@ -705,8 +705,35 @@ class WorldMapVisualization {
         this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
         this.canvas.addEventListener('click', (e) => this.handleCanvasClick(e));
         
-        // Window resize
-        window.addEventListener('resize', () => this.handleResize());
+        // Use ResizeObserver for more reliable resize detection
+        if (window.ResizeObserver) {
+            let resizeTimeout;
+            const resizeObserver = new ResizeObserver(entries => {
+                // Debounce resize events to avoid excessive calls
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    for (let entry of entries) {
+                        if (entry.target === this.canvas || entry.target === this.container) {
+                            this.handleResize();
+                            break; // Only handle once per resize batch
+                        }
+                    }
+                }, 16); // ~60fps
+            });
+            
+            // Observe both canvas and container
+            resizeObserver.observe(this.canvas);
+            resizeObserver.observe(this.container);
+        }
+        
+        // Fallback to window resize event
+        let windowResizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(windowResizeTimeout);
+            windowResizeTimeout = setTimeout(() => {
+                this.handleResize();
+            }, 16);
+        });
         
         // Theme change listener
         this.setupThemeListener();
@@ -746,9 +773,9 @@ class WorldMapVisualization {
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
-                    // Theme changed, regenerate dots with new colors
+                    // Theme changed, update colors without regenerating dots
                     setTimeout(() => {
-                        this.generateDots();
+                        this.updateDotsColors();
                     }, 100); // Small delay to ensure theme styles are loaded
                 }
             });
@@ -765,14 +792,15 @@ class WorldMapVisualization {
         if (themeStylesheet) {
             themeStylesheet.addEventListener('load', () => {
                 setTimeout(() => {
-                    this.generateDots();
+                    this.updateDotsColors();
                 }, 100);
             });
         }
     }
     
     resetView() {
-        this.generateDots();
+        this.updateDotsForResize();
+        this.updateDotsColors();
         console.log('View reset');
     }
     
@@ -796,9 +824,87 @@ class WorldMapVisualization {
     
     handleResize() {
         if (this.isActive) {
+            // Clear the current animation frame if any
+            if (this.animationId) {
+                cancelAnimationFrame(this.animationId);
+                this.animationId = null;
+            }
+            
+            // Setup canvas with new dimensions
             this.setupCanvas();
+            
+            // Regenerate dots with new scale factor
             this.generateDots();
+            
+            // Restart animation
+            this.startAnimation();
         }
+    }
+    
+    updateDotsForResize() {
+        // Calculate new scale factor
+        const minDimension = Math.min(this.width, this.height);
+        const scaleFactor = Math.max(0.5, minDimension / 800);
+        
+        this.dots.forEach((dot) => {
+            if (!dot.isFloating) {
+                // Update city dot positions and scale
+                if (dot.id < this.cities.length) {
+                    const city = this.cities[dot.id];
+                    
+                    dot.x = city.x * this.width;
+                    dot.y = city.y * this.height;
+                    dot.originalX = dot.x;
+                    dot.originalY = dot.y;
+                    dot.radius = dot.baseRadius * scaleFactor;
+                    dot.scaleFactor = scaleFactor;
+                }
+            } else {
+                // Update floating dot positions and scale - maintain relative position
+                const relativeX = dot.originalX / (dot.lastWidth || this.width);
+                const relativeY = dot.originalY / (dot.lastHeight || this.height);
+                dot.x = relativeX * this.width;
+                dot.y = relativeY * this.height;
+                dot.originalX = dot.x;
+                dot.originalY = dot.y;
+                dot.radius = dot.baseRadius * scaleFactor;
+                dot.scaleFactor = scaleFactor;
+            }
+            
+            // Store current dimensions for next resize
+            dot.lastWidth = this.width;
+            dot.lastHeight = this.height;
+        });
+        
+        // Update connections if they exist
+        this.updateConnectionPositions();
+    }
+    
+    updateConnectionPositions() {
+        this.connections.forEach(connection => {
+            // Find the updated dot positions by ID
+            const fromDot = this.dots.find(dot => dot.id === connection.from.id);
+            const toDot = this.dots.find(dot => dot.id === connection.to.id);
+            
+            if (fromDot && toDot) {
+                // Update the connection references
+                connection.from = fromDot;
+                connection.to = toDot;
+            }
+        });
+    }
+    
+    updateDotsColors() {
+        // Update colors for existing dots without regenerating them
+        this.dots.forEach(dot => {
+            if (!dot.isFloating) {
+                // City dots
+                dot.color = this.getThemeColor('accent-primary');
+            } else {
+                // Floating dots
+                dot.color = this.getThemeColor('text-secondary');
+            }
+        });
     }
     
     
@@ -807,6 +913,13 @@ class WorldMapVisualization {
         
         const rect = this.canvas.getBoundingClientRect();
         const dpr = window.devicePixelRatio || 1;
+        
+        // Ensure canvas has valid dimensions
+        if (rect.width === 0 || rect.height === 0) {
+            console.warn('Canvas has zero dimensions, retrying in 100ms');
+            setTimeout(() => this.setupCanvas(), 100);
+            return;
+        }
         
         this.canvas.width = rect.width * dpr;
         this.canvas.height = rect.height * dpr;
@@ -823,15 +936,24 @@ class WorldMapVisualization {
         this.dots = [];
         this.connections = [];
         
+        // Calculate scale factor based on canvas size
+        const minDimension = Math.min(this.width, this.height);
+        const scaleFactor = Math.max(0.5, minDimension / 800); // Base scale on 800px reference
+        
         // Create city dots
         this.cities.forEach((city, index) => {
+            const baseRadius = 4 + (city.clients / 10);
             const dot = {
                 id: index,
                 x: city.x * this.width,
                 y: city.y * this.height,
                 originalX: city.x * this.width,
                 originalY: city.y * this.height,
-                radius: 4 + (city.clients / 10),
+                radius: baseRadius * scaleFactor,
+                baseRadius: baseRadius,
+                scaleFactor: scaleFactor,
+                lastWidth: this.width,
+                lastHeight: this.height,
                 color: this.getThemeColor('accent-primary'),
                 pulsePhase: Math.random() * Math.PI * 2,
                 clients: city.clients,
@@ -867,13 +989,18 @@ class WorldMapVisualization {
         
         // Add some random floating dots for ambiance
         for (let i = 0; i < 30; i++) {
+            const baseRadius = 1 + Math.random() * 2;
             this.dots.push({
                 id: this.cities.length + i,
                 x: Math.random() * this.width,
                 y: Math.random() * this.height,
                 originalX: Math.random() * this.width,
                 originalY: Math.random() * this.height,
-                radius: 1 + Math.random() * 2,
+                radius: baseRadius * scaleFactor,
+                baseRadius: baseRadius,
+                scaleFactor: scaleFactor,
+                lastWidth: this.width,
+                lastHeight: this.height,
                 color: this.getThemeColor('text-secondary'),
                 pulsePhase: Math.random() * Math.PI * 2,
                 opacity: 0.3 + Math.random() * 0.4,
@@ -965,9 +1092,10 @@ class WorldMapVisualization {
                 if (dot.y > this.height) dot.y = 0;
             }
             
-            // Mouse interaction
+            // Mouse interaction with responsive distance
             const mouseDistance = this.getDistance(dot, this.mousePos);
-            if (mouseDistance < 100 && !dot.isFloating) {
+            const interactionRadius = 100 * (dot.scaleFactor || 1);
+            if (mouseDistance < interactionRadius && !dot.isFloating) {
                 dot.isHovered = true;
                 // Activate connections
                 dot.connections.forEach(conn => {
@@ -1025,18 +1153,26 @@ class WorldMapVisualization {
             if (!dot.isFloating && dot.clients && dot.isHovered) {
                 // Use theme-appropriate text color
                 this.ctx.fillStyle = this.getHoverTextColor();
-                this.ctx.font = '12px system-ui';
+                
+                // Responsive font size based on scale factor
+                const baseFontSize = 12;
+                const fontSize = Math.max(10, baseFontSize * dot.scaleFactor);
+                this.ctx.font = `${fontSize}px system-ui`;
                 this.ctx.textAlign = 'center';
+                
+                // Responsive text positioning
+                const textOffset = radius + (15 * dot.scaleFactor);
+                const nameOffset = radius + (30 * dot.scaleFactor);
                 
                 this.ctx.fillText(
                     `${dot.clients} clients`,
                     dot.x,
-                    dot.y - radius - 15
+                    dot.y - textOffset
                 );
                 this.ctx.fillText(
                     dot.name,
                     dot.x,
-                    dot.y - radius - 30
+                    dot.y - nameOffset
                 );
             }
         });
@@ -1045,7 +1181,12 @@ class WorldMapVisualization {
     drawConnections() {
         this.connections.forEach(connection => {
             const opacity = connection.active ? 0.8 : 0.2;
-            const lineWidth = connection.active ? 2 : 1;
+            
+            // Calculate responsive line width based on canvas size
+            const minDimension = Math.min(this.width, this.height);
+            const scaleFactor = Math.max(0.5, minDimension / 800);
+            const baseLineWidth = connection.active ? 2 : 1;
+            const lineWidth = Math.max(0.5, baseLineWidth * scaleFactor);
             
             // Create gradient for the connection line
             const gradient = this.ctx.createLinearGradient(
@@ -1058,7 +1199,10 @@ class WorldMapVisualization {
             
             this.ctx.strokeStyle = gradient;
             this.ctx.lineWidth = lineWidth;
-            this.ctx.setLineDash([5, 5]);
+            
+            // Responsive dash pattern
+            const dashSize = Math.max(3, 5 * scaleFactor);
+            this.ctx.setLineDash([dashSize, dashSize]);
             this.ctx.lineDashOffset = -connection.flowOffset;
             
             this.ctx.beginPath();
@@ -1073,9 +1217,10 @@ class WorldMapVisualization {
     drawTooltips() {
         // Draw mouse interaction area
         if (this.mousePos.x > 0 && this.mousePos.y > 0) {
-            const nearDot = this.dots.find(dot => 
-                !dot.isFloating && this.getDistance(dot, this.mousePos) < 100
-            );
+            const nearDot = this.dots.find(dot => {
+                const interactionRadius = 100 * (dot.scaleFactor || 1);
+                return !dot.isFloating && this.getDistance(dot, this.mousePos) < interactionRadius;
+            });
             
             if (nearDot) {
                 this.ctx.strokeStyle = this.getThemeColor('accent-primary', 0.5);
@@ -1101,9 +1246,10 @@ class WorldMapVisualization {
         const clickY = e.clientY - rect.top;
         
         // Check if click is on a city dot
-        const clickedDot = this.dots.find(dot => 
-            !dot.isFloating && this.getDistance({ x: clickX, y: clickY }, dot) < dot.radius + 10
-        );
+        const clickedDot = this.dots.find(dot => {
+            const clickRadius = dot.radius + (10 * (dot.scaleFactor || 1));
+            return !dot.isFloating && this.getDistance({ x: clickX, y: clickY }, dot) < clickRadius;
+        });
         
         if (clickedDot) {
             // Create ripple effect
@@ -1113,17 +1259,20 @@ class WorldMapVisualization {
     
     createRipple(x, y) {
         let rippleRadius = 0;
-        const maxRadius = 50;
+        const minDimension = Math.min(this.width, this.height);
+        const scaleFactor = Math.max(0.5, minDimension / 800);
+        const maxRadius = 50 * scaleFactor;
+        const rippleStep = 2 * scaleFactor;
         
         const animateRipple = () => {
             if (rippleRadius < maxRadius) {
                 this.ctx.strokeStyle = this.getThemeColor('accent-primary', 1 - rippleRadius / maxRadius);
-                this.ctx.lineWidth = 2;
+                this.ctx.lineWidth = Math.max(1, 2 * scaleFactor);
                 this.ctx.beginPath();
                 this.ctx.arc(x, y, rippleRadius, 0, Math.PI * 2);
                 this.ctx.stroke();
                 
-                rippleRadius += 2;
+                rippleRadius += rippleStep;
                 requestAnimationFrame(animateRipple);
             }
         };

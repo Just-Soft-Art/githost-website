@@ -287,7 +287,9 @@ body {
     position: relative;
 }
 
-.theme-toggle-btn {
+/* Shared styling for dropdown buttons */
+.theme-toggle-btn,
+.language-toggle-btn {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -299,8 +301,22 @@ body {
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
+    height: 40px;
+    min-height: 40px;
+    box-sizing: border-box;
+}
+
+.theme-toggle-btn {
     min-width: 100px;
     width: 100px;
+}
+
+.language-toggle-btn {
+    min-width: 80px;
+    width: 80px;
+    background: var(--background-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
 }
 
 .theme-icon {
@@ -386,25 +402,7 @@ body {
     position: relative;
 }
 
-.language-toggle-btn {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 8px 8px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    min-width: 80px;
-    width: 80px;
-    background: var(--background-elevated);
-    color: var(--text-primary);
-    border: 1px solid var(--border-primary);
-}
-
+.theme-toggle-btn:hover,
 .language-toggle-btn:hover {
     background: var(--background-hover);
     transform: translateY(-1px);
@@ -1178,11 +1176,17 @@ body {
         margin-right: 4px;
     }
     
+    .theme-toggle-btn,
+    .language-toggle-btn {
+        height: 40px;
+        min-height: 40px;
+        padding: 6px 8px;
+        justify-content: center;
+    }
+    
     .theme-toggle-btn {
         min-width: 60px;
         width: 60px;
-        padding: 6px 8px;
-        justify-content: center;
     }
     
     .language-dropdown {
@@ -1192,8 +1196,6 @@ body {
     .language-toggle-btn {
         min-width: 55px;
         width: 55px;
-        padding: 6px 8px;
-        justify-content: center;
     }
     
     .language-dropdown-menu {
@@ -1747,6 +1749,24 @@ html {
     font-weight: 600;
 }
 
+/* Message and button wrapper for horizontal layout */
+.message-button-wrapper {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.message-button-wrapper textarea {
+    flex: 1;
+    margin: 0;
+}
+
+.message-button-wrapper .form-submit {
+    margin-top: 0;
+    height: fit-content;
+    white-space: nowrap;
+}
+
 /* Responsive Contact Page */
 @media (max-width: 768px) {
     .contact-content {
@@ -1756,6 +1776,17 @@ html {
     
     .contact-info h2 {
         font-size: 2rem;
+    }
+    
+    /* Stack message and button vertically on mobile */
+    .message-button-wrapper {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .message-button-wrapper .form-submit {
+        align-self: stretch;
+        text-align: center;
     }
     
     .contact-form-container {
@@ -2188,6 +2219,11 @@ html {
         transparent 100%);
     scrollbar-width: thin;
     scrollbar-color: rgba(101, 113, 255, 0.3) transparent;
+    min-height: 400px;
+}
+
+.world-map-section {
+    min-height: 50vh;
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -2310,6 +2346,14 @@ html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .world-map-section {
+        min-height: 40vh;
+    }
+    
+    .world-map-container {
+        min-height: 300px;
+    }
+    
     .world-map-header {
         padding: var(--spacing-md);
     }
@@ -2335,6 +2379,16 @@ html {
         bottom: var(--spacing-md);
         left: var(--spacing-md);
         right: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .world-map-section {
+        min-height: 35vh;
+    }
+    
+    .world-map-container {
+        min-height: 250px;
     }
 }
 
@@ -2820,9 +2874,21 @@ html {
 /* Benefits Grid */
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 1200px) {
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .benefit-item {
