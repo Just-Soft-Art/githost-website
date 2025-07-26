@@ -18,11 +18,11 @@
             </a>
             
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#products" class="inactive">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                <li><a href="#products" class="inactive" data-translate="nav.products">Products</a></li>
+                <li><a href="about.html" data-translate="nav.about">About</a></li>
+                <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
             </ul>
             
             <div class="nav-controls">
@@ -42,13 +42,7 @@
                             <span class="theme-option-icon">🌙</span>
                             Dark
                         </button>
-                        <!-- Temporarily disabled high-contrast theme -->
-                        <!--
-                        <button class="theme-option" data-theme="high-contrast">
-                            <span class="theme-option-icon">⚫</span>
-                            Contrast
-                        </button>
-                        -->
+
                     </div>
                 </div>
 
@@ -60,53 +54,41 @@
                     </button>
                     <div class="language-dropdown-menu" id="language-dropdown-menu">
                         <div class="language-grid">
-                            <button class="language-option" data-lang="en">
+                            <button class="language-option active" data-language="en">
                                 <span class="language-name">English</span>
                                 <span class="language-code">EN</span>
                             </button>
-                            <button class="language-option" data-lang="es">
-                                <span class="language-name">Español</span>
-                                <span class="language-code">ES</span>
-                            </button>
-                            <button class="language-option" data-lang="fr">
-                                <span class="language-name">Français</span>
-                                <span class="language-code">FR</span>
-                            </button>
-                            <button class="language-option" data-lang="de">
-                                <span class="language-name">Deutsch</span>
+                            <button class="language-option" data-language="de">
+                                <span class="language-name">German</span>
                                 <span class="language-code">DE</span>
                             </button>
-                            <button class="language-option" data-lang="it">
-                                <span class="language-name">Italiano</span>
+                            <button class="language-option" data-language="fr">
+                                <span class="language-name">French</span>
+                                <span class="language-code">FR</span>
+                            </button>
+                            <button class="language-option" data-language="it">
+                                <span class="language-name">Italian</span>
                                 <span class="language-code">IT</span>
                             </button>
-                            <button class="language-option" data-lang="pt">
-                                <span class="language-name">Português</span>
-                                <span class="language-code">PT</span>
+                            <button class="language-option" data-language="es">
+                                <span class="language-name">Spanish</span>
+                                <span class="language-code">ES</span>
                             </button>
-                            <button class="language-option" data-lang="ru">
-                                <span class="language-name">Русский</span>
-                                <span class="language-code">RU</span>
+                            <button class="language-option" data-language="pl">
+                                <span class="language-name">Polish</span>
+                                <span class="language-code">PL</span>
                             </button>
-                            <button class="language-option" data-lang="zh">
-                                <span class="language-name">中文</span>
-                                <span class="language-code">ZH</span>
+                            <button class="language-option" data-language="ro">
+                                <span class="language-name">Romanian</span>
+                                <span class="language-code">RO</span>
                             </button>
-                            <button class="language-option" data-lang="ja">
-                                <span class="language-name">日本語</span>
-                                <span class="language-code">JA</span>
+                            <button class="language-option" data-language="nl">
+                                <span class="language-name">Dutch</span>
+                                <span class="language-code">NL</span>
                             </button>
-                            <button class="language-option" data-lang="ko">
-                                <span class="language-name">한국어</span>
-                                <span class="language-code">KO</span>
-                            </button>
-                            <button class="language-option" data-lang="ar">
-                                <span class="language-name">العربية</span>
-                                <span class="language-code">AR</span>
-                            </button>
-                            <button class="language-option" data-lang="hi">
-                                <span class="language-name">हिन्दी</span>
-                                <span class="language-code">HI</span>
+                            <button class="language-option" data-language="ua">
+                                <span class="language-name">Ukrainian</span>
+                                <span class="language-code">UA</span>
                             </button>
                         </div>
                     </div>
@@ -125,8 +107,8 @@
     <!-- About Hero -->
     <section class="hero about-hero">
         <div class="hero-content">
-            <h1 class="hero-title">About Just Soft Art</h1>
-            <p class="hero-subtitle">Connecting with clients worldwide through innovative technology solutions</p>
+            <h1 class="hero-title" data-translate="about.hero.title">About Just Soft Art</h1>
+            <p class="hero-subtitle" data-translate="about.hero.subtitle">Connecting with clients worldwide through innovative technology solutions</p>
         </div>
         <div class="scroll-indicator">
             <div class="scroll-arrow">
@@ -148,15 +130,15 @@
             <div class="global-stats">
                 <div class="stat-item">
                     <span class="stat-number">15+</span>
-                    <span class="stat-label">Countries</span>
+                    <span class="stat-label" data-translate="about.stats.countries">Countries</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">85+</span>
-                    <span class="stat-label">Projects</span>
+                    <span class="stat-label" data-translate="about.stats.projects">Projects</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">2.5+</span>
-                    <span class="stat-label">Years</span>
+                    <span class="stat-label" data-translate="about.stats.years">Years</span>
                 </div>
             </div>
         </div>
@@ -174,8 +156,8 @@
         <div class="container">
             <div class="info-content">
                 <div class="info-section">
-                    <h2>Global Presence</h2>
-                    <p>Since 2022, our dedicated team of 10 professionals has been delivering high-quality software solutions across multiple continents. We've successfully completed projects in North America, Europe, and Asia, building strong relationships with clients from various industries and backgrounds.</p>
+                    <h2 data-translate="about.globalPresence.title">Global Presence</h2>
+                    <p data-translate="about.globalPresence.description">Since 2022, our dedicated team of 10 professionals has been delivering high-quality software solutions across multiple continents. We've successfully completed projects in North America, Europe, and Asia, building strong relationships with clients from various industries and backgrounds.</p>
                 </div>
                 
                 <div class="info-section">
@@ -287,11 +269,11 @@
     <section class="global-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Go Global?</h2>
-                <p>Let's discuss how we can help you reach clients worldwide with cutting-edge technology solutions.</p>
+                <h2 data-translate="about.cta.title">Ready to Go Global?</h2>
+                <p data-translate="about.cta.subtitle">Let's discuss how we can help you reach clients worldwide with cutting-edge technology solutions.</p>
                 <div class="cta-buttons">
-                    <a href="services.html" class="btn-primary">Learn More</a>
-                    <a href="contact.html" class="btn-secondary">Get Started</a>
+                    <a href="services.html" class="btn-primary" data-translate="about.cta.learnMore">Learn More</a>
+                    <a href="contact.html" class="btn-secondary" data-translate="about.cta.getStarted">Get Started</a>
                 </div>
             </div>
         </div>
@@ -302,44 +284,44 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Company</h4>
+                    <h4 data-translate="footer.company">Company</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="about.html" data-translate="nav.about">About</a></li>
+                        <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Services</h4>
+                    <h4 data-translate="footer.services">Services</h4>
                     <ul>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile Apps</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#" data-translate="footer.webDevelopment">Web Development</a></li>
+                        <li><a href="#" data-translate="footer.mobileApps">Mobile Apps</a></li>
+                        <li><a href="#" data-translate="footer.uiUxDesign">UI/UX Design</a></li>
+                        <li><a href="#" data-translate="footer.consulting">Consulting</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h4 data-translate="footer.connect">Connect</h4>
                     <ul>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="https://t.me/justsoftart">Telegram</a></li>
+                        <li><a href="#" data-translate="footer.linkedin">LinkedIn</a></li>
+                        <li><a href="#" data-translate="footer.twitter">Twitter</a></li>
+                        <li><a href="#" data-translate="footer.github">GitHub</a></li>
+                        <li><a href="https://t.me/justsoftart" data-translate="footer.telegram">Telegram</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Support</h4>
+                    <h4 data-translate="footer.support">Support</h4>
                     <ul>
-                        <li><a href="#" class="inactive" title="Work in Progress">Documentation</a></li>
-                        <li><a href="#" class="inactive" title="Work in Progress">Help Center</a></li>
-                        <li><a href="https://discord.gg/JZKRNnqdkZ">Discord Community</a></li>
-                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="#" class="inactive" title="Work in Progress" data-translate="footer.documentation">Documentation</a></li>
+                        <li><a href="#" class="inactive" title="Work in Progress" data-translate="footer.helpCenter">Help Center</a></li>
+                        <li><a href="https://discord.gg/JZKRNnqdkZ" data-translate="footer.discord">Discord Community</a></li>
+                        <li><a href="privacy.html" data-translate="footer.privacy">Privacy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Just Soft Art. All rights reserved.</p>
+                <p data-translate="footer.copyright">&copy; 2025 Just Soft Art. All rights reserved.</p>
             </div>
         </div>
     </footer>

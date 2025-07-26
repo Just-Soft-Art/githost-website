@@ -68,7 +68,28 @@
     transform-style: preserve-3d;
 }
 
-[class*="carousel"], [class*="btn"], [class*="indicator"], [class*="nav"] {
+/* Optimize paint and layout operations */
+.navbar,
+.carousel-track,
+.carousel-slide,
+.btn-primary,
+.btn-secondary,
+.indicator,
+.nav-menu a,
+.feature-visual,
+.product-card,
+.service-card {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+/* Only apply will-change to elements that actually animate */
+.carousel-track,
+.carousel-slide,
+.btn-primary,
+.btn-secondary,
+.indicator,
+.nav-menu a {
     will-change: transform;
     backface-visibility: hidden;
 }
@@ -988,9 +1009,6 @@ body {
 .feature-visual {
     height: 400px;
     border-radius: 16px;
-    will-change: transform;
-    backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
 }
 
 .footer {

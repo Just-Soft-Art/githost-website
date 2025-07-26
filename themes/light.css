@@ -27,10 +27,8 @@ body {
     --input-background: rgba(255, 255, 255, 0.9);
     --input-border: rgba(29, 29, 31, 0.3);
     --input-focus-background: rgba(0, 122, 255, 0.05);
-    --focus-ring: rgba(0, 122, 255, 0.1);
-    --accent-color: #007aff;
-    --accent-color: #007aff;
     --focus-ring: rgba(0, 122, 255, 0.2);
+    --accent-color: #007aff;
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 

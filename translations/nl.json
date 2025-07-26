@@ -1,0 +1,277 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Diensten",
+    "products": "Producten",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Denk anders.\nCreëer mooi.",
+      "subtitle": "Ervaar de toekomst van digitale kunst en softwareontwikkeling met Just Soft Art.",
+      "learnMore": "Meer weten",
+      "getStarted": "Beginnen"
+    },
+    "showcase": {
+      "title": "Onze nieuwste werk",
+      "creativeSolutions": {
+        "title": "Creatieve oplossingen",
+        "description": "Innovatieve digitale ervaringen die grenzen verleggen."
+      },
+      "softwareDevelopment": {
+        "title": "Softwareontwikkeling",
+        "description": "Schone, efficiënte code die je visie aandrijft."
+      },
+      "digitalArt": {
+        "title": "Digitale kunst",
+        "description": "Adembenemende visuals die boeien en inspireren."
+      }
+    },
+    "carousel": {
+      "title": "Uitgelichte producten",
+      "webApp": {
+        "title": "Moderne webapplicaties",
+        "description": "Responsieve, snelle en gebruiksvriendelijke webapplicaties gebouwd met cutting-edge technologieën.",
+        "features": ["Responsief design", "Snelle prestaties", "Moderne UI/UX", "SEO-geoptimaliseerd"],
+        "button": "Meer weten"
+      },
+      "mobileApp": {
+        "title": "Mobiele app-ontwikkeling",
+        "description": "Native en cross-platform mobiele applicaties voor iOS en Android.",
+        "features": ["Native prestaties", "Cross-platform", "App Store klaar", "Push-notificaties"],
+        "button": "Meer weten"
+      },
+      "customSolution": {
+        "title": "Aangepaste software-oplossingen",
+        "description": "Op maat gemaakte software-oplossingen specifiek ontworpen voor jouw behoeften en zakelijke vereisten.",
+        "features": ["Aangepaste ontwikkeling", "Schaalbare architectuur", "Integratie klaar", "24/7 ondersteuning"],
+        "button": "Neem contact op"
+      }
+    },
+    "features": {
+      "title": "Waarom Just Soft Art kiezen?",
+      "subtitle": "We combineren creativiteit met technische excellentie om uitzonderlijke resultaten te leveren.",
+      "list": [
+        "Aangepaste softwareontwikkeling afgestemd op jouw behoeften",
+        "Moderne webapplicaties met responsief design",
+        "Mobiele app-ontwikkeling voor iOS en Android",
+        "Digitale kunst en creatieve design-oplossingen",
+        "Doorlopende ondersteuning en onderhoudsdiensten"
+      ]
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Onze diensten",
+      "subtitle": "Uitgebreide oplossingen om je bedrijf te transformeren door technologie en uitzonderlijk design."
+    },
+    "webDevelopment": {
+      "title": "Webontwikkeling",
+      "description": "Moderne, responsieve webapplicaties gebouwd met de nieuwste technologieën en beste praktijken.",
+      "features": [
+        "Responsief design",
+        "Progressive Web Apps",
+        "E-commerce oplossingen",
+        "Content management systemen"
+      ],
+      "technologies": ["React", "Vue.js", "Node.js", "PHP", "WordPress"],
+      "button": "Meer weten"
+    },
+    "mobileDevelopment": {
+      "title": "Mobiele ontwikkeling",
+      "description": "Native en cross-platform mobiele applicaties voor iOS en Android.",
+      "features": [
+        "Native iOS-ontwikkeling",
+        "Native Android-ontwikkeling",
+        "Cross-platform oplossingen",
+        "App Store optimalisatie"
+      ],
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
+      "button": "Meer weten"
+    },
+    "uiUxDesign": {
+      "title": "UI/UX Design",
+      "description": "Gebruikersgerichte design-oplossingen die boeiende en intuïtieve gebruikerservaringen creëren.",
+      "features": [
+        "Gebruikersonderzoek",
+        "Wireframing en prototyping",
+        "Visueel design",
+        "Usability testing"
+      ],
+      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision"],
+      "button": "Meer weten"
+    },
+    "consulting": {
+      "title": "Technologieconsultancy",
+      "description": "Expertadvies over technologiestrategie, architectuur en digitale transformatie.",
+      "features": [
+        "Technologiestrategie",
+        "Architectuurontwerp",
+        "Digitale transformatie",
+        "Prestatie-optimalisatie"
+      ],
+      "technologies": ["Cloud-oplossingen", "DevOps", "Beveiliging", "Schaalbaarheid"],
+      "button": "Meer weten"
+    },
+    "cta": {
+      "title": "Klaar om te beginnen?",
+      "subtitle": "Laten we bespreken hoe we je kunnen helpen je digitale doelen te bereiken.",
+      "primaryButton": "Project starten",
+      "secondaryButton": "Offerte krijgen"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Over Just Soft Art",
+      "subtitle": "Verbinden met klanten wereldwijd door innovatieve technologische oplossingen"
+    },
+    "stats": {
+      "countries": "Landen",
+      "projects": "Projecten",
+      "years": "Jaren"
+    },
+    "globalPresence": {
+      "title": "Wereldwijde aanwezigheid",
+      "description": "Sinds 2022 levert ons toegewijde team van 10 professionals hoogwaardige software-oplossingen op meerdere continenten. We hebben met succes projecten voltooid in Noord-Amerika, Europa en Azië, waarbij we sterke relaties hebben opgebouwd met klanten uit verschillende industrieën en achtergronden."
+    },
+    "regionalExpertise": {
+      "title": "Regionale expertise",
+      "northAmerica": {
+        "title": "Noord-Amerika",
+        "description": "Webapplicaties, oplossingen voor kleine bedrijven en aangepaste softwareontwikkeling die klanten in de Verenigde Staten en Canada bedient.",
+        "stats": ["35+ Projecten", "8 Steden"]
+      },
+      "europe": {
+        "title": "Europa",
+        "description": "AVG-conforme webapplicaties, digitale oplossingen en moderne webontwikkeling voor Europese kleine en middelgrote bedrijven.",
+        "stats": ["30+ Projecten", "6 Steden"]
+      },
+      "asiaPacific": {
+        "title": "Azië-Pacific",
+        "description": "Moderne web-oplossingen, responsieve designs en aangepaste applicaties voor groeiende bedrijven in de Azië-Pacific regio.",
+        "stats": ["20+ Projecten", "4 Steden"]
+      }
+    },
+    "successStories": {
+      "title": "Succesverhalen",
+      "localBusiness": {
+        "title": "Lokaal bedrijfsplatform",
+        "description": "Ontwikkeling van een uitgebreide e-commerce oplossing voor een groeiend retailbedrijf, waarbij hun online verkopen met 300% toenamen binnen 6 maanden.",
+        "tags": ["E-commerce", "Groei", "Lokaal"]
+      },
+      "education": {
+        "title": "Educatief beheersysteem",
+        "description": "Bouw van een aangepast leermanagementsysteem voor een privéschool, waarbij cursusbeheer en studentbetrokkenheid werden gestroomlijnd.",
+        "tags": ["Onderwijs", "Beheer", "Aangepast"]
+      },
+      "startup": {
+        "title": "Startup MVP-ontwikkeling",
+        "description": "Creëren van een minimum levensvatbaar product voor een tech-startup die succesvol seed-financiering verkreeg en op de markt werd gelanceerd.",
+        "tags": ["Startup", "MVP", "Innovatie"]
+      }
+    },
+    "benefits": {
+      "title": "Waarom wereldwijd partnerschap kiezen?",
+      "developmentCycle": {
+        "title": "24/7 ontwikkelingscyclus",
+        "description": "Rond-de-klok ontwikkeling met teams in verschillende tijdzones"
+      },
+      "culturalExpertise": {
+        "title": "Culturele expertise",
+        "description": "Diep begrip van lokale markten en culturele nuances"
+      },
+      "costOptimization": {
+        "title": "Kostenoptimalisatie",
+        "description": "Benut wereldwijde talentpools voor kosteneffectieve oplossingen"
+      },
+      "compliance": {
+        "title": "Compliance en beveiliging",
+        "description": "Expertise in internationale regelgeving en beveiligingsstandaarden"
+      },
+      "scalableTechnology": {
+        "title": "Schaalbare technologie",
+        "description": "Toekomstbestendige oplossingen die met je bedrijf wereldwijd groeien"
+      },
+      "partnership": {
+        "title": "Langdurig partnerschap",
+        "description": "Bouwen van duurzame relaties met doorlopende ondersteuning en onderhoud"
+      }
+    },
+    "cta": {
+      "title": "Klaar om wereldwijd te worden?",
+      "subtitle": "Laten we bespreken hoe we je kunnen helpen klanten wereldwijd te bereiken met cutting-edge technologische oplossingen.",
+      "learnMore": "Meer weten",
+      "getStarted": "Beginnen"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Neem contact op",
+      "subtitle": "Klaar om je volgende project te starten? Laten we bespreken hoe we je kunnen helpen je visie tot leven te brengen."
+    },
+    "info": {
+      "title": "Laten we een gesprek beginnen",
+      "subtitle": "We zijn hier om je te helpen slagen. Neem contact met ons op via een van deze kanalen of vul het onderstaande formulier in.",
+      "email": {
+        "title": "Stuur ons een e-mail",
+        "description": "Stuur ons een bericht en we nemen binnen 24 uur contact met je op.",
+        "address": "hello@justsoftart.com"
+      },
+      "telegram": {
+        "title": "Telegram",
+        "description": "Snelle chat en directe ondersteuning via ons Telegram-kanaal.",
+        "handle": "@justsoftart"
+      },
+      "discord": {
+        "title": "Discord Community",
+        "description": "Word lid van onze community voor discussies, updates en ondersteuning.",
+        "server": "Just Soft Art Community"
+      }
+    },
+    "form": {
+      "name": "Volledige naam",
+      "email": "E-mailadres",
+      "subject": "Onderwerp",
+      "message": "Je bericht",
+      "submit": "Bericht verzenden",
+      "placeholders": {
+        "name": "Voer je volledige naam in",
+        "email": "Voer je e-mailadres in",
+        "subject": "Waar gaat het over?",
+        "message": "Vertel ons over je project..."
+      }
+    }
+  },
+  "footer": {
+    "company": "Bedrijf",
+    "services": "Diensten",
+    "connect": "Verbinden",
+    "support": "Ondersteuning",
+    "webDevelopment": "Webontwikkeling",
+    "mobileApps": "Mobiele apps",
+    "uiUxDesign": "UI/UX Design",
+    "consulting": "Consultancy",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "documentation": "Documentatie",
+    "helpCenter": "Helpcentrum",
+    "discord": "Discord Community",
+    "privacy": "Privacy",
+    "copyright": "© 2025 Just Soft Art. Alle rechten voorbehouden."
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "success": "Succes!",
+    "close": "Sluiten",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "back": "Terug",
+    "continue": "Doorgaan"
+  }
+} 

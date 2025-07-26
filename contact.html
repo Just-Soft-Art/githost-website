@@ -21,11 +21,11 @@
                     <span>Just Soft Art</span>
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="#products" class="inactive">Products</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                    <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                    <li><a href="#products" class="inactive" data-translate="nav.products">Products</a></li>
+                    <li><a href="about.html" data-translate="nav.about">About</a></li>
+                    <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
                 </ul>
                 <div class="nav-controls">
                     <div class="theme-dropdown" id="theme-dropdown">
@@ -43,13 +43,7 @@
                                 <span class="theme-option-icon">🌙</span>
                                 <span>Dark</span>
                             </button>
-                            <!-- Temporarily disabled high-contrast theme -->
-                            <!--
-                            <button class="theme-option" data-theme="high-contrast">
-                                <span class="theme-option-icon">⚫</span>
-                                <span>Contrast</span>
-                            </button>
-                            -->
+
                         </div>
                     </div>
                     <div class="language-dropdown" id="language-dropdown">
@@ -110,8 +104,8 @@
         <!-- Contact Hero Section -->
         <section class="hero contact-hero">
             <div class="hero-content">
-                <h1 class="hero-title">Get In Touch</h1>
-                <p class="hero-subtitle">Ready to bring your ideas to life? Let's start a conversation about your next project.</p>
+                <h1 class="hero-title" data-translate="contact.hero.title">Get In Touch</h1>
+                <p class="hero-subtitle" data-translate="contact.hero.subtitle">Ready to bring your ideas to life? Let's start a conversation about your next project.</p>
             </div>
             <div class="scroll-indicator">
                 <div class="scroll-arrow">
@@ -132,8 +126,8 @@
             <div class="container">
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h2>Let's Create Something Amazing</h2>
-                        <p>Whether you need a stunning website, custom software solution, or digital art creation, we're here to help turn your vision into reality.</p>
+                        <h2 data-translate="contact.info.title">Let's Create Something Amazing</h2>
+                        <p data-translate="contact.info.description">Whether you need a stunning website, custom software solution, or digital art creation, we're here to help turn your vision into reality.</p>
                         
                         <div class="contact-methods">
                             <a href="mailto:contact@justsoft.art" class="contact-method">
@@ -165,52 +159,52 @@
                     <div class="contact-form-container">
                         <form class="contact-form" id="contact-form">
                             <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="name" data-translate="contact.form.name">Name *</label>
+                                <input type="text" id="name" name="name" required data-translate-placeholder="contact.form.placeholders.name">
                             </div>
                             
                             <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="email" data-translate="contact.form.email">Email *</label>
+                                <input type="email" id="email" name="email" required data-translate-placeholder="contact.form.placeholders.email">
                             </div>
                             
                             <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" name="company">
+                                <label for="company" data-translate="contact.form.company">Company</label>
+                                <input type="text" id="company" name="company" data-translate-placeholder="contact.form.placeholders.company">
                             </div>
                             
                             <div class="form-group">
-                                <label for="project-type">Project Type</label>
+                                <label for="project-type" data-translate="contact.form.projectType">Project Type</label>
                                 <select id="project-type" name="project-type">
-                                    <option value="">Select a project type</option>
-                                    <option value="web-development">Web Development</option>
-                                    <option value="mobile-app">Mobile App Design</option>
-                                    <option value="digital-art">Digital Art</option>
-                                    <option value="branding">Brand Identity</option>
-                                    <option value="e-commerce">E-Commerce Platform</option>
-                                    <option value="custom">Custom Solution</option>
-                                    <option value="consultation">Consultation</option>
+                                    <option value="" data-translate="contact.form.selectProjectType">Select a project type</option>
+                                    <option value="web-development" data-translate="contact.form.webDevelopment">Web Development</option>
+                                    <option value="mobile-app" data-translate="contact.form.mobileApp">Mobile App Design</option>
+                                    <option value="digital-art" data-translate="contact.form.digitalArt">Digital Art</option>
+                                    <option value="branding" data-translate="contact.form.branding">Brand Identity</option>
+                                    <option value="e-commerce" data-translate="contact.form.ecommerce">E-Commerce Platform</option>
+                                    <option value="custom" data-translate="contact.form.custom">Custom Solution</option>
+                                    <option value="consultation" data-translate="contact.form.consultation">Consultation</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label for="budget">Budget Range</label>
+                                <label for="budget" data-translate="contact.form.budget">Budget Range</label>
                                 <select id="budget" name="budget">
-                                    <option value="">Select budget range</option>
-                                    <option value="under-5k">Under $5,000</option>
-                                    <option value="5k-10k">$5,000 - $10,000</option>
-                                    <option value="10k-25k">$10,000 - $25,000</option>
-                                    <option value="25k-50k">$25,000 - $50,000</option>
-                                    <option value="50k-plus">$50,000+</option>
-                                    <option value="discuss">Let's discuss</option>
+                                    <option value="" data-translate="contact.form.selectBudget">Select budget range</option>
+                                    <option value="under-5k" data-translate="contact.form.under5k">Under $5,000</option>
+                                    <option value="5k-10k" data-translate="contact.form.5k10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k" data-translate="contact.form.10k25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k" data-translate="contact.form.25k50k">$25,000 - $50,000</option>
+                                    <option value="50k-plus" data-translate="contact.form.50kPlus">$50,000+</option>
+                                    <option value="discuss" data-translate="contact.form.discuss">Let's discuss</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label for="message">Tell us about your project *</label>
+                                <label for="message" data-translate="contact.form.message">Tell us about your project *</label>
                                 <div class="message-button-wrapper">
-                                    <textarea id="message" name="message" rows="6" required placeholder="Describe your project, goals, timeline, and any specific requirements..."></textarea>
-                                    <button type="submit" class="btn-primary form-submit">Send Message</button>
+                                    <textarea id="message" name="message" rows="6" required data-translate-placeholder="contact.form.placeholders.message"></textarea>
+                                    <button type="submit" class="btn-primary form-submit" data-translate="contact.form.submit">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -224,44 +218,44 @@
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-section">
-                        <h4>Company</h4>
+                        <h4 data-translate="footer.company">Company</h4>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                            <li><a href="about.html" data-translate="nav.about">About</a></li>
+                            <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                            <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
-                        <h4>Services</h4>
+                        <h4 data-translate="footer.services">Services</h4>
                         <ul>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">Mobile Apps</a></li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#" data-translate="footer.webDevelopment">Web Development</a></li>
+                            <li><a href="#" data-translate="footer.mobileApps">Mobile Apps</a></li>
+                            <li><a href="#" data-translate="footer.uiUxDesign">UI/UX Design</a></li>
+                            <li><a href="#" data-translate="footer.consulting">Consulting</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
-                        <h4>Connect</h4>
+                        <h4 data-translate="footer.connect">Connect</h4>
                         <ul>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="https://t.me/justsoftart">Telegram</a></li>
+                            <li><a href="#" data-translate="footer.linkedin">LinkedIn</a></li>
+                            <li><a href="#" data-translate="footer.twitter">Twitter</a></li>
+                            <li><a href="#" data-translate="footer.github">GitHub</a></li>
+                            <li><a href="https://t.me/justsoftart" data-translate="footer.telegram">Telegram</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
-                        <h4>Support</h4>
+                        <h4 data-translate="footer.support">Support</h4>
                         <ul>
-                            <li><a href="#" class="inactive" title="Work in Progress">Documentation</a></li>
-                            <li><a href="#" class="inactive" title="Work in Progress">Help Center</a></li>
-                            <li><a href="https://discord.gg/JZKRNnqdkZ">Discord Community</a></li>
-                            <li><a href="privacy.html">Privacy</a></li>
+                            <li><a href="#" class="inactive" title="Work in Progress" data-translate="footer.documentation">Documentation</a></li>
+                            <li><a href="#" class="inactive" title="Work in Progress" data-translate="footer.helpCenter">Help Center</a></li>
+                            <li><a href="https://discord.gg/JZKRNnqdkZ" data-translate="footer.discord">Discord Community</a></li>
+                            <li><a href="privacy.html" data-translate="footer.privacy">Privacy</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 Just Soft Art. All rights reserved.</p>
+                    <p data-translate="footer.copyright">&copy; 2025 Just Soft Art. All rights reserved.</p>
                 </div>
             </div>
         </footer>

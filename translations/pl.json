@@ -1,0 +1,277 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "services": "Usługi",
+    "products": "Produkty",
+    "about": "O nas",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "hero": {
+      "title": "Myśl inaczej.\nTwórz pięknie.",
+      "subtitle": "Doświadcz przyszłości sztuki cyfrowej i rozwoju oprogramowania z Just Soft Art.",
+      "learnMore": "Dowiedz się więcej",
+      "getStarted": "Rozpocznij"
+    },
+    "showcase": {
+      "title": "Nasze najnowsze prace",
+      "creativeSolutions": {
+        "title": "Kreatywne rozwiązania",
+        "description": "Innowacyjne doświadczenia cyfrowe, które przekraczają granice."
+      },
+      "softwareDevelopment": {
+        "title": "Rozwój oprogramowania",
+        "description": "Czysty i wydajny kod, który napędza Twoją wizję."
+      },
+      "digitalArt": {
+        "title": "Sztuka cyfrowa",
+        "description": "Oszałamiające wizualizacje, które urzekają i inspirują."
+      }
+    },
+    "carousel": {
+      "title": "Polecane produkty",
+      "webApp": {
+        "title": "Nowoczesne aplikacje webowe",
+        "description": "Responsywne, szybkie i przyjazne dla użytkownika aplikacje webowe zbudowane z najnowszymi technologiami.",
+        "features": ["Responsywny design", "Szybka wydajność", "Nowoczesny UI/UX", "Zoptymalizowane SEO"],
+        "button": "Dowiedz się więcej"
+      },
+      "mobileApp": {
+        "title": "Rozwój aplikacji mobilnych",
+        "description": "Natywne i wieloplatformowe aplikacje mobilne dla iOS i Android.",
+        "features": ["Natywna wydajność", "Wieloplatformowość", "Gotowe na App Store", "Powiadomienia push"],
+        "button": "Dowiedz się więcej"
+      },
+      "customSolution": {
+        "title": "Niestandardowe rozwiązania programistyczne",
+        "description": "Rozwiązania programistyczne szyte na miarę zaprojektowane specjalnie dla Twoich potrzeb i wymagań biznesowych.",
+        "features": ["Niestandardowy rozwój", "Skalowalna architektura", "Gotowe do integracji", "Wsparcie 24/7"],
+        "button": "Skontaktuj się z nami"
+      }
+    },
+    "features": {
+      "title": "Dlaczego wybrać Just Soft Art?",
+      "subtitle": "Łączymy kreatywność z techniczną doskonałością, aby dostarczać wyjątkowe rezultaty.",
+      "list": [
+        "Niestandardowy rozwój oprogramowania dostosowany do Twoich potrzeb",
+        "Nowoczesne aplikacje webowe z responsywnym designem",
+        "Rozwój aplikacji mobilnych dla iOS i Android",
+        "Rozwiązania sztuki cyfrowej i kreatywnego designu",
+        "Ciągłe usługi wsparcia i konserwacji"
+      ]
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Nasze usługi",
+      "subtitle": "Kompleksowe rozwiązania do transformacji Twojego biznesu poprzez technologię i wyjątkowy design."
+    },
+    "webDevelopment": {
+      "title": "Rozwój webowy",
+      "description": "Nowoczesne i responsywne aplikacje webowe zbudowane z najnowszymi technologiami i najlepszymi praktykami.",
+      "features": [
+        "Responsywny design",
+        "Progresywne aplikacje webowe",
+        "Rozwiązania e-commerce",
+        "Systemy zarządzania treścią"
+      ],
+      "technologies": ["React", "Vue.js", "Node.js", "PHP", "WordPress"],
+      "button": "Dowiedz się więcej"
+    },
+    "mobileDevelopment": {
+      "title": "Rozwój mobilny",
+      "description": "Natywne i wieloplatformowe aplikacje mobilne dla iOS i Android.",
+      "features": [
+        "Natywny rozwój iOS",
+        "Natywny rozwój Android",
+        "Rozwiązania wieloplatformowe",
+        "Optymalizacja App Store"
+      ],
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
+      "button": "Dowiedz się więcej"
+    },
+    "uiUxDesign": {
+      "title": "Design UI/UX",
+      "description": "Rozwiązania designu skoncentrowane na użytkowniku, które tworzą angażujące i intuicyjne doświadczenia użytkownika.",
+      "features": [
+        "Badania użytkowników",
+        "Wireframing i prototypowanie",
+        "Design wizualny",
+        "Testy użyteczności"
+      ],
+      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision"],
+      "button": "Dowiedz się więcej"
+    },
+    "consulting": {
+      "title": "Konsultacje technologiczne",
+      "description": "Eksperckie doradztwo w zakresie strategii technologicznej, architektury i transformacji cyfrowej.",
+      "features": [
+        "Strategia technologiczna",
+        "Projektowanie architektury",
+        "Transformacja cyfrowa",
+        "Optymalizacja wydajności"
+      ],
+      "technologies": ["Rozwiązania chmurowe", "DevOps", "Bezpieczeństwo", "Skalowalność"],
+      "button": "Dowiedz się więcej"
+    },
+    "cta": {
+      "title": "Gotowy do rozpoczęcia?",
+      "subtitle": "Porozmawiajmy o tym, jak możemy pomóc Ci osiągnąć Twoje cele cyfrowe.",
+      "primaryButton": "Rozpocznij projekt",
+      "secondaryButton": "Otrzymaj wycenę"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "O Just Soft Art",
+      "subtitle": "Łączenie z klientami na całym świecie poprzez innowacyjne rozwiązania technologiczne"
+    },
+    "stats": {
+      "countries": "Kraje",
+      "projects": "Projekty",
+      "years": "Lata"
+    },
+    "globalPresence": {
+      "title": "Globalna obecność",
+      "description": "Od 2022 roku nasz dedykowany zespół 10 profesjonalistów dostarcza wysokiej jakości rozwiązania programistyczne na wielu kontynentach. Pomyślnie ukończyliśmy projekty w Ameryce Północnej, Europie i Azji, budując silne relacje z klientami z różnych branż i środowisk."
+    },
+    "regionalExpertise": {
+      "title": "Ekspertyza regionalna",
+      "northAmerica": {
+        "title": "Ameryka Północna",
+        "description": "Aplikacje webowe, rozwiązania dla małych firm i niestandardowy rozwój oprogramowania obsługujący klientów w Stanach Zjednoczonych i Kanadzie.",
+        "stats": ["35+ Projektów", "8 Miast"]
+      },
+      "europe": {
+        "title": "Europa",
+        "description": "Zgodne z RODO aplikacje webowe, rozwiązania cyfrowe i nowoczesny rozwój webowy dla europejskich małych i średnich przedsiębiorstw.",
+        "stats": ["30+ Projektów", "6 Miast"]
+      },
+      "asiaPacific": {
+        "title": "Azja-Pacyfik",
+        "description": "Nowoczesne rozwiązania webowe, responsywne designy i niestandardowe aplikacje dla rosnących firm w regionie Azji-Pacyfiku.",
+        "stats": ["20+ Projektów", "4 Miasta"]
+      }
+    },
+    "successStories": {
+      "title": "Historie sukcesu",
+      "localBusiness": {
+        "title": "Platforma lokalnego biznesu",
+        "description": "Rozwinięcie kompleksowego rozwiązania e-commerce dla rosnącego biznesu detalicznego, zwiększając ich sprzedaż online o 300% w ciągu 6 miesięcy.",
+        "tags": ["E-commerce", "Wzrost", "Lokalny"]
+      },
+      "education": {
+        "title": "System zarządzania edukacją",
+        "description": "Zbudowanie niestandardowego systemu zarządzania uczeniem się dla prywatnej szkoły, usprawniając zarządzanie kursami i zaangażowanie studentów.",
+        "tags": ["Edukacja", "Zarządzanie", "Niestandardowy"]
+      },
+      "startup": {
+        "title": "Rozwój MVP startupu",
+        "description": "Stworzenie minimalnego produktu wykonalnego dla startupu technologicznego, który pomyślnie zabezpieczył finansowanie seed i został wprowadzony na rynek.",
+        "tags": ["Startup", "MVP", "Innowacja"]
+      }
+    },
+    "benefits": {
+      "title": "Dlaczego wybrać globalne partnerstwo?",
+      "developmentCycle": {
+        "title": "24/7 cykl rozwoju",
+        "description": "Rozwój przez całą dobę z zespołami w różnych strefach czasowych"
+      },
+      "culturalExpertise": {
+        "title": "Ekspertyza kulturowa",
+        "description": "Głębokie zrozumienie lokalnych rynków i niuansów kulturowych"
+      },
+      "costOptimization": {
+        "title": "Optymalizacja kosztów",
+        "description": "Wykorzystanie globalnych pul talentów dla opłacalnych rozwiązań"
+      },
+      "compliance": {
+        "title": "Zgodność i bezpieczeństwo",
+        "description": "Ekspertyza w międzynarodowych regulacjach i standardach bezpieczeństwa"
+      },
+      "scalableTechnology": {
+        "title": "Skalowalna technologia",
+        "description": "Rozwiązania przyszłościowe, które rosną z Twoim biznesem globalnie"
+      },
+      "partnership": {
+        "title": "Długoterminowe partnerstwo",
+        "description": "Budowanie trwałych relacji z ciągłym wsparciem i konserwacją"
+      }
+    },
+    "cta": {
+      "title": "Gotowy stać się globalnym?",
+      "subtitle": "Porozmawiajmy o tym, jak możemy pomóc Ci dotrzeć do klientów na całym świecie z najnowocześniejszymi rozwiązaniami technologicznymi.",
+      "learnMore": "Dowiedz się więcej",
+      "getStarted": "Rozpocznij"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Skontaktuj się",
+      "subtitle": "Gotowy rozpocząć swój następny projekt? Porozmawiajmy o tym, jak możemy pomóc Ci ożywić Twoją wizję."
+    },
+    "info": {
+      "title": "Rozpocznijmy rozmowę",
+      "subtitle": "Jesteśmy tutaj, aby pomóc Ci odnieść sukces. Skontaktuj się z nami przez którykolwiek z tych kanałów lub wypełnij formularz poniżej.",
+      "email": {
+        "title": "Wyślij nam email",
+        "description": "Wyślij nam wiadomość, a odpowiemy w ciągu 24 godzin.",
+        "address": "hello@justsoftart.com"
+      },
+      "telegram": {
+        "title": "Telegram",
+        "description": "Szybki czat i natychmiastowe wsparcie przez nasz kanał Telegram.",
+        "handle": "@justsoftart"
+      },
+      "discord": {
+        "title": "Społeczność Discord",
+        "description": "Dołącz do naszej społeczności dla dyskusji, aktualizacji i wsparcia.",
+        "server": "Just Soft Art Community"
+      }
+    },
+    "form": {
+      "name": "Pełne imię",
+      "email": "Adres email",
+      "subject": "Temat",
+      "message": "Twoja wiadomość",
+      "submit": "Wyślij wiadomość",
+      "placeholders": {
+        "name": "Wprowadź swoje pełne imię",
+        "email": "Wprowadź swój adres email",
+        "subject": "O co chodzi?",
+        "message": "Opowiedz nam o swoim projekcie..."
+      }
+    }
+  },
+  "footer": {
+    "company": "Firma",
+    "services": "Usługi",
+    "connect": "Połącz",
+    "support": "Wsparcie",
+    "webDevelopment": "Rozwój webowy",
+    "mobileApps": "Aplikacje mobilne",
+    "uiUxDesign": "Design UI/UX",
+    "consulting": "Konsultacje",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "documentation": "Dokumentacja",
+    "helpCenter": "Centrum pomocy",
+    "discord": "Społeczność Discord",
+    "privacy": "Prywatność",
+    "copyright": "© 2025 Just Soft Art. Wszystkie prawa zastrzeżone."
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "error": "Wystąpił błąd",
+    "success": "Sukces!",
+    "close": "Zamknij",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "next": "Dalej",
+    "previous": "Poprzedni",
+    "back": "Wstecz",
+    "continue": "Kontynuuj"
+  }
+} 

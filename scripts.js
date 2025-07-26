@@ -42,15 +42,7 @@ const themes = {
         href: './themes/dark.css',
         logoIcon: './assets/img/homeicon/jsa-dark-homeicon.svg'
     }
-    // Temporarily disabled high-contrast theme
-    /*
-    'high-contrast': {
-        name: 'Contrast',
-        icon: '⚫',
-        href: './themes/high-contrast.css',
-        logoIcon: './assets/img/homeicon/jsa-hc-homeicon.svg'
-    }
-    */
+
 };
 
 // Set theme function
@@ -137,8 +129,110 @@ const languages = {
     ua: { name: 'Ukrainian', code: 'UA' }
 };
 
+// Translation management
+let translations = {};
+let currentLanguage = 'en';
+
+// Load translation file
+async function loadTranslation(languageCode) {
+    try {
+        const response = await fetch(`./translations/${languageCode}.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to load translation for ${languageCode}`);
+        }
+        const translation = await response.json();
+        translations[languageCode] = translation;
+        return translation;
+    } catch (error) {
+        console.warn(`Could not load translation for ${languageCode}:`, error);
+        return null;
+    }
+}
+
+// Get translation text
+function getText(key, languageCode = currentLanguage) {
+    const translation = translations[languageCode];
+    if (!translation) return key;
+    
+    const keys = key.split('.');
+    let value = translation;
+    
+    for (const k of keys) {
+        if (value && typeof value === 'object' && k in value) {
+            value = value[k];
+        } else {
+            return key; // Return original key if translation not found
+        }
+    }
+    
+    return typeof value === 'string' ? value : key;
+}
+
+// Apply translations to the page
+function applyTranslations(languageCode) {
+    const translation = translations[languageCode];
+    if (!translation) return;
+    
+    // Update all elements with data-translate attribute
+    const translatableElements = document.querySelectorAll('[data-translate]');
+    translatableElements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const translatedText = getText(key, languageCode);
+        
+        if (translatedText && translatedText !== key) {
+            // Handle special cases for elements with HTML content
+            if (element.classList.contains('hero-title')) {
+                element.innerHTML = translatedText.replace(/\n/g, '<br>');
+            } else {
+                element.textContent = translatedText;
+            }
+        }
+    });
+    
+    // Update placeholders
+    const placeholderElements = document.querySelectorAll('[data-translate-placeholder]');
+    placeholderElements.forEach(element => {
+        const key = element.getAttribute('data-translate-placeholder');
+        const translatedText = getText(key, languageCode);
+        
+        if (translatedText && translatedText !== key) {
+            element.placeholder = translatedText;
+        }
+    });
+    
+    // Update select options
+    const selectOptions = document.querySelectorAll('option[data-translate]');
+    selectOptions.forEach(option => {
+        const key = option.getAttribute('data-translate');
+        const translatedText = getText(key, languageCode);
+        
+        if (translatedText && translatedText !== key) {
+            option.textContent = translatedText;
+        }
+    });
+    
+    // Update navigation links that don't have data-translate
+    const navLinks = document.querySelectorAll('.nav-menu a:not([data-translate])');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === 'index.html' || href === './index.html' || href === '#home') {
+            link.textContent = getText('nav.home', languageCode);
+        } else if (href === 'services.html' || href === './services.html') {
+            link.textContent = getText('nav.services', languageCode);
+        } else if (href === 'about.html' || href === './about.html') {
+            link.textContent = getText('nav.about', languageCode);
+        } else if (href === 'contact.html' || href === './contact.html') {
+            link.textContent = getText('nav.contact', languageCode);
+        } else if (href === '#products') {
+            link.textContent = getText('nav.products', languageCode);
+        }
+    });
+}
+
+
+
 // Set language function
-function setLanguage(languageCode) {
+async function setLanguage(languageCode) {
     const language = languages[languageCode];
     if (!language || !languageToggleBtn) return;
     
@@ -154,6 +248,17 @@ function setLanguage(languageCode) {
             option.classList.add('active');
         }
     });
+    
+    // Load translation if not already loaded
+    if (!translations[languageCode]) {
+        await loadTranslation(languageCode);
+    }
+    
+    // Update current language
+    currentLanguage = languageCode;
+    
+    // Apply translations to the page
+    applyTranslations(languageCode);
     
     // Save to localStorage with error handling
     try {
@@ -225,7 +330,7 @@ function closeMobileMenu() {
 }
 
 // Event listeners
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     // Load saved theme or default to light
     let savedTheme = 'light';
     try {
@@ -266,19 +371,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Language option selection
     languageOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
+        option.addEventListener('click', async function(e) {
             e.stopPropagation();
             const languageCode = this.dataset.language;
-            setLanguage(languageCode);
+            await setLanguage(languageCode);
         });
     });
     
-    // Load saved language preference
+    // Load saved language preference and initialize translations
     try {
         const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+        // Load default language translation first
+        await loadTranslation(savedLanguage);
         setLanguage(savedLanguage);
     } catch (e) {
         console.warn('Unable to load language preference:', e);
+        // Fallback to English
+        await loadTranslation('en');
         setLanguage('en');
     }
     
@@ -686,10 +795,7 @@ class WorldMapVisualization {
         this.container = document.getElementById('world-map-container');
         this.canvas = document.getElementById('world-map-canvas');
         
-        console.log('About Page Init:', {
-            container: this.container,
-            canvas: this.canvas
-        });
+
         
         if (!this.container || !this.canvas) {
             console.warn('World map elements not found on about page');
@@ -724,16 +830,22 @@ class WorldMapVisualization {
             // Observe both canvas and container
             resizeObserver.observe(this.canvas);
             resizeObserver.observe(this.container);
+            
+            // Store observer for cleanup
+            this.resizeObserver = resizeObserver;
+        } else {
+            // Fallback to window resize event
+            let windowResizeTimeout;
+            const handleWindowResize = () => {
+                clearTimeout(windowResizeTimeout);
+                windowResizeTimeout = setTimeout(() => {
+                    this.handleResize();
+                }, 16);
+            };
+            
+            window.addEventListener('resize', handleWindowResize, { passive: true });
+            this.windowResizeHandler = handleWindowResize;
         }
-        
-        // Fallback to window resize event
-        let windowResizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(windowResizeTimeout);
-            windowResizeTimeout = setTimeout(() => {
-                this.handleResize();
-            }, 16);
-        });
         
         // Theme change listener
         this.setupThemeListener();
@@ -747,7 +859,6 @@ class WorldMapVisualization {
     
     initContactPage() {
         // Legacy contact page code - About page now has the world map
-        console.log('Contact page - About page now contains the interactive world map');
     }
     
     setupControls() {
@@ -801,7 +912,6 @@ class WorldMapVisualization {
     resetView() {
         this.updateDotsForResize();
         this.updateDotsColors();
-        console.log('View reset');
     }
     
     toggleConnections() {
@@ -810,7 +920,7 @@ class WorldMapVisualization {
         if (btn) {
             btn.textContent = this.connectionsVisible ? '🔗 Hide Connections' : '🔗 Show Connections';
         }
-        console.log('Connections toggled:', this.connectionsVisible);
+
     }
     
     toggleAnimation() {
@@ -819,7 +929,7 @@ class WorldMapVisualization {
         if (btn) {
             btn.textContent = this.animationPaused ? '▶️ Resume Animation' : '⏸️ Pause Animation';
         }
-        console.log('Animation toggled:', !this.animationPaused);
+
     }
     
     handleResize() {
@@ -1329,22 +1439,11 @@ class WorldMapVisualization {
         const themeStylesheet = document.getElementById('theme-stylesheet');
         const stylesheetHref = themeStylesheet ? themeStylesheet.href : '';
         
-        // Debug logging
-        console.log('Current theme attribute:', themeAttribute);
-        console.log('Stylesheet href:', stylesheetHref);
-        
         // Check for dark theme
         const isDark = themeAttribute === 'dark' || stylesheetHref.includes('dark.css');
-        const isHighContrast = themeAttribute === 'high-contrast' || stylesheetHref.includes('high-contrast.css');
-        
         if (isDark) {
-            console.log('Using white text for dark theme');
             return '#FFFFFF'; // White text for dark theme
-        } else if (isHighContrast) {
-            console.log('Using black text for high-contrast theme');
-            return '#000000'; // Black text for high-contrast theme (white background)
         } else {
-            console.log('Using black text for light theme');
             return '#000000'; // Black text for light theme
         }
     }
@@ -1355,6 +1454,41 @@ class WorldMapVisualization {
         const g = parseInt(cleanHex.slice(2, 4), 16);
         const b = parseInt(cleanHex.slice(4, 6), 16);
         return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    }
+    
+    // Cleanup method to prevent memory leaks
+    destroy() {
+        // Stop animation
+        if (this.animationId) {
+            cancelAnimationFrame(this.animationId);
+            this.animationId = null;
+        }
+        
+        // Disconnect ResizeObserver
+        if (this.resizeObserver) {
+            this.resizeObserver.disconnect();
+            this.resizeObserver = null;
+        }
+        
+        // Remove window resize listener
+        if (this.windowResizeHandler) {
+            window.removeEventListener('resize', this.windowResizeHandler);
+            this.windowResizeHandler = null;
+        }
+        
+        // Remove canvas event listeners
+        if (this.canvas) {
+            this.canvas.removeEventListener('mousemove', this.handleMouseMove);
+            this.canvas.removeEventListener('click', this.handleCanvasClick);
+        }
+        
+        // Clear intervals
+        if (this.autoplayInterval) {
+            clearInterval(this.autoplayInterval);
+            this.autoplayInterval = null;
+        }
+        
+        this.isActive = false;
     }
 }
 

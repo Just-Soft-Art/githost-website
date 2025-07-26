@@ -1,0 +1,277 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Think Different.\nCreate Beautiful.",
+      "subtitle": "Experience the future of digital art and software development with Just Soft Art.",
+      "learnMore": "Learn More",
+      "getStarted": "Get Started"
+    },
+    "showcase": {
+      "title": "Our Latest Work",
+      "creativeSolutions": {
+        "title": "Creative Solutions",
+        "description": "Innovative digital experiences that push boundaries."
+      },
+      "softwareDevelopment": {
+        "title": "Software Development",
+        "description": "Clean, efficient code that powers your vision."
+      },
+      "digitalArt": {
+        "title": "Digital Art",
+        "description": "Stunning visuals that captivate and inspire."
+      }
+    },
+    "carousel": {
+      "title": "Featured Products",
+      "webApp": {
+        "title": "Modern Web Applications",
+        "description": "Responsive, fast, and user-friendly web applications built with cutting-edge technologies.",
+        "features": ["Responsive Design", "Fast Performance", "Modern UI/UX", "SEO Optimized"],
+        "button": "Learn More"
+      },
+      "mobileApp": {
+        "title": "Mobile App Development",
+        "description": "Native and cross-platform mobile applications for iOS and Android platforms.",
+        "features": ["Native Performance", "Cross-Platform", "App Store Ready", "Push Notifications"],
+        "button": "Learn More"
+      },
+      "customSolution": {
+        "title": "Custom Software Solutions",
+        "description": "Tailored software solutions designed specifically for your business needs and requirements.",
+        "features": ["Custom Development", "Scalable Architecture", "Integration Ready", "24/7 Support"],
+        "button": "Contact Us"
+      }
+    },
+    "features": {
+      "title": "Why Choose Just Soft Art?",
+      "subtitle": "We combine creativity with technical excellence to deliver exceptional results.",
+      "list": [
+        "Custom software development tailored to your needs",
+        "Modern web applications with responsive design",
+        "Mobile app development for iOS and Android",
+        "Digital art and creative design solutions",
+        "Ongoing support and maintenance services"
+      ]
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive solutions to transform your business through technology and exceptional design."
+    },
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "Modern, responsive web applications built with the latest technologies and best practices.",
+      "features": [
+        "Responsive Design",
+        "Progressive Web Apps",
+        "E-commerce Solutions",
+        "Content Management Systems"
+      ],
+      "technologies": ["React", "Vue.js", "Node.js", "PHP", "WordPress"],
+      "button": "Learn More"
+    },
+    "mobileDevelopment": {
+      "title": "Mobile Development",
+      "description": "Native and cross-platform mobile applications for iOS and Android platforms.",
+      "features": [
+        "Native iOS Development",
+        "Native Android Development",
+        "Cross-Platform Solutions",
+        "App Store Optimization"
+      ],
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
+      "button": "Learn More"
+    },
+    "uiUxDesign": {
+      "title": "UI/UX Design",
+      "description": "User-centered design solutions that create engaging and intuitive user experiences.",
+      "features": [
+        "User Research",
+        "Wireframing & Prototyping",
+        "Visual Design",
+        "Usability Testing"
+      ],
+      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision"],
+      "button": "Learn More"
+    },
+    "consulting": {
+      "title": "Technology Consulting",
+      "description": "Expert guidance on technology strategy, architecture, and digital transformation.",
+      "features": [
+        "Technology Strategy",
+        "Architecture Design",
+        "Digital Transformation",
+        "Performance Optimization"
+      ],
+      "technologies": ["Cloud Solutions", "DevOps", "Security", "Scalability"],
+      "button": "Learn More"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Let's discuss how we can help you achieve your digital goals.",
+      "primaryButton": "Start Project",
+      "secondaryButton": "Get Quote"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Just Soft Art",
+      "subtitle": "Connecting with clients worldwide through innovative technology solutions"
+    },
+    "stats": {
+      "countries": "Countries",
+      "projects": "Projects",
+      "years": "Years"
+    },
+    "globalPresence": {
+      "title": "Global Presence",
+      "description": "Since 2022, our dedicated team of 10 professionals has been delivering high-quality software solutions across multiple continents. We've successfully completed projects in North America, Europe, and Asia, building strong relationships with clients from various industries and backgrounds."
+    },
+    "regionalExpertise": {
+      "title": "Regional Expertise",
+      "northAmerica": {
+        "title": "North America",
+        "description": "Web applications, small business solutions, and custom software development serving clients across the United States and Canada.",
+        "stats": ["35+ Projects", "8 Cities"]
+      },
+      "europe": {
+        "title": "Europe",
+        "description": "GDPR-compliant web applications, digital solutions, and modern web development for European small and medium businesses.",
+        "stats": ["30+ Projects", "6 Cities"]
+      },
+      "asiaPacific": {
+        "title": "Asia-Pacific",
+        "description": "Modern web solutions, responsive designs, and custom applications for growing businesses in the Asia-Pacific region.",
+        "stats": ["20+ Projects", "4 Cities"]
+      }
+    },
+    "successStories": {
+      "title": "Success Stories",
+      "localBusiness": {
+        "title": "Local Business Platform",
+        "description": "Developed a comprehensive e-commerce solution for a growing retail business, increasing their online sales by 300% within 6 months.",
+        "tags": ["E-commerce", "Growth", "Local"]
+      },
+      "education": {
+        "title": "Educational Management System",
+        "description": "Built a custom learning management system for a private school, streamlining course management and student engagement.",
+        "tags": ["Education", "Management", "Custom"]
+      },
+      "startup": {
+        "title": "Startup MVP Development",
+        "description": "Created a minimum viable product for a tech startup that successfully secured seed funding and launched to market.",
+        "tags": ["Startup", "MVP", "Innovation"]
+      }
+    },
+    "benefits": {
+      "title": "Why Choose Global Partnership?",
+      "developmentCycle": {
+        "title": "24/7 Development Cycle",
+        "description": "Round-the-clock development with teams across different time zones"
+      },
+      "culturalExpertise": {
+        "title": "Cultural Expertise",
+        "description": "Deep understanding of local markets and cultural nuances"
+      },
+      "costOptimization": {
+        "title": "Cost Optimization",
+        "description": "Leverage global talent pools for cost-effective solutions"
+      },
+      "compliance": {
+        "title": "Compliance & Security",
+        "description": "Expertise in international regulations and security standards"
+      },
+      "scalableTechnology": {
+        "title": "Scalable Technology",
+        "description": "Future-ready solutions that grow with your business globally"
+      },
+      "partnership": {
+        "title": "Long-term Partnership",
+        "description": "Building lasting relationships with ongoing support and maintenance"
+      }
+    },
+    "cta": {
+      "title": "Ready to Go Global?",
+      "subtitle": "Let's discuss how we can help you reach clients worldwide with cutting-edge technology solutions.",
+      "learnMore": "Learn More",
+      "getStarted": "Get Started"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Get in Touch",
+      "subtitle": "Ready to start your next project? Let's discuss how we can help bring your vision to life."
+    },
+    "info": {
+      "title": "Let's Start a Conversation",
+      "subtitle": "We're here to help you succeed. Reach out to us through any of these channels or fill out the form below.",
+      "email": {
+        "title": "Email Us",
+        "description": "Send us a message and we'll get back to you within 24 hours.",
+        "address": "hello@justsoftart.com"
+      },
+      "telegram": {
+        "title": "Telegram",
+        "description": "Quick chat and instant support through our Telegram channel.",
+        "handle": "@justsoftart"
+      },
+      "discord": {
+        "title": "Discord Community",
+        "description": "Join our community for discussions, updates, and support.",
+        "server": "Just Soft Art Community"
+      }
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "placeholders": {
+        "name": "Enter your full name",
+        "email": "Enter your email address",
+        "subject": "What's this about?",
+        "message": "Tell us about your project..."
+      }
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "connect": "Connect",
+    "support": "Support",
+    "webDevelopment": "Web Development",
+    "mobileApps": "Mobile Apps",
+    "uiUxDesign": "UI/UX Design",
+    "consulting": "Consulting",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "documentation": "Documentation",
+    "helpCenter": "Help Center",
+    "discord": "Discord Community",
+    "privacy": "Privacy",
+    "copyright": "© 2025 Just Soft Art. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "next": "Next",
+    "previous": "Previous",
+    "back": "Back",
+    "continue": "Continue"
+  }
+} 
