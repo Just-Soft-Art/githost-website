@@ -1,4 +1,35 @@
 {
+  "page": {
+    "home": {
+      "title": "Just Soft Art"
+    },
+    "about": {
+      "title": "Despre noi - Just Soft Art"
+    },
+    "services": {
+      "title": "Servicii - Just Soft Art"
+    },
+    "contact": {
+      "title": "Contact - Just Soft Art"
+    },
+    "privacy": {
+      "title": "Politica de confidențialitate - Just Soft Art"
+    },
+    "globalReach": {
+      "title": "Acoperire globală - Just Soft Art"
+    }
+  },
+  "language": {
+    "english": "Engleză",
+    "german": "Germană",
+    "french": "Franceză", 
+    "italian": "Italiană",
+    "spanish": "Spaniolă",
+    "polish": "Poloneză",
+    "romanian": "Română",
+    "dutch": "Olandeză",
+    "ukrainian": "Ucraineană"
+  },
   "nav": {
     "home": "Acasă",
     "services": "Servicii",
@@ -6,119 +37,103 @@
     "about": "Despre noi",
     "contact": "Contact"
   },
+  "theme": {
+    "light": "Luminos",
+    "dark": "Întunecat"
+  },
   "home": {
     "hero": {
-      "title": "Gândește diferit.\nCreează frumos.",
+      "title": "Gândește diferit.<br>Creează frumos.",
       "subtitle": "Experimentează viitorul artei digitale și dezvoltării software cu Just Soft Art.",
       "learnMore": "Află mai multe",
       "getStarted": "Începe"
     },
-    "showcase": {
-      "title": "Ultimele noastre lucrări",
-      "creativeSolutions": {
-        "title": "Soluții creative",
-        "description": "Experiențe digitale inovatoare care depășesc limitele."
-      },
-      "softwareDevelopment": {
-        "title": "Dezvoltare software",
-        "description": "Cod curat și eficient care îți alimentează viziunea."
-      },
-      "digitalArt": {
-        "title": "Artă digitală",
-        "description": "Vizuale uimitoare care captivează și inspiră."
-      }
-    },
-    "carousel": {
-      "title": "Produse recomandate",
-      "webApp": {
-        "title": "Aplicații web moderne",
-        "description": "Aplicații web responsive, rapide și prietenoase cu utilizatorul construite cu cele mai noi tehnologii.",
-        "features": ["Design responsive", "Performanță rapidă", "UI/UX modern", "Optimizat SEO"],
-        "button": "Află mai multe"
-      },
-      "mobileApp": {
-        "title": "Dezvoltare aplicații mobile",
-        "description": "Aplicații mobile native și cross-platform pentru iOS și Android.",
-        "features": ["Performanță nativă", "Cross-platform", "Gata pentru App Store", "Notificări push"],
-        "button": "Află mai multe"
-      },
-      "customSolution": {
-        "title": "Soluții software personalizate",
-        "description": "Soluții software la comandă proiectate specific pentru nevoile și cerințele tale de business.",
-        "features": ["Dezvoltare personalizată", "Arhitectură scalabilă", "Gata pentru integrare", "Suport 24/7"],
-        "button": "Contactează-ne"
-      }
-    },
     "features": {
-      "title": "De ce să alegi Just Soft Art?",
-      "subtitle": "Combinăm creativitatea cu excelența tehnică pentru a livra rezultate excepționale.",
-      "list": [
-        "Dezvoltare software personalizată adaptată nevoilor tale",
-        "Aplicații web moderne cu design responsive",
-        "Dezvoltare aplicații mobile pentru iOS și Android",
-        "Soluții de artă digitală și design creativ",
-        "Servicii continue de suport și întreținere"
-      ]
+      "title": "Proiectat pentru excelență",
+      "description": "Fiecare pixel contează. Fiecare linie de cod este importantă. Creăm experiențe digitale cu aceeași atenție la detalii care definește designul excelent.",
+      "pixelPerfect": "Design perfect la pixel",
+      "performance": "Performanță optimizată",
+      "userCentered": "Abordare centrată pe utilizator",
+      "futureReady": "Tehnologie pregătită pentru viitor"
     }
   },
   "services": {
     "hero": {
       "title": "Serviciile noastre",
-      "subtitle": "Soluții complete pentru a-ți transforma afacerea prin tehnologie și design excepțional."
+      "subtitle": "Soluții complete pentru transformarea afacerii tale prin tehnologie și design excepțional."
     },
-    "webDevelopment": {
-      "title": "Dezvoltare web",
-      "description": "Aplicații web moderne și responsive construite cu cele mai noi tehnologii și cele mai bune practici.",
-      "features": [
-        "Design responsive",
-        "Aplicații web progresive",
-        "Soluții e-commerce",
-        "Sisteme de gestionare a conținutului"
-      ],
-      "technologies": ["React", "Vue.js", "Node.js", "PHP", "WordPress"],
-      "button": "Află mai multe"
+    "customSoftware": {
+      "title": "Dezvoltare software personalizat",
+      "description": "Soluții adaptate provocărilor tale de business: sisteme CRM, platforme ERP și aplicații de business personalizate concepute pentru a optimiza operațiunile și a stimula creșterea.",
+      "features": {
+        "erp": "Planificarea resurselor întreprinderii (ERP)",
+        "crm": "Managementul relațiilor cu clienții (CRM)",
+        "bi": "Platforme de business intelligence",
+        "workflow": "Sisteme de automatizare a fluxurilor de lucru",
+        "api": "Dezvoltare și integrare API"
+      }
     },
-    "mobileDevelopment": {
-      "title": "Dezvoltare mobilă",
-      "description": "Aplicații mobile native și cross-platform pentru iOS și Android.",
-      "features": [
-        "Dezvoltare nativă iOS",
-        "Dezvoltare nativă Android",
-        "Soluții cross-platform",
-        "Optimizare App Store"
-      ],
-      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
-      "button": "Află mai multe"
+    "webMobile": {
+      "title": "Dezvoltare web și mobile",
+      "description": "Site-uri web moderne, aplicații cu o singură pagină (SPA), aplicații web progresive (PWA) și aplicații mobile native care oferă experiențe de utilizator excepționale pe toate dispozitivele.",
+      "features": {
+        "responsive": "Aplicații web responsive",
+        "pwa": "Aplicații web progresive (PWA)",
+        "spa": "Aplicații cu o singură pagină (SPA)",
+        "native": "Dezvoltare mobile nativă",
+        "crossPlatform": "Soluții cross-platform"
+      }
     },
-    "uiUxDesign": {
+    "uiUx": {
       "title": "Design UI/UX",
-      "description": "Soluții de design centrate pe utilizator care creează experiențe de utilizator captivante și intuitive.",
-      "features": [
-        "Cercetare utilizatori",
-        "Wireframing și prototipare",
-        "Design vizual",
-        "Teste de utilizabilitate"
-      ],
-      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision"],
-      "button": "Află mai multe"
+      "description": "Designul interfețelor, prototiparea și auditurile experienței utilizatorului care creează experiențe digitale intuitive și captivante pe care utilizatorii le iubesc și de care afacerile depind.",
+      "features": {
+        "research": "Cercetarea experienței utilizatorului",
+        "prototyping": "Prototipare interactivă",
+        "designSystems": "Sisteme de design",
+        "usability": "Testarea utilizabilității",
+        "accessibility": "Conformitatea cu accesibilitatea"
+      }
+    },
+    "ecommerce": {
+      "title": "Soluții e-commerce",
+      "description": "Dezvoltarea completă a magazinelor online, sisteme de rezervare și soluții de procesare a plăților care stimulează vânzările și oferă experiențe de cumpărături fluide pentru clienții tăi.",
+      "features": {
+        "onlineStore": "Dezvoltarea magazinului online",
+        "payment": "Integrarea gateway-ului de plată",
+        "inventory": "Managementul inventarului",
+        "booking": "Sisteme de rezervare",
+        "multiVendor": "Marketplace-uri cu mai mulți vânzători"
+      }
+    },
+    "aiAutomation": {
+      "title": "AI și automatizare",
+      "description": "Integrarea AI, automatizarea sarcinilor, chatbot-uri inteligente și soluții de generare de conținut care îmbunătățesc productivitatea și creează procese de business mai inteligente.",
+      "features": {
+        "aiIntegration": "Integrarea inteligenței artificiale",
+        "automation": "Automatizarea proceselor de business",
+        "chatbots": "Chatbot-uri inteligente",
+        "contentGeneration": "Sisteme de generare de conținut",
+        "machineLearning": "Soluții de machine learning"
+      }
     },
     "consulting": {
-      "title": "Consultanță tehnologică",
-      "description": "Sfaturi experte în strategie tehnologică, arhitectură și transformare digitală.",
-      "features": [
-        "Strategie tehnologică",
-        "Design arhitectural",
-        "Transformare digitală",
-        "Optimizare performanță"
-      ],
-      "technologies": ["Soluții cloud", "DevOps", "Securitate", "Scalabilitate"],
-      "button": "Află mai multe"
+      "title": "Consultanță IT și CTO-ca-serviciu",
+      "description": "Consultanță strategică în tehnologie, leadership tehnic și suport complet pentru startup-uri și IMM-uri care doresc să își scaleze eficient infrastructura tehnologică.",
+      "features": {
+        "strategy": "Consultanță în strategia tehnologică",
+        "reviews": "Revizuiri de arhitectură și cod",
+        "leadership": "Leadership de echipă și mentoring",
+        "startup": "Suport tehnic pentru startup-uri",
+        "transformation": "Transformare digitală"
+      }
     },
+    "getStarted": "Începe",
     "cta": {
-      "title": "Gata să începi?",
-      "subtitle": "Să discutăm despre cum te putem ajuta să-ți atingi obiectivele digitale.",
-      "primaryButton": "Începe proiectul",
-      "secondaryButton": "Obține ofertă"
+      "title": "Gata să îți transformi afacerea?",
+      "description": "Să discutăm cum serviciile noastre te pot ajuta să îți atingi obiectivele și să stimulezi inovația în industria ta.",
+      "startProject": "Începe proiectul",
+      "scheduleConsultation": "Programează consultația"
     }
   },
   "about": {
@@ -133,122 +148,205 @@
     },
     "globalPresence": {
       "title": "Prezență globală",
-      "description": "Din 2022, echipa noastră dedicată de 10 profesioniști livrează soluții software de înaltă calitate pe mai multe continente. Am finalizat cu succes proiecte în America de Nord, Europa și Asia, construind relații puternice cu clienți din diverse industrii și medii."
+      "description": "Din 2022, echipa noastră dedicată de 10 profesioniști livrează soluții software de înaltă calitate pe mai multe continente. Am finalizat cu succes proiecte în America de Nord, Europa și Asia, construind relații solide cu clienți din diverse industrii și medii."
     },
     "regionalExpertise": {
       "title": "Expertiză regională",
       "northAmerica": {
         "title": "America de Nord",
-        "description": "Aplicații web, soluții pentru mici afaceri și dezvoltare software personalizată servind clienți în Statele Unite și Canada.",
-        "stats": ["35+ Proiecte", "8 Orașe"]
+        "description": "Aplicații web, soluții pentru întreprinderi mici și dezvoltare software personalizată servind clienți din Statele Unite și Canada.",
+        "projects": "35+ Proiecte",
+        "cities": "8 Orașe"
       },
       "europe": {
         "title": "Europa",
-        "description": "Aplicații web conforme GDPR, soluții digitale și dezvoltare web modernă pentru întreprinderi mici și mijlocii europene.",
-        "stats": ["30+ Proiecte", "6 Orașe"]
+        "description": "Aplicații web conforme GDPR, soluții digitale și dezvoltare web modernă pentru întreprinderile mici și mijlocii europene.",
+        "projects": "30+ Proiecte",
+        "cities": "6 Orașe"
       },
       "asiaPacific": {
         "title": "Asia-Pacific",
-        "description": "Soluții web moderne, designuri responsive și aplicații personalizate pentru afaceri în creștere în regiunea Asia-Pacific.",
-        "stats": ["20+ Proiecte", "4 Orașe"]
+        "description": "Soluții web moderne, design responsive și aplicații personalizate pentru afaceri în creștere din regiunea Asia-Pacific.",
+        "projects": "20+ Proiecte",
+        "cities": "4 Orașe"
       }
     },
     "successStories": {
       "title": "Povești de succes",
-      "localBusiness": {
-        "title": "Platformă de afacere locală",
-        "description": "Dezvoltarea unei soluții e-commerce complete pentru o afacere de retail în creștere, crescând vânzările online cu 300% în 6 luni.",
-        "tags": ["E-commerce", "Creștere", "Local"]
+      "business": {
+        "title": "Platformă de afaceri locale",
+        "description": "A dezvoltat o soluție e-commerce cuprinzătoare pentru o afacere de retail în creștere, crescând vânzările online cu 300% în 6 luni."
       },
       "education": {
-        "title": "Sistem de gestionare educațională",
-        "description": "Construirea unui sistem de gestionare a învățării personalizat pentru o școală privată, optimizând gestionarea cursurilor și implicarea studenților.",
-        "tags": ["Educație", "Gestionare", "Personalizat"]
+        "title": "Sistem de management educațional",
+        "description": "A construit un sistem de management al învățării personalizat pentru o școală privată, îmbunătățind managementul cursurilor și implicarea studenților."
       },
       "startup": {
         "title": "Dezvoltare MVP startup",
-        "description": "Crearea unui produs minim viabil pentru un startup tehnologic care a obținut cu succes finanțare seed și a fost lansat pe piață.",
-        "tags": ["Startup", "MVP", "Inovație"]
+        "description": "A creat un produs minim viabil pentru un startup tehnologic care a obținut cu succes finanțare inițială și s-a lansat pe piață."
+      },
+      "tags": {
+        "ecommerce": "E-commerce",
+        "growth": "Creștere",
+        "local": "Local",
+        "education": "Educație",
+        "management": "Management",
+        "custom": "Personalizat",
+        "startup": "Startup",
+        "mvp": "MVP",
+        "innovation": "Inovație"
       }
     },
     "benefits": {
-      "title": "De ce să alegi parteneriat global?",
-      "developmentCycle": {
+      "title": "De ce să alegi parteneriatul global?",
+      "development": {
         "title": "Ciclu de dezvoltare 24/7",
-        "description": "Dezvoltare non-stop cu echipe în diferite zone de timp"
+        "description": "Dezvoltare continuă cu echipe în diferite fusuri orare"
       },
-      "culturalExpertise": {
+      "cultural": {
         "title": "Expertiză culturală",
         "description": "Înțelegere profundă a piețelor locale și nuanțelor culturale"
       },
-      "costOptimization": {
-        "title": "Optimizare costuri",
-        "description": "Leveragează pool-urile de talente globale pentru soluții rentabile"
+      "cost": {
+        "title": "Optimizarea costurilor",
+        "description": "Valorificarea pool-urilor de talente globale pentru soluții cost-eficiente"
       },
       "compliance": {
         "title": "Conformitate și securitate",
         "description": "Expertiză în reglementări internaționale și standarde de securitate"
       },
-      "scalableTechnology": {
+      "scalable": {
         "title": "Tehnologie scalabilă",
         "description": "Soluții pregătite pentru viitor care cresc cu afacerea ta global"
       },
       "partnership": {
         "title": "Parteneriat pe termen lung",
-        "description": "Construirea de relații durabile cu suport și întreținere continue"
+        "description": "Construirea de relații durabile cu suport și întreținere continuă"
       }
     },
     "cta": {
       "title": "Gata să devii global?",
-      "subtitle": "Să discutăm despre cum te putem ajuta să ajungi la clienți din întreaga lume cu soluții tehnologice de ultimă generație.",
+      "subtitle": "Să discutăm cum te putem ajuta să ajungi la clienți din întreaga lume cu soluții tehnologice de ultimă generație.",
       "learnMore": "Află mai multe",
       "getStarted": "Începe"
     }
   },
   "contact": {
     "hero": {
-      "title": "Ia legătura",
-      "subtitle": "Gata să începi următorul tău proiect? Să discutăm despre cum te putem ajuta să-ți dai viață viziunii."
+      "title": "Să luăm legătura",
+      "subtitle": "Gata să îți dai viață ideilor? Să începem o conversație despre următorul tău proiect."
     },
     "info": {
-      "title": "Să începem o conversație",
-      "subtitle": "Suntem aici să te ajutăm să reușești. Contactează-ne prin oricare dintre aceste canale sau completează formularul de mai jos.",
+      "title": "Să creăm ceva uimitor",
+      "description": "Fie că ai nevoie de un site web uluitor, o soluție software personalizată sau creația de artă digitală, suntem aici să te ajutăm să îți transformi viziunea în realitate."
+    },
+    "methods": {
       "email": {
-        "title": "Trimite-ne un email",
-        "description": "Trimite-ne un mesaj și îți vom răspunde în 24 de ore.",
-        "address": "hello@justsoftart.com"
+        "title": "Email"
       },
-      "telegram": {
-        "title": "Telegram",
-        "description": "Chat rapid și suport instant prin canalul nostru Telegram.",
-        "handle": "@justsoftart"
+      "chat": {
+        "title": "Să vorbim",
+        "description": "Răspuns rapid garantat"
       },
-      "discord": {
-        "title": "Comunitatea Discord",
-        "description": "Alătură-te comunității noastre pentru discuții, actualizări și suport.",
-        "server": "Just Soft Art Community"
+      "global": {
+        "title": "Acoperire globală",
+        "description": "Lucrând cu clienți din întreaga lume"
       }
     },
     "form": {
-      "name": "Numele complet",
-      "email": "Adresa de email",
-      "subject": "Subiect",
-      "message": "Mesajul tău",
+      "name": "Nume *",
+      "email": "Email *",
+      "company": "Companie",
+      "projectType": "Tipul proiectului",
+      "selectProjectType": "Selectează un tip de proiect",
+      "webDevelopment": "Dezvoltare Web",
+      "mobileApp": "Design Aplicație Mobilă",
+      "digitalArt": "Artă Digitală",
+      "branding": "Identitate de Brand",
+      "ecommerce": "Platformă E-Commerce",
+      "custom": "Soluție Personalizată",
+      "consultation": "Consultanță",
+      "budget": "Interval de buget",
+      "selectBudget": "Selectează intervalul de buget",
+      "under5k": "Sub $5,000",
+      "5k10k": "$5,000 - $10,000",
+      "10k25k": "$10,000 - $25,000",
+      "25k50k": "$25,000 - $50,000",
+      "50kPlus": "$50,000+",
+      "discuss": "Să discutăm",
+      "message": "Spune-ne despre proiectul tău *",
       "submit": "Trimite mesajul",
       "placeholders": {
-        "name": "Introdu numele tău complet",
-        "email": "Introdu adresa ta de email",
-        "subject": "Despre ce este vorba?",
-        "message": "Spune-ne despre proiectul tău..."
+        "name": "Numele tău",
+        "email": "al-tau@email.ro",
+        "company": "Compania ta",
+        "message": "Descrie proiectul, obiectivele și cronologia..."
       }
     }
+  },
+  "privacy": {
+    "hero": {
+      "title": "Politica de confidențialitate",
+      "description": "Confidențialitatea ta este importantă pentru noi. Această politică explică cum colectăm, folosim și protejăm informațiile tale."
+    },
+    "infoCollection": {
+      "title": "Informațiile pe care le colectăm",
+      "description": "Colectăm informații pe care ni le furnizezi direct, cum ar fi atunci când creezi un cont, ne contactezi sau folosești serviciile noastre. Acestea pot include:",
+      "name": "Nume și informații de contact",
+      "project": "Cerințe și specificații ale proiectului",
+      "preferences": "Preferințe de comunicare",
+      "payment": "Informații de plată (procesate în siguranță prin furnizori terți)"
+    },
+    "howWeUse": {
+      "title": "Cum folosim informațiile tale",
+      "description": "Folosim informațiile pe care le colectăm pentru a:",
+      "provide": "Furniza și îmbunătăți serviciile noastre",
+      "communicate": "Comunica cu tine despre proiecte și actualizări",
+      "process": "Procesa plăți și îndeplini contracte",
+      "marketing": "Trimite comunicări de marketing (cu consimțământul tău)",
+      "comply": "Respecta obligațiile legale"
+    },
+    "infoSharing": {
+      "title": "Partajarea informațiilor",
+      "description": "Nu vindem, nu schimbăm și nu transferăm informațiile tale personale către terți fără consimțământul tău, cu excepția:",
+      "providers": "Furnizorilor de servicii de încredere care ne ajută să ne desfășurăm activitatea",
+      "legal": "Când este cerut de lege sau pentru a ne proteja drepturile",
+      "business": "În legătură cu un transfer sau achiziție de afaceri"
+    },
+    "security": {
+      "title": "Securitatea datelor",
+      "description": "Implementăm măsuri de securitate adecvate pentru a proteja informațiile tale personale împotriva accesului neautorizat, alterării, divulgării sau distrugerii. Cu toate acestea, nicio metodă de transmisie prin internet nu este 100% sigură."
+    },
+    "rights": {
+      "title": "Drepturile tale",
+      "description": "Ai dreptul să:",
+      "access": "Accesezi și actualizezi informațiile tale personale",
+      "delete": "Soliciți ștergerea datelor tale",
+      "optout": "Te dezabonezi de la comunicările de marketing",
+      "portability": "Portabilitatea datelor"
+    },
+    "cookies": {
+      "title": "Cookie-uri și urmărire",
+      "description": "Folosim cookie-uri și tehnologii similare pentru a îmbunătăți experiența ta, a analiza utilizarea și în scopuri de marketing. Poți controla setările cookie-urilor prin preferințele browserului tău."
+    },
+    "changes": {
+      "title": "Modificări ale acestei politici",
+      "description": "Putem actualiza această politică de confidențialitate din când în când. Te vom notifica despre orice modificări publicând noua politică pe această pagină și actualizând data \"Ultima actualizare\"."
+    },
+    "contact": {
+      "title": "Contactează-ne",
+      "description": "Dacă ai întrebări despre această politică de confidențialitate sau practicile noastre de date, te rugăm să ne contactezi:",
+      "email": "Email: privacy@justsoftart.com",
+      "form": "Formular de contact: <a href=\"contact.html\">Pagina de contact</a>"
+    },
+    "lastUpdated": "Ultima actualizare: 28 iulie 2025"
   },
   "footer": {
     "company": "Companie",
     "services": "Servicii",
-    "connect": "Conectează",
+    "connect": "Conectare",
     "support": "Suport",
-    "webDevelopment": "Dezvoltare web",
+    "webDevelopment": "Dezvoltare Web",
     "mobileApps": "Aplicații mobile",
     "uiUxDesign": "Design UI/UX",
     "consulting": "Consultanță",
@@ -263,15 +361,7 @@
     "copyright": "© 2025 Just Soft Art. Toate drepturile rezervate."
   },
   "common": {
-    "loading": "Se încarcă...",
-    "error": "A apărut o eroare",
-    "success": "Succes!",
-    "close": "Închide",
-    "save": "Salvează",
-    "cancel": "Anulează",
-    "next": "Următorul",
-    "previous": "Anterior",
-    "back": "Înapoi",
-    "continue": "Continuă"
+    "workInProgress": "În lucru",
+    "companyName": "Just Soft Art"
   }
 } 

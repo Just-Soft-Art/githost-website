@@ -1,4 +1,35 @@
 {
+  "page": {
+    "home": {
+      "title": "Just Soft Art"
+    },
+    "about": {
+      "title": "O nas - Just Soft Art"
+    },
+    "services": {
+      "title": "Usługi - Just Soft Art"
+    },
+    "contact": {
+      "title": "Kontakt - Just Soft Art"
+    },
+    "privacy": {
+      "title": "Polityka prywatności - Just Soft Art"
+    },
+    "globalReach": {
+      "title": "Globalny zasięg - Just Soft Art"
+    }
+  },
+  "language": {
+    "english": "Angielski",
+    "german": "Niemiecki",
+    "french": "Francuski", 
+    "italian": "Włoski",
+    "spanish": "Hiszpański",
+    "polish": "Polski",
+    "romanian": "Rumuński",
+    "dutch": "Holenderski",
+    "ukrainian": "Ukraiński"
+  },
   "nav": {
     "home": "Strona główna",
     "services": "Usługi",
@@ -6,119 +37,103 @@
     "about": "O nas",
     "contact": "Kontakt"
   },
+  "theme": {
+    "light": "Jasny",
+    "dark": "Ciemny"
+  },
   "home": {
     "hero": {
-      "title": "Myśl inaczej.\nTwórz pięknie.",
+      "title": "Myśl inaczej.<br>Twórz pięknie.",
       "subtitle": "Doświadcz przyszłości sztuki cyfrowej i rozwoju oprogramowania z Just Soft Art.",
       "learnMore": "Dowiedz się więcej",
-      "getStarted": "Rozpocznij"
-    },
-    "showcase": {
-      "title": "Nasze najnowsze prace",
-      "creativeSolutions": {
-        "title": "Kreatywne rozwiązania",
-        "description": "Innowacyjne doświadczenia cyfrowe, które przekraczają granice."
-      },
-      "softwareDevelopment": {
-        "title": "Rozwój oprogramowania",
-        "description": "Czysty i wydajny kod, który napędza Twoją wizję."
-      },
-      "digitalArt": {
-        "title": "Sztuka cyfrowa",
-        "description": "Oszałamiające wizualizacje, które urzekają i inspirują."
-      }
-    },
-    "carousel": {
-      "title": "Polecane produkty",
-      "webApp": {
-        "title": "Nowoczesne aplikacje webowe",
-        "description": "Responsywne, szybkie i przyjazne dla użytkownika aplikacje webowe zbudowane z najnowszymi technologiami.",
-        "features": ["Responsywny design", "Szybka wydajność", "Nowoczesny UI/UX", "Zoptymalizowane SEO"],
-        "button": "Dowiedz się więcej"
-      },
-      "mobileApp": {
-        "title": "Rozwój aplikacji mobilnych",
-        "description": "Natywne i wieloplatformowe aplikacje mobilne dla iOS i Android.",
-        "features": ["Natywna wydajność", "Wieloplatformowość", "Gotowe na App Store", "Powiadomienia push"],
-        "button": "Dowiedz się więcej"
-      },
-      "customSolution": {
-        "title": "Niestandardowe rozwiązania programistyczne",
-        "description": "Rozwiązania programistyczne szyte na miarę zaprojektowane specjalnie dla Twoich potrzeb i wymagań biznesowych.",
-        "features": ["Niestandardowy rozwój", "Skalowalna architektura", "Gotowe do integracji", "Wsparcie 24/7"],
-        "button": "Skontaktuj się z nami"
-      }
+      "getStarted": "Zacznij"
     },
     "features": {
-      "title": "Dlaczego wybrać Just Soft Art?",
-      "subtitle": "Łączymy kreatywność z techniczną doskonałością, aby dostarczać wyjątkowe rezultaty.",
-      "list": [
-        "Niestandardowy rozwój oprogramowania dostosowany do Twoich potrzeb",
-        "Nowoczesne aplikacje webowe z responsywnym designem",
-        "Rozwój aplikacji mobilnych dla iOS i Android",
-        "Rozwiązania sztuki cyfrowej i kreatywnego designu",
-        "Ciągłe usługi wsparcia i konserwacji"
-      ]
+      "title": "Zaprojektowane dla doskonałości",
+      "description": "Każdy piksel ma znaczenie. Każda linia kodu się liczy. Tworzymy cyfrowe doświadczenia z taką samą dbałością o szczegóły, która definiuje wspaniały design.",
+      "pixelPerfect": "Pikselowo doskonały design",
+      "performance": "Zoptymalizowana wydajność",
+      "userCentered": "Podejście skoncentrowane na użytkowniku",
+      "futureReady": "Technologia przyszłości"
     }
   },
   "services": {
     "hero": {
       "title": "Nasze usługi",
-      "subtitle": "Kompleksowe rozwiązania do transformacji Twojego biznesu poprzez technologię i wyjątkowy design."
+      "subtitle": "Kompleksowe rozwiązania do transformacji Twojej firmy dzięki technologii i wyjątkowemu designowi."
     },
-    "webDevelopment": {
-      "title": "Rozwój webowy",
-      "description": "Nowoczesne i responsywne aplikacje webowe zbudowane z najnowszymi technologiami i najlepszymi praktykami.",
-      "features": [
-        "Responsywny design",
-        "Progresywne aplikacje webowe",
-        "Rozwiązania e-commerce",
-        "Systemy zarządzania treścią"
-      ],
-      "technologies": ["React", "Vue.js", "Node.js", "PHP", "WordPress"],
-      "button": "Dowiedz się więcej"
+    "customSoftware": {
+      "title": "Niestandardowy rozwój oprogramowania",
+      "description": "Dostosowane rozwiązania dla Twoich wyzwań biznesowych: systemy CRM, platformy ERP i niestandardowe aplikacje biznesowe zaprojektowane w celu usprawnienia operacji i stymulowania wzrostu.",
+      "features": {
+        "erp": "Planowanie zasobów przedsiębiorstwa (ERP)",
+        "crm": "Zarządzanie relacjami z klientami (CRM)",
+        "bi": "Platformy business intelligence",
+        "workflow": "Systemy automatyzacji przepływów pracy",
+        "api": "Rozwój i integracja API"
+      }
     },
-    "mobileDevelopment": {
-      "title": "Rozwój mobilny",
-      "description": "Natywne i wieloplatformowe aplikacje mobilne dla iOS i Android.",
-      "features": [
-        "Natywny rozwój iOS",
-        "Natywny rozwój Android",
-        "Rozwiązania wieloplatformowe",
-        "Optymalizacja App Store"
-      ],
-      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
-      "button": "Dowiedz się więcej"
+    "webMobile": {
+      "title": "Rozwój web i mobile",
+      "description": "Nowoczesne strony internetowe, aplikacje jednostronicowe (SPA), progresywne aplikacje webowe (PWA) i natywne aplikacje mobilne, które zapewniają wyjątkowe doświadczenia użytkownika na wszystkich urządzeniach.",
+      "features": {
+        "responsive": "Responsywne aplikacje webowe",
+        "pwa": "Progresywne aplikacje webowe (PWA)",
+        "spa": "Aplikacje jednostronicowe (SPA)",
+        "native": "Natywny rozwój mobilny",
+        "crossPlatform": "Rozwiązania wieloplatformowe"
+      }
     },
-    "uiUxDesign": {
+    "uiUx": {
       "title": "Design UI/UX",
-      "description": "Rozwiązania designu skoncentrowane na użytkowniku, które tworzą angażujące i intuicyjne doświadczenia użytkownika.",
-      "features": [
-        "Badania użytkowników",
-        "Wireframing i prototypowanie",
-        "Design wizualny",
-        "Testy użyteczności"
-      ],
-      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision"],
-      "button": "Dowiedz się więcej"
+      "description": "Projektowanie interfejsów, prototypowanie i audyty doświadczenia użytkownika, które tworzą intuicyjne i angażujące doświadczenia cyfrowe, które użytkownicy kochają, a firmy na nich polegają.",
+      "features": {
+        "research": "Badania doświadczenia użytkownika",
+        "prototyping": "Interaktywne prototypowanie",
+        "designSystems": "Systemy projektowe",
+        "usability": "Testy użyteczności",
+        "accessibility": "Zgodność z dostępnością"
+      }
+    },
+    "ecommerce": {
+      "title": "Rozwiązania e-commerce",
+      "description": "Pełny rozwój sklepów internetowych, systemy rezerwacji i rozwiązania przetwarzania płatności, które napędzają sprzedaż i zapewniają płynne doświadczenia zakupowe dla Twoich klientów.",
+      "features": {
+        "onlineStore": "Rozwój sklepu internetowego",
+        "payment": "Integracja bramki płatniczej",
+        "inventory": "Zarządzanie zapasami",
+        "booking": "Systemy rezerwacji",
+        "multiVendor": "Marketplace wielu sprzedawców"
+      }
+    },
+    "aiAutomation": {
+      "title": "AI i automatyzacja",
+      "description": "Integracja AI, automatyzacja zadań, inteligentne chatboty i rozwiązania generowania treści, które zwiększają produktywność i tworzą inteligentniejsze procesy biznesowe.",
+      "features": {
+        "aiIntegration": "Integracja sztucznej inteligencji",
+        "automation": "Automatyzacja procesów biznesowych",
+        "chatbots": "Inteligentne chatboty",
+        "contentGeneration": "Systemy generowania treści",
+        "machineLearning": "Rozwiązania uczenia maszynowego"
+      }
     },
     "consulting": {
-      "title": "Konsultacje technologiczne",
-      "description": "Eksperckie doradztwo w zakresie strategii technologicznej, architektury i transformacji cyfrowej.",
-      "features": [
-        "Strategia technologiczna",
-        "Projektowanie architektury",
-        "Transformacja cyfrowa",
-        "Optymalizacja wydajności"
-      ],
-      "technologies": ["Rozwiązania chmurowe", "DevOps", "Bezpieczeństwo", "Skalowalność"],
-      "button": "Dowiedz się więcej"
+      "title": "Konsulting IT i CTO-jako-usługa",
+      "description": "Strategiczne doradztwo technologiczne, przywództwo techniczne i kompleksowe wsparcie dla startupów i MŚP, które chcą skutecznie skalować swoją infrastrukturę technologiczną.",
+      "features": {
+        "strategy": "Doradztwo strategii technologicznej",
+        "reviews": "Przeglądy architektury i kodu",
+        "leadership": "Przywództwo zespołu i mentoring",
+        "startup": "Wsparcie techniczne startupów",
+        "transformation": "Transformacja cyfrowa"
+      }
     },
+    "getStarted": "Rozpocznij",
     "cta": {
-      "title": "Gotowy do rozpoczęcia?",
-      "subtitle": "Porozmawiajmy o tym, jak możemy pomóc Ci osiągnąć Twoje cele cyfrowe.",
-      "primaryButton": "Rozpocznij projekt",
-      "secondaryButton": "Otrzymaj wycenę"
+      "title": "Gotowy na transformację swojej firmy?",
+      "description": "Porozmawiajmy o tym, jak nasze usługi mogą pomóc Ci osiągnąć cele i napędzać innowacje w Twojej branży.",
+      "startProject": "Rozpocznij projekt",
+      "scheduleConsultation": "Zaplanuj konsultację"
     }
   },
   "about": {
@@ -132,66 +147,77 @@
       "years": "Lata"
     },
     "globalPresence": {
-      "title": "Globalna obecność",
-      "description": "Od 2022 roku nasz dedykowany zespół 10 profesjonalistów dostarcza wysokiej jakości rozwiązania programistyczne na wielu kontynentach. Pomyślnie ukończyliśmy projekty w Ameryce Północnej, Europie i Azji, budując silne relacje z klientami z różnych branż i środowisk."
+      "title": "Obecność globalna",
+      "description": "Od 2022 roku nasz oddany zespół 10 profesjonalistów dostarcza wysokiej jakości rozwiązania programowe na wielu kontynentach. Pomyślnie zrealizowaliśmy projekty w Ameryce Północnej, Europie i Azji, budując silne relacje z klientami z różnych branż i środowisk."
     },
     "regionalExpertise": {
       "title": "Ekspertyza regionalna",
       "northAmerica": {
         "title": "Ameryka Północna",
         "description": "Aplikacje webowe, rozwiązania dla małych firm i niestandardowy rozwój oprogramowania obsługujący klientów w Stanach Zjednoczonych i Kanadzie.",
-        "stats": ["35+ Projektów", "8 Miast"]
+        "projects": "35+ Projektów",
+        "cities": "8 Miast"
       },
       "europe": {
         "title": "Europa",
-        "description": "Zgodne z RODO aplikacje webowe, rozwiązania cyfrowe i nowoczesny rozwój webowy dla europejskich małych i średnich przedsiębiorstw.",
-        "stats": ["30+ Projektów", "6 Miast"]
+        "description": "Aplikacje webowe zgodne z RODO, rozwiązania cyfrowe i nowoczesny rozwój stron internetowych dla europejskich małych i średnich przedsiębiorstw.",
+        "projects": "30+ Projektów",
+        "cities": "6 Miast"
       },
       "asiaPacific": {
         "title": "Azja-Pacyfik",
-        "description": "Nowoczesne rozwiązania webowe, responsywne designy i niestandardowe aplikacje dla rosnących firm w regionie Azji-Pacyfiku.",
-        "stats": ["20+ Projektów", "4 Miasta"]
+        "description": "Nowoczesne rozwiązania internetowe, responsywne projekty i niestandardowe aplikacje dla rozwijających się firm w regionie Azji i Pacyfiku.",
+        "projects": "20+ Projektów",
+        "cities": "4 Miasta"
       }
     },
     "successStories": {
       "title": "Historie sukcesu",
-      "localBusiness": {
+      "business": {
         "title": "Platforma lokalnego biznesu",
-        "description": "Rozwinięcie kompleksowego rozwiązania e-commerce dla rosnącego biznesu detalicznego, zwiększając ich sprzedaż online o 300% w ciągu 6 miesięcy.",
-        "tags": ["E-commerce", "Wzrost", "Lokalny"]
+        "description": "Opracował kompleksowe rozwiązanie e-commerce dla rozwijającej się firmy detalicznej, zwiększając ich sprzedaż online o 300% w ciągu 6 miesięcy."
       },
       "education": {
         "title": "System zarządzania edukacją",
-        "description": "Zbudowanie niestandardowego systemu zarządzania uczeniem się dla prywatnej szkoły, usprawniając zarządzanie kursami i zaangażowanie studentów.",
-        "tags": ["Edukacja", "Zarządzanie", "Niestandardowy"]
+        "description": "Zbudował niestandardowy system zarządzania nauczaniem dla prywatnej szkoły, usprawniając zarządzanie kursami i zaangażowanie uczniów."
       },
       "startup": {
         "title": "Rozwój MVP startupu",
-        "description": "Stworzenie minimalnego produktu wykonalnego dla startupu technologicznego, który pomyślnie zabezpieczył finansowanie seed i został wprowadzony na rynek.",
-        "tags": ["Startup", "MVP", "Innowacja"]
+        "description": "Stworzył minimalny produkt żywotny dla startupu technologicznego, który pomyślnie pozyskał finansowanie zalążkowe i wszedł na rynek."
+      },
+      "tags": {
+        "ecommerce": "E-commerce",
+        "growth": "Wzrost",
+        "local": "Lokalny",
+        "education": "Edukacja",
+        "management": "Zarządzanie",
+        "custom": "Niestandardowy",
+        "startup": "Startup",
+        "mvp": "MVP",
+        "innovation": "Innowacja"
       }
     },
     "benefits": {
       "title": "Dlaczego wybrać globalne partnerstwo?",
-      "developmentCycle": {
-        "title": "24/7 cykl rozwoju",
-        "description": "Rozwój przez całą dobę z zespołami w różnych strefach czasowych"
+      "development": {
+        "title": "Cykl rozwoju 24/7",
+        "description": "Ciągły rozwój z zespołami w różnych strefach czasowych"
       },
-      "culturalExpertise": {
+      "cultural": {
         "title": "Ekspertyza kulturowa",
         "description": "Głębokie zrozumienie lokalnych rynków i niuansów kulturowych"
       },
-      "costOptimization": {
+      "cost": {
         "title": "Optymalizacja kosztów",
-        "description": "Wykorzystanie globalnych pul talentów dla opłacalnych rozwiązań"
+        "description": "Wykorzystanie globalnych pul talentów dla ekonomicznych rozwiązań"
       },
       "compliance": {
         "title": "Zgodność i bezpieczeństwo",
         "description": "Ekspertyza w międzynarodowych regulacjach i standardach bezpieczeństwa"
       },
-      "scalableTechnology": {
+      "scalable": {
         "title": "Skalowalna technologia",
-        "description": "Rozwiązania przyszłościowe, które rosną z Twoim biznesem globalnie"
+        "description": "Gotowe na przyszłość rozwiązania, które rosną z Twoim biznesem globalnie"
       },
       "partnership": {
         "title": "Długoterminowe partnerstwo",
@@ -199,56 +225,128 @@
       }
     },
     "cta": {
-      "title": "Gotowy stać się globalnym?",
-      "subtitle": "Porozmawiajmy o tym, jak możemy pomóc Ci dotrzeć do klientów na całym świecie z najnowocześniejszymi rozwiązaniami technologicznymi.",
+      "title": "Gotowy na globalizację?",
+      "subtitle": "Porozmawiajmy o tym, jak możemy pomóc Ci dotrzeć do klientów na całym świecie dzięki najnowocześniejszym rozwiązaniom technologicznym.",
       "learnMore": "Dowiedz się więcej",
       "getStarted": "Rozpocznij"
     }
   },
   "contact": {
     "hero": {
-      "title": "Skontaktuj się",
-      "subtitle": "Gotowy rozpocząć swój następny projekt? Porozmawiajmy o tym, jak możemy pomóc Ci ożywić Twoją wizję."
+      "title": "Skontaktuj się z nami",
+      "subtitle": "Gotowy, aby ożywić swoje pomysły? Rozpocznijmy rozmowę o Twoim następnym projekcie."
     },
     "info": {
-      "title": "Rozpocznijmy rozmowę",
-      "subtitle": "Jesteśmy tutaj, aby pomóc Ci odnieść sukces. Skontaktuj się z nami przez którykolwiek z tych kanałów lub wypełnij formularz poniżej.",
+      "title": "Stwórzmy coś niesamowitego",
+      "description": "Niezależnie od tego, czy potrzebujesz oszałamiającej strony internetowej, niestandardowego rozwiązania programowego czy tworzenia sztuki cyfrowej, jesteśmy tutaj, aby pomóc Ci przekształcić Twoją wizję w rzeczywistość."
+    },
+    "methods": {
       "email": {
-        "title": "Wyślij nam email",
-        "description": "Wyślij nam wiadomość, a odpowiemy w ciągu 24 godzin.",
-        "address": "hello@justsoftart.com"
+        "title": "Email"
       },
-      "telegram": {
-        "title": "Telegram",
-        "description": "Szybki czat i natychmiastowe wsparcie przez nasz kanał Telegram.",
-        "handle": "@justsoftart"
+      "chat": {
+        "title": "Porozmawiajmy",
+        "description": "Gwarantowana szybka odpowiedź"
       },
-      "discord": {
-        "title": "Społeczność Discord",
-        "description": "Dołącz do naszej społeczności dla dyskusji, aktualizacji i wsparcia.",
-        "server": "Just Soft Art Community"
+      "global": {
+        "title": "Globalny zasięg",
+        "description": "Pracujemy z klientami na całym świecie"
       }
     },
     "form": {
-      "name": "Pełne imię",
-      "email": "Adres email",
-      "subject": "Temat",
-      "message": "Twoja wiadomość",
+      "name": "Imię *",
+      "email": "Email *",
+      "company": "Firma",
+      "projectType": "Typ projektu",
+      "selectProjectType": "Wybierz typ projektu",
+      "webDevelopment": "Rozwój Stron Web",
+      "mobileApp": "Design Aplikacji Mobilnej",
+      "digitalArt": "Sztuka Cyfrowa",
+      "branding": "Tożsamość Marki",
+      "ecommerce": "Platforma E-Commerce",
+      "custom": "Rozwiązanie Niestandardowe",
+      "consultation": "Konsultacja",
+      "budget": "Zakres budżetu",
+      "selectBudget": "Wybierz zakres budżetu",
+      "under5k": "Poniżej 20 000 zł",
+      "5k10k": "20 000 zł - 40 000 zł",
+      "10k25k": "40 000 zł - 100 000 zł",
+      "25k50k": "100 000 zł - 200 000 zł",
+      "50kPlus": "200 000 zł+",
+      "discuss": "Porozmawiajmy",
+      "message": "Opowiedz nam o swoim projekcie *",
       "submit": "Wyślij wiadomość",
       "placeholders": {
-        "name": "Wprowadź swoje pełne imię",
-        "email": "Wprowadź swój adres email",
-        "subject": "O co chodzi?",
-        "message": "Opowiedz nam o swoim projekcie..."
+        "name": "Twoje imię",
+        "email": "twoj@email.pl",
+        "company": "Twoja firma",
+        "message": "Opisz swój projekt, cele i harmonogram..."
       }
     }
+  },
+  "privacy": {
+    "hero": {
+      "title": "Polityka prywatności",
+      "description": "Twoja prywatność jest dla nas ważna. Ta polityka wyjaśnia, jak zbieramy, używamy i chronimy Twoje informacje."
+    },
+    "infoCollection": {
+      "title": "Informacje, które zbieramy",
+      "description": "Zbieramy informacje, które bezpośrednio nam przekazujesz, na przykład gdy tworzysz konto, kontaktujesz się z nami lub korzystasz z naszych usług. Może to obejmować:",
+      "name": "Imię i nazwisko oraz informacje kontaktowe",
+      "project": "Wymagania i specyfikacje projektu",
+      "preferences": "Preferencje komunikacyjne",
+      "payment": "Informacje o płatnościach (przetwarzane bezpiecznie przez zewnętrznych dostawców)"
+    },
+    "howWeUse": {
+      "title": "Jak używamy Twoich informacji",
+      "description": "Wykorzystujemy zebrane informacje do:",
+      "provide": "Świadczenia i ulepszania naszych usług",
+      "communicate": "Komunikowania się z Tobą w sprawie projektów i aktualizacji",
+      "process": "Przetwarzania płatności i wykonywania kontraktów",
+      "marketing": "Wysyłania komunikacji marketingowej (za Twoją zgodą)",
+      "comply": "Przestrzegania zobowiązań prawnych"
+    },
+    "infoSharing": {
+      "title": "Udostępnianie informacji",
+      "description": "Nie sprzedajemy, nie wymieniamy ani nie przekazujemy Twoich danych osobowych stronom trzecim bez Twojej zgody, z wyjątkiem:",
+      "providers": "Zaufanym dostawcom usług, którzy pomagają nam prowadzić działalność",
+      "legal": "Gdy wymaga tego prawo lub aby chronić nasze prawa",
+      "business": "W związku z transferem lub przejęciem biznesu"
+    },
+    "security": {
+      "title": "Bezpieczeństwo danych",
+      "description": "Wdrażamy odpowiednie środki bezpieczeństwa, aby chronić Twoje dane osobowe przed nieautoryzowanym dostępem, zmianą, ujawnieniem lub zniszczeniem. Jednak żadna metoda transmisji przez Internet nie jest w 100% bezpieczna."
+    },
+    "rights": {
+      "title": "Twoje prawa",
+      "description": "Masz prawo do:",
+      "access": "Dostępu i aktualizacji swoich danych osobowych",
+      "delete": "Żądania usunięcia swoich danych",
+      "optout": "Rezygnacji z komunikacji marketingowej",
+      "portability": "Przenośności danych"
+    },
+    "cookies": {
+      "title": "Pliki cookie i śledzenie",
+      "description": "Używamy plików cookie i podobnych technologii, aby ulepszyć Twoje doświadczenie, analizować użytkowanie i w celach marketingowych. Możesz kontrolować ustawienia plików cookie przez preferencje swojej przeglądarki."
+    },
+    "changes": {
+      "title": "Zmiany w tej polityce",
+      "description": "Możemy od czasu do czasu aktualizować tę politykę prywatności. Powiadomimy Cię o wszelkich zmianach, publikując nową politykę na tej stronie i aktualizując datę \"Ostatnia aktualizacja\"."
+    },
+    "contact": {
+      "title": "Skontaktuj się z nami",
+      "description": "Jeśli masz pytania dotyczące tej polityki prywatności lub naszych praktyk związanych z danymi, skontaktuj się z nami:",
+      "email": "Email: privacy@justsoftart.com",
+      "form": "Formularz kontaktowy: <a href=\"contact.html\">Strona kontaktu</a>"
+    },
+    "lastUpdated": "Ostatnia aktualizacja: 28 lipca 2025"
   },
   "footer": {
     "company": "Firma",
     "services": "Usługi",
     "connect": "Połącz",
     "support": "Wsparcie",
-    "webDevelopment": "Rozwój webowy",
+    "webDevelopment": "Rozwój stron internetowych",
     "mobileApps": "Aplikacje mobilne",
     "uiUxDesign": "Design UI/UX",
     "consulting": "Konsultacje",
@@ -263,15 +361,7 @@
     "copyright": "© 2025 Just Soft Art. Wszystkie prawa zastrzeżone."
   },
   "common": {
-    "loading": "Ładowanie...",
-    "error": "Wystąpił błąd",
-    "success": "Sukces!",
-    "close": "Zamknij",
-    "save": "Zapisz",
-    "cancel": "Anuluj",
-    "next": "Dalej",
-    "previous": "Poprzedni",
-    "back": "Wstecz",
-    "continue": "Kontynuuj"
+    "workInProgress": "W trakcie",
+    "companyName": "Just Soft Art"
   }
 } 

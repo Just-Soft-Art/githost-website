@@ -205,9 +205,20 @@ function applyTranslations(languageCode) {
     selectOptions.forEach(option => {
         const key = option.getAttribute('data-translate');
         const translatedText = getText(key, languageCode);
-        
+
         if (translatedText && translatedText !== key) {
             option.textContent = translatedText;
+        }
+    });
+
+    // Update title attributes
+    const titleElements = document.querySelectorAll('[data-translate-title]');
+    titleElements.forEach(element => {
+        const key = element.getAttribute('data-translate-title');
+        const translatedText = getText(key, languageCode);
+
+        if (translatedText && translatedText !== key) {
+            element.title = translatedText;
         }
     });
     

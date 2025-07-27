@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Reach - Just Soft Art</title>
+    <title data-translate="page.globalReach.title">Global Reach - Just Soft Art</title>
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./themes/light.css" id="theme-stylesheet">
     <link rel="icon" href="./jsa-favicon.svg" type="image/svg+xml">
@@ -14,15 +14,15 @@
         <div class="nav-container">
             <a href="./index.html" class="nav-logo">
                 <img src="./assets/img/homeicon/jsa-light-homeicon.svg" alt="Just Soft Art" class="logo-icon" id="logo-icon">
-                <span>Just Soft Art</span>
+                <span data-translate="common.companyName">Just Soft Art</span>
             </a>
             
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#products" class="inactive">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                <li><a href="#products" class="inactive" data-translate="nav.products">Products</a></li>
+                <li><a href="about.html" data-translate="nav.about">About</a></li>
+                <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
             </ul>
             
             <div class="nav-controls">
@@ -30,17 +30,17 @@
                 <div class="theme-dropdown" id="theme-dropdown">
                     <button class="theme-toggle-btn" id="theme-toggle-btn">
                         <span class="theme-icon" id="theme-icon">☀️</span>
-                        <span class="theme-text" id="theme-text">Light</span>
+                        <span class="theme-text" id="theme-text" data-translate="theme.light">Light</span>
                         <span class="dropdown-arrow">▼</span>
                     </button>
                     <div class="theme-dropdown-menu" id="theme-dropdown-menu">
                         <button class="theme-option" data-theme="light">
                             <span class="theme-option-icon">☀️</span>
-                            Light
+                            <span data-translate="theme.light">Light</span>
                         </button>
                         <button class="theme-option" data-theme="dark">
                             <span class="theme-option-icon">🌙</span>
-                            Dark
+                            <span data-translate="theme.dark">Dark</span>
                         </button>
 
                     </div>
@@ -54,53 +54,41 @@
                     </button>
                     <div class="language-dropdown-menu" id="language-dropdown-menu">
                         <div class="language-grid">
-                            <button class="language-option" data-lang="en">
-                                <span class="language-name">English</span>
+                            <button class="language-option active" data-language="en">
+                                <span class="language-name" data-translate="language.english">English</span>
                                 <span class="language-code">EN</span>
                             </button>
-                            <button class="language-option" data-lang="es">
-                                <span class="language-name">Español</span>
-                                <span class="language-code">ES</span>
-                            </button>
-                            <button class="language-option" data-lang="fr">
-                                <span class="language-name">Français</span>
-                                <span class="language-code">FR</span>
-                            </button>
-                            <button class="language-option" data-lang="de">
-                                <span class="language-name">Deutsch</span>
+                            <button class="language-option" data-language="de">
+                                <span class="language-name" data-translate="language.german">German</span>
                                 <span class="language-code">DE</span>
                             </button>
-                            <button class="language-option" data-lang="it">
-                                <span class="language-name">Italiano</span>
+                            <button class="language-option" data-language="fr">
+                                <span class="language-name" data-translate="language.french">French</span>
+                                <span class="language-code">FR</span>
+                            </button>
+                            <button class="language-option" data-language="it">
+                                <span class="language-name" data-translate="language.italian">Italian</span>
                                 <span class="language-code">IT</span>
                             </button>
-                            <button class="language-option" data-lang="pt">
-                                <span class="language-name">Português</span>
-                                <span class="language-code">PT</span>
+                            <button class="language-option" data-language="es">
+                                <span class="language-name" data-translate="language.spanish">Spanish</span>
+                                <span class="language-code">ES</span>
                             </button>
-                            <button class="language-option" data-lang="ru">
-                                <span class="language-name">Русский</span>
-                                <span class="language-code">RU</span>
+                            <button class="language-option" data-language="pl">
+                                <span class="language-name" data-translate="language.polish">Polish</span>
+                                <span class="language-code">PL</span>
                             </button>
-                            <button class="language-option" data-lang="zh">
-                                <span class="language-name">中文</span>
-                                <span class="language-code">ZH</span>
+                            <button class="language-option" data-language="ro">
+                                <span class="language-name" data-translate="language.romanian">Romanian</span>
+                                <span class="language-code">RO</span>
                             </button>
-                            <button class="language-option" data-lang="ja">
-                                <span class="language-name">日本語</span>
-                                <span class="language-code">JA</span>
+                            <button class="language-option" data-language="nl">
+                                <span class="language-name" data-translate="language.dutch">Dutch</span>
+                                <span class="language-code">NL</span>
                             </button>
-                            <button class="language-option" data-lang="ko">
-                                <span class="language-name">한국어</span>
-                                <span class="language-code">KO</span>
-                            </button>
-                            <button class="language-option" data-lang="ar">
-                                <span class="language-name">العربية</span>
-                                <span class="language-code">AR</span>
-                            </button>
-                            <button class="language-option" data-lang="hi">
-                                <span class="language-name">हिन्दी</span>
-                                <span class="language-code">HI</span>
+                            <button class="language-option" data-language="ua">
+                                <span class="language-name" data-translate="language.ukrainian">Ukrainian</span>
+                                <span class="language-code">UA</span>
                             </button>
                         </div>
                     </div>
@@ -120,22 +108,22 @@
     <section class="global-reach-hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">🌍 Global Reach</h1>
-                <p class="hero-subtitle">Connecting with clients worldwide through innovative technology solutions</p>
+                <h1 class="hero-title" data-translate="globalReach.hero.title">🌍 Global Reach</h1>
+                <p class="hero-subtitle" data-translate="globalReach.hero.subtitle">Connecting with clients worldwide through innovative technology solutions</p>
                 
                 <!-- Client Stats -->
                 <div class="global-stats">
                     <div class="stat-item">
                         <span class="stat-number">50+</span>
-                        <span class="stat-label">Countries</span>
+                        <span class="stat-label" data-translate="globalReach.stats.countries">Countries</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">500+</span>
-                        <span class="stat-label">Projects</span>
+                        <span class="stat-label" data-translate="globalReach.stats.projects">Projects</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">24/7</span>
-                        <span class="stat-label">Support</span>
+                        <span class="stat-label" data-translate="globalReach.stats.support">Support</span>
                     </div>
                 </div>
             </div>
@@ -147,9 +135,9 @@
         <div class="world-map-container" id="world-map-container">
             <canvas id="world-map-canvas"></canvas>
             <div class="map-controls">
-                <button class="map-control-btn" id="reset-view">🌍 Reset View</button>
-                <button class="map-control-btn" id="toggle-connections">🔗 Toggle Connections</button>
-                <button class="map-control-btn" id="toggle-animation">⏸️ Pause Animation</button>
+                <button class="map-control-btn" id="reset-view" data-translate="globalReach.map.resetView">🌍 Reset View</button>
+                <button class="map-control-btn" id="toggle-connections" data-translate="globalReach.map.toggleConnections">🔗 Toggle Connections</button>
+                <button class="map-control-btn" id="toggle-animation" data-translate="globalReach.map.pauseAnimation">⏸️ Pause Animation</button>
             </div>
         </div>
     </section>
@@ -159,107 +147,107 @@
         <div class="container">
             <div class="info-content">
                 <div class="info-section">
-                    <h2>🌐 Global Presence</h2>
-                    <p>Our team operates across multiple time zones to provide continuous support and development services. We have successfully delivered projects in North America, Europe, Asia, Africa, and Oceania, building lasting partnerships with clients from diverse industries and cultures.</p>
+                    <h2 data-translate="globalReach.globalPresence.title">🌐 Global Presence</h2>
+                    <p data-translate="globalReach.globalPresence.description">Our team operates across multiple time zones to provide continuous support and development services. We have successfully delivered projects in North America, Europe, Asia, Africa, and Oceania, building lasting partnerships with clients from diverse industries and cultures.</p>
                 </div>
                 
                 <div class="info-section">
-                    <h2>🚀 Regional Expertise</h2>
+                    <h2 data-translate="globalReach.regionalExpertise.title">🚀 Regional Expertise</h2>
                     <div class="region-grid">
                         <div class="region-card">
                             <div class="region-icon">🇺🇸</div>
-                            <h3>North America</h3>
-                            <p>Enterprise solutions, fintech platforms, and e-commerce systems serving millions of users across the United States and Canada.</p>
+                            <h3 data-translate="globalReach.regionalExpertise.northAmerica.title">North America</h3>
+                            <p data-translate="globalReach.regionalExpertise.northAmerica.description">Enterprise solutions, fintech platforms, and e-commerce systems serving millions of users across the United States and Canada.</p>
                             <div class="region-stats">
-                                <span>150+ Projects</span>
-                                <span>12 Cities</span>
+                                <span data-translate="globalReach.regionalExpertise.northAmerica.projects">150+ Projects</span>
+                                <span data-translate="globalReach.regionalExpertise.northAmerica.cities">12 Cities</span>
                             </div>
                         </div>
                         <div class="region-card">
                             <div class="region-icon">🇪🇺</div>
-                            <h3>Europe</h3>
-                            <p>GDPR-compliant applications, digital transformation initiatives, and innovative web solutions for European markets.</p>
+                            <h3 data-translate="globalReach.regionalExpertise.europe.title">Europe</h3>
+                            <p data-translate="globalReach.regionalExpertise.europe.description">GDPR-compliant applications, digital transformation initiatives, and innovative web solutions for European markets.</p>
                             <div class="region-stats">
-                                <span>200+ Projects</span>
-                                <span>18 Cities</span>
+                                <span data-translate="globalReach.regionalExpertise.europe.projects">200+ Projects</span>
+                                <span data-translate="globalReach.regionalExpertise.europe.cities">18 Cities</span>
                             </div>
                         </div>
                         <div class="region-card">
                             <div class="region-icon">🇦🇺</div>
-                            <h3>Asia-Pacific</h3>
-                            <p>Mobile-first solutions, emerging technologies, and scalable platforms for the dynamic Asia-Pacific region.</p>
+                            <h3 data-translate="globalReach.regionalExpertise.asiaPacific.title">Asia-Pacific</h3>
+                            <p data-translate="globalReach.regionalExpertise.asiaPacific.description">Mobile-first solutions, emerging technologies, and scalable platforms for the dynamic Asia-Pacific region.</p>
                             <div class="region-stats">
-                                <span>120+ Projects</span>
-                                <span>15 Cities</span>
+                                <span data-translate="globalReach.regionalExpertise.asiaPacific.projects">120+ Projects</span>
+                                <span data-translate="globalReach.regionalExpertise.asiaPacific.cities">15 Cities</span>
                             </div>
                         </div>
                         <div class="region-card">
                             <div class="region-icon">🌍</div>
-                            <h3>Emerging Markets</h3>
-                            <p>Innovative solutions for growing markets in Africa, South America, and the Middle East, focusing on accessibility and scalability.</p>
+                            <h3 data-translate="globalReach.regionalExpertise.emergingMarkets.title">Emerging Markets</h3>
+                            <p data-translate="globalReach.regionalExpertise.emergingMarkets.description">Innovative solutions for growing markets in Africa, South America, and the Middle East, focusing on accessibility and scalability.</p>
                             <div class="region-stats">
-                                <span>80+ Projects</span>
-                                <span>10 Cities</span>
+                                <span data-translate="globalReach.regionalExpertise.emergingMarkets.projects">80+ Projects</span>
+                                <span data-translate="globalReach.regionalExpertise.emergingMarkets.cities">10 Cities</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="info-section">
-                    <h2>⭐ Success Stories</h2>
+                    <h2 data-translate="globalReach.successStories.title">⭐ Success Stories</h2>
                     <div class="success-stories">
                         <div class="story-card">
-                            <h4>🏦 Global Banking Platform</h4>
-                            <p>Developed a secure, multi-currency banking platform serving customers across 25 countries with real-time transaction processing.</p>
+                            <h4 data-translate="globalReach.successStories.banking.title">🏦 Global Banking Platform</h4>
+                            <p data-translate="globalReach.successStories.banking.description">Developed a secure, multi-currency banking platform serving customers across 25 countries with real-time transaction processing.</p>
                             <div class="story-tags">
-                                <span>Fintech</span>
-                                <span>Security</span>
-                                <span>Scale</span>
+                                <span data-translate="globalReach.successStories.tags.fintech">Fintech</span>
+                                <span data-translate="globalReach.successStories.tags.security">Security</span>
+                                <span data-translate="globalReach.successStories.tags.scale">Scale</span>
                             </div>
                         </div>
                         <div class="story-card">
-                            <h4>🛒 E-commerce Revolution</h4>
-                            <p>Built a revolutionary e-commerce platform that handles millions of transactions daily across multiple continents.</p>
+                            <h4 data-translate="globalReach.successStories.ecommerce.title">🛒 E-commerce Revolution</h4>
+                            <p data-translate="globalReach.successStories.ecommerce.description">Built a revolutionary e-commerce platform that handles millions of transactions daily across multiple continents.</p>
                             <div class="story-tags">
-                                <span>E-commerce</span>
-                                <span>Performance</span>
-                                <span>Global</span>
+                                <span data-translate="globalReach.successStories.tags.ecommerce">E-commerce</span>
+                                <span data-translate="globalReach.successStories.tags.performance">Performance</span>
+                                <span data-translate="globalReach.successStories.tags.global">Global</span>
                             </div>
                         </div>
                         <div class="story-card">
-                            <h4>📱 Healthcare Innovation</h4>
-                            <p>Created a telemedicine platform connecting patients and doctors worldwide, breaking geographical barriers in healthcare.</p>
+                            <h4 data-translate="globalReach.successStories.healthcare.title">📱 Healthcare Innovation</h4>
+                            <p data-translate="globalReach.successStories.healthcare.description">Created a telemedicine platform connecting patients and doctors worldwide, breaking geographical barriers in healthcare.</p>
                             <div class="story-tags">
-                                <span>Healthcare</span>
-                                <span>Innovation</span>
-                                <span>Impact</span>
+                                <span data-translate="globalReach.successStories.tags.healthcare">Healthcare</span>
+                                <span data-translate="globalReach.successStories.tags.innovation">Innovation</span>
+                                <span data-translate="globalReach.successStories.tags.impact">Impact</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="info-section">
-                    <h2>🤝 Why Choose Global Partnership?</h2>
+                    <h2 data-translate="globalReach.benefits.title">🤝 Why Choose Global Partnership?</h2>
                     <div class="benefits-grid">
                         <div class="benefit-item">
                             <div class="benefit-icon">⏰</div>
-                            <h4>24/7 Development Cycle</h4>
-                            <p>Round-the-clock development with teams across different time zones</p>
+                            <h4 data-translate="globalReach.benefits.development.title">24/7 Development Cycle</h4>
+                            <p data-translate="globalReach.benefits.development.description">Round-the-clock development with teams across different time zones</p>
                         </div>
                         <div class="benefit-item">
                             <div class="benefit-icon">🌐</div>
-                            <h4>Cultural Expertise</h4>
-                            <p>Deep understanding of local markets and cultural nuances</p>
+                            <h4 data-translate="globalReach.benefits.cultural.title">Cultural Expertise</h4>
+                            <p data-translate="globalReach.benefits.cultural.description">Deep understanding of local markets and cultural nuances</p>
                         </div>
                         <div class="benefit-item">
                             <div class="benefit-icon">💰</div>
-                            <h4>Cost Optimization</h4>
-                            <p>Leverage global talent pools for cost-effective solutions</p>
+                            <h4 data-translate="globalReach.benefits.cost.title">Cost Optimization</h4>
+                            <p data-translate="globalReach.benefits.cost.description">Leverage global talent pools for cost-effective solutions</p>
                         </div>
                         <div class="benefit-item">
                             <div class="benefit-icon">🔒</div>
-                            <h4>Compliance & Security</h4>
-                            <p>Expertise in international regulations and security standards</p>
+                            <h4 data-translate="globalReach.benefits.compliance.title">Compliance & Security</h4>
+                            <p data-translate="globalReach.benefits.compliance.description">Expertise in international regulations and security standards</p>
                         </div>
                     </div>
                 </div>
@@ -271,11 +259,11 @@
     <section class="global-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Go Global?</h2>
-                <p>Let's discuss how we can help you reach clients worldwide with cutting-edge technology solutions.</p>
+                <h2 data-translate="globalReach.cta.title">Ready to Go Global?</h2>
+                <p data-translate="globalReach.cta.description">Let's discuss how we can help you reach clients worldwide with cutting-edge technology solutions.</p>
                 <div class="cta-buttons">
-                    <a href="./contact.html" class="btn-primary">Start Your Global Journey</a>
-                    <a href="./services.html" class="btn-secondary">Explore Our Services</a>
+                    <a href="./contact.html" class="btn-primary" data-translate="globalReach.cta.startJourney">Start Your Global Journey</a>
+                    <a href="./services.html" class="btn-secondary" data-translate="globalReach.cta.exploreServices">Explore Our Services</a>
                 </div>
             </div>
         </div>
@@ -286,44 +274,44 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Company</h4>
+                    <h4 data-translate="footer.company">Company</h4>
                     <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./services.html">Services</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="./global-reach.html">Global Reach</a></li>
+                        <li><a href="./index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="./services.html" data-translate="nav.services">Services</a></li>
+                        <li><a href="./contact.html" data-translate="nav.contact">Contact</a></li>
+                        <li><a href="./global-reach.html" data-translate="globalReach.title">Global Reach</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Services</h4>
+                    <h4 data-translate="footer.services">Services</h4>
                     <ul>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile Apps</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#" data-translate="footer.webDevelopment">Web Development</a></li>
+                        <li><a href="#" data-translate="footer.mobileApps">Mobile Apps</a></li>
+                        <li><a href="#" data-translate="footer.uiUxDesign">UI/UX Design</a></li>
+                        <li><a href="#" data-translate="footer.consulting">Consulting</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h4 data-translate="footer.connect">Connect</h4>
                     <ul>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="https://t.me/justsoftart">Telegram</a></li>
+                        <li><a href="#" data-translate="footer.linkedin">LinkedIn</a></li>
+                        <li><a href="#" data-translate="footer.twitter">Twitter</a></li>
+                        <li><a href="#" data-translate="footer.github">GitHub</a></li>
+                        <li><a href="https://t.me/justsoftart" data-translate="footer.telegram">Telegram</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Support</h4>
+                    <h4 data-translate="footer.support">Support</h4>
                     <ul>
-                        <li><a href="#" class="inactive" title="Work in Progress">Documentation</a></li>
-                        <li><a href="#" class="inactive" title="Work in Progress">Help Center</a></li>
-                        <li><a href="https://discord.gg/JZKRNnqdkZ">Discord Community</a></li>
-                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="#" class="inactive" title="Work in Progress" data-translate="footer.documentation" data-translate-title="common.workInProgress">Documentation</a></li>
+                        <li><a href="#" class="inactive" title="Work in Progress" data-translate="footer.helpCenter" data-translate-title="common.workInProgress">Help Center</a></li>
+                        <li><a href="https://discord.gg/JZKRNnqdkZ" data-translate="footer.discord">Discord Community</a></li>
+                        <li><a href="privacy.html" data-translate="footer.privacy">Privacy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Just Soft Art. All rights reserved.</p>
+                <p data-translate="footer.copyright">&copy; 2025 Just Soft Art. All rights reserved.</p>
             </div>
         </div>
     </footer>

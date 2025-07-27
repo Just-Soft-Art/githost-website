@@ -1,4 +1,72 @@
 {
+  "page": {
+    "home": {
+      "title": "Just Soft Art"
+    },
+    "about": {
+      "title": "About - Just Soft Art"
+    },
+    "services": {
+      "title": "Services - Just Soft Art"
+    },
+    "contact": {
+      "title": "Contact - Just Soft Art"
+    },
+    "privacy": {
+      "title": "Privacy Policy - Just Soft Art"
+    },
+    "globalReach": {
+      "title": "Global Reach - Just Soft Art"
+    }
+  },
+  "language": {
+    "english": "English",
+    "german": "German",
+    "french": "French", 
+    "italian": "Italian",
+    "spanish": "Spanish",
+    "polish": "Polish",
+    "romanian": "Romanian",
+    "dutch": "Dutch",
+    "ukrainian": "Ukrainian"
+  },
+  "tech": {
+    "react": "React",
+    "nodejs": "Node.js",
+    "mongodb": "MongoDB",
+    "uiux": "UI/UX",
+    "figma": "Figma",
+    "prototyping": "Prototyping",
+    "branding": "Branding",
+    "logoDesign": "Logo Design",
+    "guidelines": "Guidelines",
+    "ecommerce": "E-Commerce",
+    "payment": "Payment",
+    "analytics": "Analytics",
+    "customSolutions": "Custom Solutions",
+    "innovation": "Innovation",
+    "consultation": "Consultation",
+    "python": "Python",
+    "postgresql": "PostgreSQL",
+    "docker": "Docker",
+    "vuejs": "Vue.js",
+    "reactNative": "React Native",
+    "typescript": "TypeScript",
+    "adobeXd": "Adobe XD",
+    "sketch": "Sketch",
+    "principle": "Principle",
+    "shopify": "Shopify",
+    "woocommerce": "WooCommerce",
+    "stripe": "Stripe",
+    "paypal": "PayPal",
+    "openaiApi": "OpenAI API",
+    "tensorflow": "TensorFlow",
+    "automation": "Automation",
+    "strategy": "Strategy",
+    "leadership": "Leadership",
+    "mentoring": "Mentoring",
+    "planning": "Planning"
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
@@ -6,20 +74,24 @@
     "about": "About",
     "contact": "Contact"
   },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  },
   "home": {
     "hero": {
-      "title": "Think Different.\nCreate Beautiful.",
+      "title": "Think Different.<br>Create Beautiful.",
       "subtitle": "Experience the future of digital art and software development with Just Soft Art.",
       "learnMore": "Learn More",
       "getStarted": "Get Started"
     },
     "showcase": {
       "title": "Our Latest Work",
-      "creativeSolutions": {
+      "creative": {
         "title": "Creative Solutions",
         "description": "Innovative digital experiences that push boundaries."
       },
-      "softwareDevelopment": {
+      "software": {
         "title": "Software Development",
         "description": "Clean, efficient code that powers your vision."
       },
@@ -31,34 +103,52 @@
     "carousel": {
       "title": "Featured Products",
       "webApp": {
-        "title": "Modern Web Applications",
-        "description": "Responsive, fast, and user-friendly web applications built with cutting-edge technologies.",
-        "features": ["Responsive Design", "Fast Performance", "Modern UI/UX", "SEO Optimized"],
-        "button": "Learn More"
+        "title": "Web Application Suite",
+        "description": "A comprehensive web application platform built with modern technologies. Features responsive design, real-time data processing, and seamless user experience."
       },
       "mobileApp": {
-        "title": "Mobile App Development",
-        "description": "Native and cross-platform mobile applications for iOS and Android platforms.",
-        "features": ["Native Performance", "Cross-Platform", "App Store Ready", "Push Notifications"],
-        "button": "Learn More"
+        "title": "Mobile App Design",
+        "description": "Stunning mobile application designs that combine beautiful aesthetics with intuitive user experience. Optimized for both iOS and Android platforms."
       },
-      "customSolution": {
-        "title": "Custom Software Solutions",
-        "description": "Tailored software solutions designed specifically for your business needs and requirements.",
-        "features": ["Custom Development", "Scalable Architecture", "Integration Ready", "24/7 Support"],
-        "button": "Contact Us"
+      "brandIdentity": {
+        "title": "Brand Identity System",
+        "description": "Complete brand identity packages including logo design, color palettes, typography, and brand guidelines for consistent visual communication."
+      },
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "description": "Full-featured e-commerce solution with payment integration, inventory management, and analytics dashboard. Built for scalability and performance."
+      },
+      "custom": {
+        "title": "Something Unique in Mind?",
+        "description": "Don't see exactly what you're looking for? We love tackling unique challenges! From custom software solutions to innovative digital experiences, we bring your wildest ideas to life.",
+        "letsTalk": "Let's Talk!"
+      },
+      "learnMore": "Learn More",
+      "feature": {
+        "react": "React",
+        "nodejs": "Node.js",
+        "mongodb": "MongoDB",
+        "uiux": "UI/UX",
+        "figma": "Figma",
+        "prototyping": "Prototyping",
+        "branding": "Branding",
+        "logoDesign": "Logo Design",
+        "guidelines": "Guidelines",
+        "ecommerce": "E-Commerce",
+        "payment": "Payment",
+        "analytics": "Analytics",
+        "customSolutions": "Custom Solutions",
+        "innovation": "Innovation",
+        "consultation": "Consultation"
       }
     },
     "features": {
-      "title": "Why Choose Just Soft Art?",
-      "subtitle": "We combine creativity with technical excellence to deliver exceptional results.",
-      "list": [
-        "Custom software development tailored to your needs",
-        "Modern web applications with responsive design",
-        "Mobile app development for iOS and Android",
-        "Digital art and creative design solutions",
-        "Ongoing support and maintenance services"
-      ]
+      "title": "Designed for Excellence",
+      "description": "Every pixel matters. Every line of code counts. We craft digital experiences with the same attention to detail that defines great design.",
+      "pixelPerfect": "Pixel-perfect design",
+      "performance": "Performance optimized",
+      "userCentered": "User-centered approach",
+      "futureReady": "Future-ready technology"
     }
   },
   "services": {
@@ -66,59 +156,78 @@
       "title": "Our Services",
       "subtitle": "Comprehensive solutions to transform your business through technology and exceptional design."
     },
-    "webDevelopment": {
-      "title": "Web Development",
-      "description": "Modern, responsive web applications built with the latest technologies and best practices.",
-      "features": [
-        "Responsive Design",
-        "Progressive Web Apps",
-        "E-commerce Solutions",
-        "Content Management Systems"
-      ],
-      "technologies": ["React", "Vue.js", "Node.js", "PHP", "WordPress"],
-      "button": "Learn More"
+    "customSoftware": {
+      "title": "Custom Software Development",
+      "description": "Tailored solutions for your business challenges: CRM systems, ERP platforms, and custom business applications designed to streamline your operations and drive growth.",
+      "features": {
+        "erp": "Enterprise Resource Planning (ERP)",
+        "crm": "Customer Relationship Management (CRM)",
+        "bi": "Business Intelligence Platforms",
+        "workflow": "Workflow Automation Systems",
+        "api": "API Development & Integration"
+      }
     },
-    "mobileDevelopment": {
-      "title": "Mobile Development",
-      "description": "Native and cross-platform mobile applications for iOS and Android platforms.",
-      "features": [
-        "Native iOS Development",
-        "Native Android Development",
-        "Cross-Platform Solutions",
-        "App Store Optimization"
-      ],
-      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
-      "button": "Learn More"
+    "webMobile": {
+      "title": "Web & Mobile Development",
+      "description": "Modern websites, Single Page Applications (SPA), Progressive Web Apps (PWA), and native mobile applications that deliver exceptional user experiences across all devices.",
+      "features": {
+        "responsive": "Responsive Web Applications",
+        "pwa": "Progressive Web Apps (PWA)",
+        "spa": "Single Page Applications (SPA)",
+        "native": "Native Mobile Development",
+        "crossPlatform": "Cross-Platform Solutions"
+      }
     },
-    "uiUxDesign": {
+    "uiUx": {
       "title": "UI/UX Design",
-      "description": "User-centered design solutions that create engaging and intuitive user experiences.",
-      "features": [
-        "User Research",
-        "Wireframing & Prototyping",
-        "Visual Design",
-        "Usability Testing"
-      ],
-      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision"],
-      "button": "Learn More"
+      "description": "Interface design, prototyping, and user experience audits that create intuitive and engaging digital experiences that users love and businesses depend on.",
+      "features": {
+        "research": "User Experience Research",
+        "prototyping": "Interactive Prototyping",
+        "designSystems": "Design Systems",
+        "usability": "Usability Testing",
+        "accessibility": "Accessibility Compliance"
+      }
+    },
+    "ecommerce": {
+      "title": "E-commerce Solutions",
+      "description": "Complete online store development, booking systems, and payment processing solutions that drive sales and provide seamless shopping experiences for your customers.",
+      "features": {
+        "onlineStore": "Online Store Development",
+        "payment": "Payment Gateway Integration",
+        "inventory": "Inventory Management",
+        "booking": "Booking & Reservation Systems",
+        "multiVendor": "Multi-vendor Marketplaces"
+      }
+    },
+    "aiAutomation": {
+      "title": "AI & Automation",
+      "description": "AI integration, task automation, intelligent chatbots, and content generation solutions that enhance productivity and create smarter business processes.",
+      "features": {
+        "aiIntegration": "Artificial Intelligence Integration",
+        "automation": "Business Process Automation",
+        "chatbots": "Intelligent Chatbots",
+        "contentGeneration": "Content Generation Systems",
+        "machineLearning": "Machine Learning Solutions"
+      }
     },
     "consulting": {
-      "title": "Technology Consulting",
-      "description": "Expert guidance on technology strategy, architecture, and digital transformation.",
-      "features": [
-        "Technology Strategy",
-        "Architecture Design",
-        "Digital Transformation",
-        "Performance Optimization"
-      ],
-      "technologies": ["Cloud Solutions", "DevOps", "Security", "Scalability"],
-      "button": "Learn More"
+      "title": "IT Consulting & CTO-as-a-Service",
+      "description": "Strategic technology consulting, technical leadership, and comprehensive support for startups and SMBs looking to scale their technology infrastructure effectively.",
+      "features": {
+        "strategy": "Technology Strategy Consulting",
+        "reviews": "Architecture & Code Reviews",
+        "leadership": "Team Leadership & Mentoring",
+        "startup": "Startup Technical Support",
+        "transformation": "Digital Transformation"
+      }
     },
+    "getStarted": "Get Started",
     "cta": {
-      "title": "Ready to Get Started?",
-      "subtitle": "Let's discuss how we can help you achieve your digital goals.",
-      "primaryButton": "Start Project",
-      "secondaryButton": "Get Quote"
+      "title": "Ready to Transform Your Business?",
+      "description": "Let's discuss how our services can help you achieve your goals and drive innovation in your industry.",
+      "startProject": "Start Your Project",
+      "scheduleConsultation": "Schedule Consultation"
     }
   },
   "about": {
@@ -140,48 +249,59 @@
       "northAmerica": {
         "title": "North America",
         "description": "Web applications, small business solutions, and custom software development serving clients across the United States and Canada.",
-        "stats": ["35+ Projects", "8 Cities"]
+        "projects": "35+ Projects",
+        "cities": "8 Cities"
       },
       "europe": {
         "title": "Europe",
         "description": "GDPR-compliant web applications, digital solutions, and modern web development for European small and medium businesses.",
-        "stats": ["30+ Projects", "6 Cities"]
+        "projects": "30+ Projects",
+        "cities": "6 Cities"
       },
       "asiaPacific": {
         "title": "Asia-Pacific",
         "description": "Modern web solutions, responsive designs, and custom applications for growing businesses in the Asia-Pacific region.",
-        "stats": ["20+ Projects", "4 Cities"]
+        "projects": "20+ Projects",
+        "cities": "4 Cities"
       }
     },
     "successStories": {
       "title": "Success Stories",
-      "localBusiness": {
+      "business": {
         "title": "Local Business Platform",
-        "description": "Developed a comprehensive e-commerce solution for a growing retail business, increasing their online sales by 300% within 6 months.",
-        "tags": ["E-commerce", "Growth", "Local"]
+        "description": "Developed a comprehensive e-commerce solution for a growing retail business, increasing their online sales by 300% within 6 months."
       },
       "education": {
         "title": "Educational Management System",
-        "description": "Built a custom learning management system for a private school, streamlining course management and student engagement.",
-        "tags": ["Education", "Management", "Custom"]
+        "description": "Built a custom learning management system for a private school, streamlining course management and student engagement."
       },
       "startup": {
         "title": "Startup MVP Development",
-        "description": "Created a minimum viable product for a tech startup that successfully secured seed funding and launched to market.",
-        "tags": ["Startup", "MVP", "Innovation"]
+        "description": "Created a minimum viable product for a tech startup that successfully secured seed funding and launched to market."
+      },
+      "tags": {
+        "ecommerce": "E-commerce",
+        "growth": "Growth",
+        "local": "Local",
+        "education": "Education",
+        "management": "Management",
+        "custom": "Custom",
+        "startup": "Startup",
+        "mvp": "MVP",
+        "innovation": "Innovation"
       }
     },
     "benefits": {
       "title": "Why Choose Global Partnership?",
-      "developmentCycle": {
+      "development": {
         "title": "24/7 Development Cycle",
         "description": "Round-the-clock development with teams across different time zones"
       },
-      "culturalExpertise": {
+      "cultural": {
         "title": "Cultural Expertise",
         "description": "Deep understanding of local markets and cultural nuances"
       },
-      "costOptimization": {
+      "cost": {
         "title": "Cost Optimization",
         "description": "Leverage global talent pools for cost-effective solutions"
       },
@@ -189,7 +309,7 @@
         "title": "Compliance & Security",
         "description": "Expertise in international regulations and security standards"
       },
-      "scalableTechnology": {
+      "scalable": {
         "title": "Scalable Technology",
         "description": "Future-ready solutions that grow with your business globally"
       },
@@ -207,40 +327,211 @@
   },
   "contact": {
     "hero": {
-      "title": "Get in Touch",
-      "subtitle": "Ready to start your next project? Let's discuss how we can help bring your vision to life."
+      "title": "Get In Touch",
+      "subtitle": "Ready to bring your ideas to life? Let's start a conversation about your next project."
     },
     "info": {
-      "title": "Let's Start a Conversation",
-      "subtitle": "We're here to help you succeed. Reach out to us through any of these channels or fill out the form below.",
+      "title": "Let's Create Something Amazing",
+      "description": "Whether you need a stunning website, custom software solution, or digital art creation, we're here to help turn your vision into reality."
+    },
+    "methods": {
       "email": {
-        "title": "Email Us",
-        "description": "Send us a message and we'll get back to you within 24 hours.",
-        "address": "hello@justsoftart.com"
+        "title": "Email"
       },
-      "telegram": {
-        "title": "Telegram",
-        "description": "Quick chat and instant support through our Telegram channel.",
-        "handle": "@justsoftart"
+      "chat": {
+        "title": "Let's Chat",
+        "description": "Quick response guaranteed"
       },
-      "discord": {
-        "title": "Discord Community",
-        "description": "Join our community for discussions, updates, and support.",
-        "server": "Just Soft Art Community"
+      "global": {
+        "title": "Global Reach",
+        "description": "Working with clients worldwide"
       }
     },
     "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "subject": "Subject",
-      "message": "Your Message",
+      "name": "Name *",
+      "email": "Email *",
+      "company": "Company",
+      "projectType": "Project Type",
+      "budget": "Budget Range",
+      "message": "Tell us about your project *",
       "submit": "Send Message",
+      "selectProjectType": "Select a project type",
+      "webDevelopment": "Web Development",
+      "mobileApp": "Mobile App Design",
+      "digitalArt": "Digital Art",
+      "branding": "Brand Identity",
+      "ecommerce": "E-Commerce Platform",
+      "custom": "Custom Solution",
+      "consultation": "Consultation",
+      "selectBudget": "Select budget range",
+      "under5k": "Under $5,000",
+      "5k10k": "$5,000 - $10,000",
+      "10k25k": "$10,000 - $25,000",
+      "25k50k": "$25,000 - $50,000",
+      "50kPlus": "$50,000+",
+      "discuss": "Let's discuss",
       "placeholders": {
-        "name": "Enter your full name",
-        "email": "Enter your email address",
-        "subject": "What's this about?",
-        "message": "Tell us about your project..."
+        "name": "Your full name",
+        "email": "your.email@example.com",
+        "company": "Your company name (optional)",
+        "message": "Describe your project, goals, timeline, and any specific requirements..."
       }
+    }
+  },
+  "privacy": {
+    "hero": {
+      "title": "Privacy Policy",
+      "description": "Your privacy is important to us. This policy explains how we collect, use, and protect your information."
+    },
+    "infoCollection": {
+      "title": "Information We Collect",
+      "description": "We collect information you provide directly to us, such as when you create an account, contact us, or use our services. This may include:",
+      "name": "Name and contact information",
+      "project": "Project requirements and specifications",
+      "preferences": "Communication preferences",
+      "payment": "Payment information (processed securely through third-party providers)"
+    },
+    "howWeUse": {
+      "title": "How We Use Your Information",
+      "description": "We use the information we collect to:",
+      "provide": "Provide and improve our services",
+      "communicate": "Communicate with you about projects and updates",
+      "process": "Process payments and fulfill contracts",
+      "marketing": "Send marketing communications (with your consent)",
+      "comply": "Comply with legal obligations"
+    },
+    "infoSharing": {
+      "title": "Information Sharing",
+      "description": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except:",
+      "providers": "To trusted service providers who assist in operating our business",
+      "legal": "When required by law or to protect our rights",
+      "business": "In connection with a business transfer or acquisition"
+    },
+    "security": {
+      "title": "Data Security",
+      "description": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "description": "You have the right to:",
+      "access": "Access and update your personal information",
+      "delete": "Request deletion of your data",
+      "optout": "Opt-out of marketing communications",
+      "portability": "Data portability"
+    },
+    "cookies": {
+      "title": "Cookies and Tracking",
+      "description": "We use cookies and similar technologies to enhance your experience, analyze usage, and for marketing purposes. You can control cookie settings through your browser preferences."
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "description": "We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the \"Last Updated\" date."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have questions about this privacy policy or our data practices, please contact us:",
+      "email": "Email: privacy@justsoftart.com",
+      "form": "Contact Form: Contact Page"
+    },
+    "lastUpdated": "Last Updated: July 28, 2025"
+  },
+  "globalReach": {
+    "title": "Global Reach",
+    "hero": {
+      "title": "🌍 Global Reach",
+      "subtitle": "Connecting with clients worldwide through innovative technology solutions"
+    },
+    "stats": {
+      "countries": "Countries",
+      "projects": "Projects",
+      "support": "Support"
+    },
+    "map": {
+      "resetView": "🌍 Reset View",
+      "toggleConnections": "🔗 Toggle Connections",
+      "pauseAnimation": "⏸️ Pause Animation"
+    },
+    "globalPresence": {
+      "title": "🌐 Global Presence",
+      "description": "Our team operates across multiple time zones to provide continuous support and development services. We have successfully delivered projects in North America, Europe, Asia, Africa, and Oceania, building lasting partnerships with clients from diverse industries and cultures."
+    },
+    "regionalExpertise": {
+      "title": "🚀 Regional Expertise",
+      "northAmerica": {
+        "title": "North America",
+        "description": "Enterprise solutions, fintech platforms, and e-commerce systems serving millions of users across the United States and Canada.",
+        "projects": "150+ Projects",
+        "cities": "12 Cities"
+      },
+      "europe": {
+        "title": "Europe",
+        "description": "GDPR-compliant applications, digital transformation initiatives, and innovative web solutions for European markets.",
+        "projects": "200+ Projects",
+        "cities": "18 Cities"
+      },
+      "asiaPacific": {
+        "title": "Asia-Pacific",
+        "description": "Mobile-first solutions, emerging technologies, and scalable platforms for the dynamic Asia-Pacific region.",
+        "projects": "120+ Projects",
+        "cities": "15 Cities"
+      },
+      "emergingMarkets": {
+        "title": "Emerging Markets",
+        "description": "Innovative solutions for growing markets in Africa, South America, and the Middle East, focusing on accessibility and scalability.",
+        "projects": "80+ Projects",
+        "cities": "10 Cities"
+      }
+    },
+    "successStories": {
+      "title": "⭐ Success Stories",
+      "banking": {
+        "title": "🏦 Global Banking Platform",
+        "description": "Developed a secure, multi-currency banking platform serving customers across 25 countries with real-time transaction processing."
+      },
+      "ecommerce": {
+        "title": "🛒 E-commerce Revolution",
+        "description": "Built a revolutionary e-commerce platform that handles millions of transactions daily across multiple continents."
+      },
+      "healthcare": {
+        "title": "📱 Healthcare Innovation",
+        "description": "Created a telemedicine platform connecting patients and doctors worldwide, breaking geographical barriers in healthcare."
+      },
+      "tags": {
+        "fintech": "Fintech",
+        "security": "Security",
+        "scale": "Scale",
+        "ecommerce": "E-commerce",
+        "performance": "Performance",
+        "global": "Global",
+        "healthcare": "Healthcare",
+        "innovation": "Innovation",
+        "impact": "Impact"
+      }
+    },
+    "benefits": {
+      "title": "🤝 Why Choose Global Partnership?",
+      "development": {
+        "title": "24/7 Development Cycle",
+        "description": "Round-the-clock development with teams across different time zones"
+      },
+      "cultural": {
+        "title": "Cultural Expertise",
+        "description": "Deep understanding of local markets and cultural nuances"
+      },
+      "cost": {
+        "title": "Cost Optimization",
+        "description": "Leverage global talent pools for cost-effective solutions"
+      },
+      "compliance": {
+        "title": "Compliance & Security",
+        "description": "Expertise in international regulations and security standards"
+      }
+    },
+    "cta": {
+      "title": "Ready to Go Global?",
+      "description": "Let's discuss how we can help you reach clients worldwide with cutting-edge technology solutions.",
+      "startJourney": "Start Your Global Journey",
+      "exploreServices": "Explore Our Services"
     }
   },
   "footer": {
@@ -263,15 +554,7 @@
     "copyright": "© 2025 Just Soft Art. All rights reserved."
   },
   "common": {
-    "loading": "Loading...",
-    "error": "An error occurred",
-    "success": "Success!",
-    "close": "Close",
-    "save": "Save",
-    "cancel": "Cancel",
-    "next": "Next",
-    "previous": "Previous",
-    "back": "Back",
-    "continue": "Continue"
+    "workInProgress": "Work in Progress",
+    "companyName": "Just Soft Art"
   }
 } 

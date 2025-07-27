@@ -1,4 +1,35 @@
 {
+  "page": {
+    "home": {
+      "title": "Just Soft Art"
+    },
+    "about": {
+      "title": "Over ons - Just Soft Art"
+    },
+    "services": {
+      "title": "Diensten - Just Soft Art"
+    },
+    "contact": {
+      "title": "Contact - Just Soft Art"
+    },
+    "privacy": {
+      "title": "Privacybeleid - Just Soft Art"
+    },
+    "globalReach": {
+      "title": "Wereldwijd bereik - Just Soft Art"
+    }
+  },
+  "language": {
+    "english": "Engels",
+    "german": "Duits",
+    "french": "Frans", 
+    "italian": "Italiaans",
+    "spanish": "Spaans",
+    "polish": "Pools",
+    "romanian": "Roemeens",
+    "dutch": "Nederlands",
+    "ukrainian": "Oekraïens"
+  },
   "nav": {
     "home": "Home",
     "services": "Diensten",
@@ -6,201 +37,196 @@
     "about": "Over ons",
     "contact": "Contact"
   },
+  "theme": {
+    "light": "Licht",
+    "dark": "Donker"
+  },
   "home": {
     "hero": {
-      "title": "Denk anders.\nCreëer mooi.",
+      "title": "Denk anders.<br>Creëer prachtig.",
       "subtitle": "Ervaar de toekomst van digitale kunst en softwareontwikkeling met Just Soft Art.",
-      "learnMore": "Meer weten",
-      "getStarted": "Beginnen"
-    },
-    "showcase": {
-      "title": "Onze nieuwste werk",
-      "creativeSolutions": {
-        "title": "Creatieve oplossingen",
-        "description": "Innovatieve digitale ervaringen die grenzen verleggen."
-      },
-      "softwareDevelopment": {
-        "title": "Softwareontwikkeling",
-        "description": "Schone, efficiënte code die je visie aandrijft."
-      },
-      "digitalArt": {
-        "title": "Digitale kunst",
-        "description": "Adembenemende visuals die boeien en inspireren."
-      }
-    },
-    "carousel": {
-      "title": "Uitgelichte producten",
-      "webApp": {
-        "title": "Moderne webapplicaties",
-        "description": "Responsieve, snelle en gebruiksvriendelijke webapplicaties gebouwd met cutting-edge technologieën.",
-        "features": ["Responsief design", "Snelle prestaties", "Moderne UI/UX", "SEO-geoptimaliseerd"],
-        "button": "Meer weten"
-      },
-      "mobileApp": {
-        "title": "Mobiele app-ontwikkeling",
-        "description": "Native en cross-platform mobiele applicaties voor iOS en Android.",
-        "features": ["Native prestaties", "Cross-platform", "App Store klaar", "Push-notificaties"],
-        "button": "Meer weten"
-      },
-      "customSolution": {
-        "title": "Aangepaste software-oplossingen",
-        "description": "Op maat gemaakte software-oplossingen specifiek ontworpen voor jouw behoeften en zakelijke vereisten.",
-        "features": ["Aangepaste ontwikkeling", "Schaalbare architectuur", "Integratie klaar", "24/7 ondersteuning"],
-        "button": "Neem contact op"
-      }
+      "learnMore": "Meer informatie",
+      "getStarted": "Begin"
     },
     "features": {
-      "title": "Waarom Just Soft Art kiezen?",
-      "subtitle": "We combineren creativiteit met technische excellentie om uitzonderlijke resultaten te leveren.",
-      "list": [
-        "Aangepaste softwareontwikkeling afgestemd op jouw behoeften",
-        "Moderne webapplicaties met responsief design",
-        "Mobiele app-ontwikkeling voor iOS en Android",
-        "Digitale kunst en creatieve design-oplossingen",
-        "Doorlopende ondersteuning en onderhoudsdiensten"
-      ]
+      "title": "Ontworpen voor uitmuntendheid",
+      "description": "Elke pixel telt. Elke regel code is belangrijk. We creëren digitale ervaringen met dezelfde aandacht voor detail die geweldig design definieert.",
+      "pixelPerfect": "Pixel-perfect design",
+      "performance": "Geoptimaliseerde prestaties",
+      "userCentered": "Gebruikersgerichte aanpak",
+      "futureReady": "Toekomstbestendige technologie"
     }
   },
   "services": {
     "hero": {
       "title": "Onze diensten",
-      "subtitle": "Uitgebreide oplossingen om je bedrijf te transformeren door technologie en uitzonderlijk design."
+      "subtitle": "Uitgebreide oplossingen om je bedrijf te transformeren door technologie en uitzonderlijk ontwerp."
     },
-    "webDevelopment": {
-      "title": "Webontwikkeling",
-      "description": "Moderne, responsieve webapplicaties gebouwd met de nieuwste technologieën en beste praktijken.",
-      "features": [
-        "Responsief design",
-        "Progressive Web Apps",
-        "E-commerce oplossingen",
-        "Content management systemen"
-      ],
-      "technologies": ["React", "Vue.js", "Node.js", "PHP", "WordPress"],
-      "button": "Meer weten"
+    "customSoftware": {
+      "title": "Maatwerk softwareontwikkeling",
+      "description": "Op maat gemaakte oplossingen voor je bedrijfsuitdagingen: CRM-systemen, ERP-platforms en aangepaste bedrijfsapplicaties ontworpen om je operaties te stroomlijnen en groei te stimuleren.",
+      "features": {
+        "erp": "Enterprise Resource Planning (ERP)",
+        "crm": "Customer Relationship Management (CRM)",
+        "bi": "Business Intelligence platformen",
+        "workflow": "Workflow automatiseringssystemen",
+        "api": "API ontwikkeling & integratie"
+      }
     },
-    "mobileDevelopment": {
-      "title": "Mobiele ontwikkeling",
-      "description": "Native en cross-platform mobiele applicaties voor iOS en Android.",
-      "features": [
-        "Native iOS-ontwikkeling",
-        "Native Android-ontwikkeling",
-        "Cross-platform oplossingen",
-        "App Store optimalisatie"
-      ],
-      "technologies": ["React Native", "Flutter", "Swift", "Kotlin"],
-      "button": "Meer weten"
+    "webMobile": {
+      "title": "Web & mobiele ontwikkeling",
+      "description": "Moderne websites, Single Page Applications (SPA), Progressive Web Apps (PWA) en native mobiele applicaties die uitzonderlijke gebruikerservaringen bieden op alle apparaten.",
+      "features": {
+        "responsive": "Responsieve webapplicaties",
+        "pwa": "Progressive Web Apps (PWA)",
+        "spa": "Single Page Applications (SPA)",
+        "native": "Native mobiele ontwikkeling",
+        "crossPlatform": "Cross-platform oplossingen"
+      }
     },
-    "uiUxDesign": {
+    "uiUx": {
       "title": "UI/UX Design",
-      "description": "Gebruikersgerichte design-oplossingen die boeiende en intuïtieve gebruikerservaringen creëren.",
-      "features": [
-        "Gebruikersonderzoek",
-        "Wireframing en prototyping",
-        "Visueel design",
-        "Usability testing"
-      ],
-      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision"],
-      "button": "Meer weten"
+      "description": "Interface ontwerp, prototyping en gebruikerservaring audits die intuïtieve en boeiende digitale ervaringen creëren waar gebruikers van houden en waar bedrijven op vertrouwen.",
+      "features": {
+        "research": "Gebruikerservaring onderzoek",
+        "prototyping": "Interactieve prototyping",
+        "designSystems": "Ontwerpsystemen",
+        "usability": "Bruikbaarheidstests",
+        "accessibility": "Toegankelijkheidscompatibiliteit"
+      }
+    },
+    "ecommerce": {
+      "title": "E-commerce oplossingen",
+      "description": "Complete online winkel ontwikkeling, boekingssystemen en betalingsverwerkingsoplossingen die verkopen stimuleren en naadloze winkelervaringen bieden voor je klanten.",
+      "features": {
+        "onlineStore": "Online winkel ontwikkeling",
+        "payment": "Betalingsgateway integratie",
+        "inventory": "Voorraadbeheer",
+        "booking": "Boeking & reserveringssystemen",
+        "multiVendor": "Multi-vendor marktplaatsen"
+      }
+    },
+    "aiAutomation": {
+      "title": "AI & automatisering",
+      "description": "AI integratie, taakautomatisering, intelligente chatbots en contentgeneratieoplossingen die productiviteit verbeteren en slimmere bedrijfsprocessen creëren.",
+      "features": {
+        "aiIntegration": "Kunstmatige intelligentie integratie",
+        "automation": "Bedrijfsproces automatisering",
+        "chatbots": "Intelligente chatbots",
+        "contentGeneration": "Contentgeneratiesystemen",
+        "machineLearning": "Machine learning oplossingen"
+      }
     },
     "consulting": {
-      "title": "Technologieconsultancy",
-      "description": "Expertadvies over technologiestrategie, architectuur en digitale transformatie.",
-      "features": [
-        "Technologiestrategie",
-        "Architectuurontwerp",
-        "Digitale transformatie",
-        "Prestatie-optimalisatie"
-      ],
-      "technologies": ["Cloud-oplossingen", "DevOps", "Beveiliging", "Schaalbaarheid"],
-      "button": "Meer weten"
+      "title": "IT-consultancy & CTO-als-dienst",
+      "description": "Strategische technologieconsultancy, technisch leiderschap en uitgebreide ondersteuning voor startups en MKB die hun technologische infrastructuur effectief willen opschalen.",
+      "features": {
+        "strategy": "Technologiestrategie consultancy",
+        "reviews": "Architectuur & code reviews",
+        "leadership": "Teamleiderschap & mentoring",
+        "startup": "Startup technische ondersteuning",
+        "transformation": "Digitale transformatie"
+      }
     },
+    "getStarted": "Beginnen",
     "cta": {
-      "title": "Klaar om te beginnen?",
-      "subtitle": "Laten we bespreken hoe we je kunnen helpen je digitale doelen te bereiken.",
-      "primaryButton": "Project starten",
-      "secondaryButton": "Offerte krijgen"
+      "title": "Klaar om je bedrijf te transformeren?",
+      "description": "Laten we bespreken hoe onze diensten je kunnen helpen je doelen te bereiken en innovatie in je industrie te stimuleren.",
+      "startProject": "Project starten",
+      "scheduleConsultation": "Consultatie inplannen"
     }
   },
   "about": {
     "hero": {
       "title": "Over Just Soft Art",
-      "subtitle": "Verbinden met klanten wereldwijd door innovatieve technologische oplossingen"
+      "subtitle": "Verbinding maken met klanten wereldwijd door innovatieve technologische oplossingen"
     },
     "stats": {
       "countries": "Landen",
       "projects": "Projecten",
-      "years": "Jaren"
+      "years": "Jaar"
     },
     "globalPresence": {
-      "title": "Wereldwijde aanwezigheid",
-      "description": "Sinds 2022 levert ons toegewijde team van 10 professionals hoogwaardige software-oplossingen op meerdere continenten. We hebben met succes projecten voltooid in Noord-Amerika, Europa en Azië, waarbij we sterke relaties hebben opgebouwd met klanten uit verschillende industrieën en achtergronden."
+      "title": "Mondiale aanwezigheid",
+      "description": "Sinds 2022 levert ons toegewijde team van 10 professionals hoogwaardige softwareoplossingen op meerdere continenten. We hebben succesvol projecten voltooid in Noord-Amerika, Europa en Azië, en sterke relaties opgebouwd met klanten uit verschillende industrieën en achtergronden."
     },
     "regionalExpertise": {
       "title": "Regionale expertise",
       "northAmerica": {
         "title": "Noord-Amerika",
-        "description": "Webapplicaties, oplossingen voor kleine bedrijven en aangepaste softwareontwikkeling die klanten in de Verenigde Staten en Canada bedient.",
-        "stats": ["35+ Projecten", "8 Steden"]
+        "description": "Webapplicaties, kleine bedrijfsoplossingen en maatwerk softwareontwikkeling voor klanten in de Verenigde Staten en Canada.",
+        "projects": "35+ Projecten",
+        "cities": "8 Steden"
       },
       "europe": {
         "title": "Europa",
         "description": "AVG-conforme webapplicaties, digitale oplossingen en moderne webontwikkeling voor Europese kleine en middelgrote bedrijven.",
-        "stats": ["30+ Projecten", "6 Steden"]
+        "projects": "30+ Projecten",
+        "cities": "6 Steden"
       },
       "asiaPacific": {
         "title": "Azië-Pacific",
-        "description": "Moderne web-oplossingen, responsieve designs en aangepaste applicaties voor groeiende bedrijven in de Azië-Pacific regio.",
-        "stats": ["20+ Projecten", "4 Steden"]
+        "description": "Moderne weboplossingen, responsieve ontwerpen en aangepaste applicaties voor groeiende bedrijven in de Azië-Pacific regio.",
+        "projects": "20+ Projecten",
+        "cities": "4 Steden"
       }
     },
     "successStories": {
       "title": "Succesverhalen",
-      "localBusiness": {
+      "business": {
         "title": "Lokaal bedrijfsplatform",
-        "description": "Ontwikkeling van een uitgebreide e-commerce oplossing voor een groeiend retailbedrijf, waarbij hun online verkopen met 300% toenamen binnen 6 maanden.",
-        "tags": ["E-commerce", "Groei", "Lokaal"]
+        "description": "Ontwikkelde een uitgebreide e-commerce oplossing voor een groeiend retailbedrijf, waardoor hun online verkopen met 300% toenamen binnen 6 maanden."
       },
       "education": {
-        "title": "Educatief beheersysteem",
-        "description": "Bouw van een aangepast leermanagementsysteem voor een privéschool, waarbij cursusbeheer en studentbetrokkenheid werden gestroomlijnd.",
-        "tags": ["Onderwijs", "Beheer", "Aangepast"]
+        "title": "Educatief managementsysteem",
+        "description": "Bouwde een aangepast leerbeheersysteem voor een privéschool, waardoor cursusbeheer en studentenbetrokkenheid werden gestroomlijnd."
       },
       "startup": {
-        "title": "Startup MVP-ontwikkeling",
-        "description": "Creëren van een minimum levensvatbaar product voor een tech-startup die succesvol seed-financiering verkreeg en op de markt werd gelanceerd.",
-        "tags": ["Startup", "MVP", "Innovatie"]
+        "title": "Startup MVP ontwikkeling",
+        "description": "Creëerde een minimaal levensvatbaar product voor een tech startup die succesvol startfinanciering kreeg en op de markt kwam."
+      },
+      "tags": {
+        "ecommerce": "E-commerce",
+        "growth": "Groei",
+        "local": "Lokaal",
+        "education": "Onderwijs",
+        "management": "Management",
+        "custom": "Maatwerk",
+        "startup": "Startup",
+        "mvp": "MVP",
+        "innovation": "Innovatie"
       }
     },
     "benefits": {
-      "title": "Waarom wereldwijd partnerschap kiezen?",
-      "developmentCycle": {
-        "title": "24/7 ontwikkelingscyclus",
-        "description": "Rond-de-klok ontwikkeling met teams in verschillende tijdzones"
+      "title": "Waarom kiezen voor wereldwijd partnerschap?",
+      "development": {
+        "title": "24/7 Ontwikkelingscyclus",
+        "description": "Continue ontwikkeling met teams in verschillende tijdzones"
       },
-      "culturalExpertise": {
+      "cultural": {
         "title": "Culturele expertise",
         "description": "Diep begrip van lokale markten en culturele nuances"
       },
-      "costOptimization": {
+      "cost": {
         "title": "Kostenoptimalisatie",
-        "description": "Benut wereldwijde talentpools voor kosteneffectieve oplossingen"
+        "description": "Gebruik maken van wereldwijde talentpools voor kosteneffectieve oplossingen"
       },
       "compliance": {
-        "title": "Compliance en beveiliging",
+        "title": "Compliance & Beveiliging",
         "description": "Expertise in internationale regelgeving en beveiligingsstandaarden"
       },
-      "scalableTechnology": {
+      "scalable": {
         "title": "Schaalbare technologie",
-        "description": "Toekomstbestendige oplossingen die met je bedrijf wereldwijd groeien"
+        "description": "Toekomstbestendige oplossingen die wereldwijd meegroeien met je bedrijf"
       },
       "partnership": {
-        "title": "Langdurig partnerschap",
-        "description": "Bouwen van duurzame relaties met doorlopende ondersteuning en onderhoud"
+        "title": "Langetermijnpartnerschap",
+        "description": "Duurzame relaties opbouwen met doorlopende ondersteuning en onderhoud"
       }
     },
     "cta": {
-      "title": "Klaar om wereldwijd te worden?",
-      "subtitle": "Laten we bespreken hoe we je kunnen helpen klanten wereldwijd te bereiken met cutting-edge technologische oplossingen.",
+      "title": "Klaar om wereldwijd te gaan?",
+      "subtitle": "Laten we bespreken hoe we je kunnen helpen klanten wereldwijd te bereiken met geavanceerde technologische oplossingen.",
       "learnMore": "Meer weten",
       "getStarted": "Beginnen"
     }
@@ -208,40 +234,112 @@
   "contact": {
     "hero": {
       "title": "Neem contact op",
-      "subtitle": "Klaar om je volgende project te starten? Laten we bespreken hoe we je kunnen helpen je visie tot leven te brengen."
+      "subtitle": "Klaar om je ideeën tot leven te brengen? Laten we een gesprek starten over je volgende project."
     },
     "info": {
-      "title": "Laten we een gesprek beginnen",
-      "subtitle": "We zijn hier om je te helpen slagen. Neem contact met ons op via een van deze kanalen of vul het onderstaande formulier in.",
+      "title": "Laten we iets geweldigs creëren",
+      "description": "Of je nu een prachtige website, een aangepaste softwareoplossing of digitale kunstcreatie nodig hebt, we zijn er om je te helpen je visie werkelijkheid te maken."
+    },
+    "methods": {
       "email": {
-        "title": "Stuur ons een e-mail",
-        "description": "Stuur ons een bericht en we nemen binnen 24 uur contact met je op.",
-        "address": "hello@justsoftart.com"
+        "title": "Email"
       },
-      "telegram": {
-        "title": "Telegram",
-        "description": "Snelle chat en directe ondersteuning via ons Telegram-kanaal.",
-        "handle": "@justsoftart"
+      "chat": {
+        "title": "Laten we praten",
+        "description": "Snelle reactie gegarandeerd"
       },
-      "discord": {
-        "title": "Discord Community",
-        "description": "Word lid van onze community voor discussies, updates en ondersteuning.",
-        "server": "Just Soft Art Community"
+      "global": {
+        "title": "Wereldwijd bereik",
+        "description": "Werken met klanten wereldwijd"
       }
     },
     "form": {
-      "name": "Volledige naam",
-      "email": "E-mailadres",
-      "subject": "Onderwerp",
-      "message": "Je bericht",
-      "submit": "Bericht verzenden",
+      "name": "Naam *",
+      "email": "Email *",
+      "company": "Bedrijf",
+      "projectType": "Projecttype",
+      "selectProjectType": "Selecteer een projecttype",
+      "webDevelopment": "Webontwikkeling",
+      "mobileApp": "Mobiele App Design",
+      "digitalArt": "Digitale Kunst",
+      "branding": "Merkidentiteit",
+      "ecommerce": "E-Commerce Platform",
+      "custom": "Aangepaste Oplossing",
+      "consultation": "Consultatie",
+      "budget": "Budgetbereik",
+      "selectBudget": "Selecteer budgetbereik",
+      "under5k": "Onder €5,000",
+      "5k10k": "€5,000 - €10,000",
+      "10k25k": "€10,000 - €25,000",
+      "25k50k": "€25,000 - €50,000",
+      "50kPlus": "€50,000+",
+      "discuss": "Laten we bespreken",
+      "message": "Vertel ons over je project *",
+      "submit": "Bericht versturen",
       "placeholders": {
-        "name": "Voer je volledige naam in",
-        "email": "Voer je e-mailadres in",
-        "subject": "Waar gaat het over?",
-        "message": "Vertel ons over je project..."
+        "name": "Je naam",
+        "email": "jouw@email.nl",
+        "company": "Je bedrijf",
+        "message": "Beschrijf je project, doelen en tijdlijn..."
       }
     }
+  },
+  "privacy": {
+    "hero": {
+      "title": "Privacybeleid",
+      "description": "Je privacy is belangrijk voor ons. Dit beleid legt uit hoe we je informatie verzamelen, gebruiken en beschermen."
+    },
+    "infoCollection": {
+      "title": "Informatie die we verzamelen",
+      "description": "We verzamelen informatie die je ons direct verstrekt, zoals wanneer je een account aanmaakt, contact met ons opneemt of onze diensten gebruikt. Dit kan het volgende omvatten:",
+      "name": "Naam en contactinformatie",
+      "project": "Projectvereisten en specificaties",
+      "preferences": "Communicatievoorkeuren",
+      "payment": "Betaalinformatie (veilig verwerkt via externe providers)"
+    },
+    "howWeUse": {
+      "title": "Hoe we je informatie gebruiken",
+      "description": "We gebruiken de informatie die we verzamelen om:",
+      "provide": "Onze diensten te leveren en te verbeteren",
+      "communicate": "Met je te communiceren over projecten en updates",
+      "process": "Betalingen te verwerken en contracten na te komen",
+      "marketing": "Marketingcommunicatie te verzenden (met je toestemming)",
+      "comply": "Wettelijke verplichtingen na te komen"
+    },
+    "infoSharing": {
+      "title": "Informatie delen",
+      "description": "We verkopen, ruilen of dragen je persoonlijke informatie niet over aan derden zonder je toestemming, behalve:",
+      "providers": "Aan vertrouwde serviceproviders die ons helpen bij het runnen van ons bedrijf",
+      "legal": "Wanneer wettelijk vereist of om onze rechten te beschermen",
+      "business": "In verband met een bedrijfsoverdracht of acquisitie"
+    },
+    "security": {
+      "title": "Gegevensbeveiliging",
+      "description": "We implementeren passende beveiligingsmaatregelen om je persoonlijke informatie te beschermen tegen ongeautoriseerde toegang, wijziging, openbaarmaking of vernietiging. Echter, geen enkele methode van transmissie via internet is 100% veilig."
+    },
+    "rights": {
+      "title": "Je rechten",
+      "description": "Je hebt het recht om:",
+      "access": "Toegang te krijgen tot en je persoonlijke informatie bij te werken",
+      "delete": "Verwijdering van je gegevens aan te vragen",
+      "optout": "Je af te melden voor marketingcommunicatie",
+      "portability": "Gegevensportabiliteit"
+    },
+    "cookies": {
+      "title": "Cookies en tracking",
+      "description": "We gebruiken cookies en vergelijkbare technologieën om je ervaring te verbeteren, gebruik te analyseren en voor marketingdoeleinden. Je kunt cookie-instellingen beheren via je browservoorkeuren."
+    },
+    "changes": {
+      "title": "Wijzigingen in dit beleid",
+      "description": "We kunnen dit privacybeleid van tijd tot tijd bijwerken. We zullen je op de hoogte stellen van wijzigingen door het nieuwe beleid op deze pagina te plaatsen en de datum \"Laatst bijgewerkt\" bij te werken."
+    },
+    "contact": {
+      "title": "Neem contact met ons op",
+      "description": "Als je vragen hebt over dit privacybeleid of onze gegevenspraktijken, neem dan contact met ons op:",
+      "email": "Email: privacy@justsoftart.com",
+      "form": "Contactformulier: <a href=\"contact.html\">Contactpagina</a>"
+    },
+    "lastUpdated": "Laatst bijgewerkt: 28 juli 2025"
   },
   "footer": {
     "company": "Bedrijf",
@@ -263,15 +361,7 @@
     "copyright": "© 2025 Just Soft Art. Alle rechten voorbehouden."
   },
   "common": {
-    "loading": "Laden...",
-    "error": "Er is een fout opgetreden",
-    "success": "Succes!",
-    "close": "Sluiten",
-    "save": "Opslaan",
-    "cancel": "Annuleren",
-    "next": "Volgende",
-    "previous": "Vorige",
-    "back": "Terug",
-    "continue": "Doorgaan"
+    "workInProgress": "In uitvoering",
+    "companyName": "Just Soft Art"
   }
 } 
