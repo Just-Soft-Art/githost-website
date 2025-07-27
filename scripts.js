@@ -56,7 +56,35 @@ function setTheme(themeName) {
     // Update logo icon
     const logoIcon = document.getElementById('logo-icon');
     if (logoIcon && theme.logoIcon) {
+        // Add loading state
+        logoIcon.style.opacity = '0.5';
+        
+        logoIcon.onload = function() {
+            logoIcon.style.opacity = '1';
+        };
+        
         logoIcon.src = theme.logoIcon;
+        
+        // Add error handling for logo loading
+        logoIcon.onerror = function() {
+            console.warn('Failed to load logo:', theme.logoIcon);
+            logoIcon.style.opacity = '1';
+            // Fallback to light theme logo if dark theme fails
+            if (themeName === 'dark') {
+                logoIcon.src = './assets/img/homeicon/jsa-light-homeicon.svg';
+            } else {
+                // If light theme also fails, show text fallback
+                logoIcon.style.display = 'none';
+                const logoText = document.querySelector('.nav-logo span');
+                if (logoText) {
+                    logoText.style.fontWeight = 'bold';
+                    logoText.style.fontSize = '1.2em';
+                }
+            }
+        };
+        
+        // Update alt text for accessibility
+        logoIcon.alt = `Just Soft Art Logo - ${themeName} theme`;
     }
     
     // Update toggle button
@@ -319,10 +347,28 @@ function toggleMobileMenu() {
         languageToggleBtn.disabled = isActive;
     }
     
-    // Close any open dropdowns when opening mobile menu
+    // Lock/unlock body scroll when mobile menu is active
     if (isActive) {
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
         closeDropdown();
         closeLanguageDropdown();
+        
+        // Focus management for accessibility
+        const firstNavLink = navMenu.querySelector('a');
+        if (firstNavLink) {
+            firstNavLink.focus();
+        }
+    } else {
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+        
+        // Return focus to hamburger button
+        if (hamburger) {
+            hamburger.focus();
+        }
     }
 }
 
@@ -338,6 +384,11 @@ function closeMobileMenu() {
     if (languageToggleBtn) {
         languageToggleBtn.disabled = false;
     }
+    
+    // Restore body scroll
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
 }
 
 // Event listeners
@@ -349,6 +400,18 @@ document.addEventListener('DOMContentLoaded', async function() {
     } catch (e) {
         console.warn('Unable to access localStorage:', e);
     }
+    
+    // Preload logo images for better performance
+    const logoImages = [
+        './assets/img/homeicon/jsa-light-homeicon.svg',
+        './assets/img/homeicon/jsa-dark-homeicon.svg'
+    ];
+    
+    logoImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+    
     setTheme(savedTheme);
     
     // Theme dropdown toggle
@@ -407,23 +470,49 @@ document.addEventListener('DOMContentLoaded', async function() {
         hamburger.addEventListener('click', toggleMobileMenu);
     }
     
-    // Close mobile menu when clicking on nav links
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
+    // Logo click tracking for analytics
+    const navLogo = document.querySelector('.nav-logo');
+    if (navLogo) {
+        navLogo.addEventListener('click', function() {
+            // Track logo click for analytics
+            console.log('Logo clicked - navigating to home');
+        });
+    }
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
-        if (!event.target.closest('.nav-container')) {
-            closeMobileMenu();
+        if (navMenu && navMenu.classList.contains('active')) {
+            const isClickInsideNav = navMenu.contains(event.target);
+            const isClickOnHamburger = hamburger && hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger) {
+                closeMobileMenu();
+            }
         }
+    });
+    
+    // Close mobile menu when clicking on nav links
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 767) {
+                closeMobileMenu();
+            }
+        });
     });
     
     // Handle window resize
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 767 && navMenu && navMenu.classList.contains('active')) {
             closeMobileMenu();
-            closeDropdown();
+        }
+    });
+    
+    // Handle keyboard navigation for mobile menu
+    document.addEventListener('keydown', function(event) {
+        if (navMenu && navMenu.classList.contains('active')) {
+            if (event.key === 'Escape') {
+                closeMobileMenu();
+            }
         }
     });
 });

@@ -85,6 +85,63 @@
       "learnMore": "Mehr erfahren",
       "getStarted": "Loslegen"
     },
+    "showcase": {
+      "title": "Unsere neuesten Arbeiten",
+      "creative": {
+        "title": "Kreative Lösungen",
+        "description": "Innovative digitale Erlebnisse, die Grenzen überschreiten."
+      },
+      "software": {
+        "title": "Softwareentwicklung",
+        "description": "Sauberer, effizienter Code, der Ihre Vision antreibt."
+      },
+      "digitalArt": {
+        "title": "Digitale Kunst",
+        "description": "Atemberaubende Visuals, die fesseln und inspirieren."
+      }
+    },
+    "carousel": {
+      "title": "Vorgestellte Produkte",
+      "webApp": {
+        "title": "Web-Anwendungs-Suite",
+        "description": "Eine umfassende Web-Anwendungsplattform, die mit modernen Technologien erstellt wurde. Bietet responsives Design, Echtzeitdatenverarbeitung und nahtlose Benutzererfahrung."
+      },
+      "mobileApp": {
+        "title": "Mobile App Design",
+        "description": "Atemberaubende Mobile-App-Designs, die schöne Ästhetik mit intuitiver Benutzererfahrung kombinieren. Optimiert für iOS- und Android-Plattformen."
+      },
+      "brandIdentity": {
+        "title": "Markenidentitätssystem",
+        "description": "Komplette Markenidentitätspakete einschließlich Logo-Design, Farbpaletten, Typografie und Markenrichtlinien für konsistente visuelle Kommunikation."
+      },
+      "ecommerce": {
+        "title": "E-Commerce-Plattform",
+        "description": "Vollausgestattete E-Commerce-Lösung mit Zahlungsintegration, Bestandsverwaltung und Analytics-Dashboard. Für Skalierbarkeit und Leistung entwickelt."
+      },
+      "custom": {
+        "title": "Etwas Einzigartiges im Kopf?",
+        "description": "Sehen Sie nicht genau das, was Sie suchen? Wir lieben es, einzigartige Herausforderungen anzugehen! Von maßgeschneiderten Softwarelösungen bis hin zu innovativen digitalen Erlebnissen bringen wir Ihre verrücktesten Ideen zum Leben.",
+        "letsTalk": "Sprechen wir!"
+      },
+      "learnMore": "Mehr erfahren",
+      "feature": {
+        "react": "React",
+        "nodejs": "Node.js",
+        "mongodb": "MongoDB",
+        "uiux": "UI/UX",
+        "figma": "Figma",
+        "prototyping": "Prototyping",
+        "branding": "Branding",
+        "logoDesign": "Logo-Design",
+        "guidelines": "Richtlinien",
+        "ecommerce": "E-Commerce",
+        "payment": "Zahlung",
+        "analytics": "Analytik",
+        "customSolutions": "Individuelle Lösungen",
+        "innovation": "Innovation",
+        "consultation": "Beratung"
+      }
+    },
     "features": {
       "title": "Für Exzellenz entwickelt",
       "description": "Jeder Pixel zählt. Jede Codezeile ist wichtig. Wir schaffen digitale Erlebnisse mit derselben Liebe zum Detail, die großartiges Design auszeichnet.",

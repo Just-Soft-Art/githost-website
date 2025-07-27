@@ -48,6 +48,63 @@
       "learnMore": "Dowiedz się więcej",
       "getStarted": "Zacznij"
     },
+    "showcase": {
+      "title": "Nasze najnowsze prace",
+      "creative": {
+        "title": "Kreatywne rozwiązania",
+        "description": "Innowacyjne doświadczenia cyfrowe, które przekraczają granice."
+      },
+      "software": {
+        "title": "Rozwój oprogramowania",
+        "description": "Czysty, wydajny kod, który napędza Twoją wizję."
+      },
+      "digitalArt": {
+        "title": "Sztuka cyfrowa",
+        "description": "Oszałamiające wizualizacje, które fascynują i inspirują."
+      }
+    },
+    "carousel": {
+      "title": "Produkty wyróżnione",
+      "webApp": {
+        "title": "Pakiet aplikacji webowych",
+        "description": "Kompleksowa platforma aplikacji webowych zbudowana z nowoczesnymi technologiami. Oferuje responsywny design, przetwarzanie danych w czasie rzeczywistym i bezproblemowe doświadczenie użytkownika."
+      },
+      "mobileApp": {
+        "title": "Projekt aplikacji mobilnej",
+        "description": "Oszałamiające projekty aplikacji mobilnych, które łączą piękną estetykę z intuicyjnym doświadczeniem użytkownika. Zoptymalizowane dla platform iOS i Android."
+      },
+      "brandIdentity": {
+        "title": "System tożsamości marki",
+        "description": "Kompletne pakiety tożsamości marki obejmujące projekt logo, palety kolorów, typografię i wytyczne marki dla spójnej komunikacji wizualnej."
+      },
+      "ecommerce": {
+        "title": "Platforma e-commerce",
+        "description": "W pełni funkcjonalne rozwiązanie e-commerce z integracją płatności, zarządzaniem zapasami i pulpitem analitycznym. Zbudowane z myślą o skalowalności i wydajności."
+      },
+      "custom": {
+        "title": "Masz coś wyjątkowego na myśli?",
+        "description": "Nie widzisz dokładnie tego, czego szukasz? Uwielbiamy podejmować wyjątkowe wyzwania! Od niestandardowych rozwiązań oprogramowania po innowacyjne doświadczenia cyfrowe, ożywiamy Twoje najśmielsze pomysły.",
+        "letsTalk": "Porozmawiajmy!"
+      },
+      "learnMore": "Dowiedz się więcej",
+      "feature": {
+        "react": "React",
+        "nodejs": "Node.js",
+        "mongodb": "MongoDB",
+        "uiux": "UI/UX",
+        "figma": "Figma",
+        "prototyping": "Prototypowanie",
+        "branding": "Branding",
+        "logoDesign": "Projekt logo",
+        "guidelines": "Wytyczne",
+        "ecommerce": "E-Commerce",
+        "payment": "Płatność",
+        "analytics": "Analityka",
+        "customSolutions": "Rozwiązania niestandardowe",
+        "innovation": "Innowacja",
+        "consultation": "Konsultacja"
+      }
+    },
     "features": {
       "title": "Zaprojektowane dla doskonałości",
       "description": "Każdy piksel ma znaczenie. Każda linia kodu się liczy. Tworzymy cyfrowe doświadczenia z taką samą dbałością o szczegóły, która definiuje wspaniały design.",

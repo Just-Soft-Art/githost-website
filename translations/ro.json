@@ -48,6 +48,63 @@
       "learnMore": "Află mai multe",
       "getStarted": "Începe"
     },
+    "showcase": {
+      "title": "Lucrările noastre recente",
+      "creative": {
+        "title": "Soluții creative",
+        "description": "Experiențe digitale inovatoare care depășesc limitele."
+      },
+      "software": {
+        "title": "Dezvoltare software",
+        "description": "Cod curat și eficient care îți alimentează viziunea."
+      },
+      "digitalArt": {
+        "title": "Artă digitală",
+        "description": "Vizuale uimitoare care captivează și inspiră."
+      }
+    },
+    "carousel": {
+      "title": "Produse recomandate",
+      "webApp": {
+        "title": "Suita de aplicații web",
+        "description": "O platformă cuprinzătoare de aplicații web construită cu tehnologii moderne. Oferă design responsive, procesarea datelor în timp real și o experiență utilizator fără întreruperi."
+      },
+      "mobileApp": {
+        "title": "Design aplicații mobile",
+        "description": "Designuri uimitoare de aplicații mobile care combină estetica frumoasă cu experiența utilizator intuitivă. Optimizate pentru platformele iOS și Android."
+      },
+      "brandIdentity": {
+        "title": "Sistem de identitate de brand",
+        "description": "Pachete complete de identitate de brand incluzând designul logo-ului, palete de culori, tipografie și ghiduri de brand pentru comunicare vizuală consistentă."
+      },
+      "ecommerce": {
+        "title": "Platformă e-commerce",
+        "description": "Soluție e-commerce completă cu integrare de plăți, gestionarea inventarului și tablou de bord analytic. Construită pentru scalabilitate și performanță."
+      },
+      "custom": {
+        "title": "Ai ceva unic în minte?",
+        "description": "Nu vezi exact ceea ce cauți? Ne place să abordăm provocări unice! De la soluții software personalizate la experiențe digitale inovatoare, aducem la viață cele mai îndrăznețe idei ale tale.",
+        "letsTalk": "Să vorbim!"
+      },
+      "learnMore": "Află mai multe",
+      "feature": {
+        "react": "React",
+        "nodejs": "Node.js",
+        "mongodb": "MongoDB",
+        "uiux": "UI/UX",
+        "figma": "Figma",
+        "prototyping": "Prototipare",
+        "branding": "Branding",
+        "logoDesign": "Design logo",
+        "guidelines": "Ghiduri",
+        "ecommerce": "E-Commerce",
+        "payment": "Plată",
+        "analytics": "Analiză",
+        "customSolutions": "Soluții personalizate",
+        "innovation": "Inovație",
+        "consultation": "Consultare"
+      }
+    },
     "features": {
       "title": "Proiectat pentru excelență",
       "description": "Fiecare pixel contează. Fiecare linie de cod este importantă. Creăm experiențe digitale cu aceeași atenție la detalii care definește designul excelent.",

@@ -48,6 +48,63 @@
       "learnMore": "Meer informatie",
       "getStarted": "Begin"
     },
+    "showcase": {
+      "title": "Ons nieuwste werk",
+      "creative": {
+        "title": "Creatieve oplossingen",
+        "description": "Innovatieve digitale ervaringen die grenzen verleggen."
+      },
+      "software": {
+        "title": "Softwareontwikkeling",
+        "description": "Schone, efficiënte code die uw visie aandrijft."
+      },
+      "digitalArt": {
+        "title": "Digitale kunst",
+        "description": "Verbluffende visuals die boeien en inspireren."
+      }
+    },
+    "carousel": {
+      "title": "Uitgelichte producten",
+      "webApp": {
+        "title": "Webapplicatie suite",
+        "description": "Een uitgebreid webapplicatieplatform gebouwd met moderne technologieën. Biedt responsief design, realtime gegevensverwerking en naadloze gebruikerservaring."
+      },
+      "mobileApp": {
+        "title": "Mobiele app design",
+        "description": "Verbluffende mobiele app-ontwerpen die mooie esthetiek combineren met intuïtieve gebruikerservaring. Geoptimaliseerd voor zowel iOS- als Android-platforms."
+      },
+      "brandIdentity": {
+        "title": "Merkidentiteitssysteem",
+        "description": "Complete merkidentiteitspakketten inclusief logo-ontwerp, kleurpaletten, typografie en merkrichtlijnen voor consistente visuele communicatie."
+      },
+      "ecommerce": {
+        "title": "E-commerce platform",
+        "description": "Volledig uitgeruste e-commerce oplossing met betalingsintegratie, voorraadbeheer en analytics dashboard. Gebouwd voor schaalbaarheid en prestaties."
+      },
+      "custom": {
+        "title": "Iets unieks in gedachten?",
+        "description": "Zie je niet precies wat je zoekt? We houden van het aanpakken van unieke uitdagingen! Van aangepaste softwareoplossingen tot innovatieve digitale ervaringen, we brengen je wildste ideeën tot leven.",
+        "letsTalk": "Laten we praten!"
+      },
+      "learnMore": "Meer informatie",
+      "feature": {
+        "react": "React",
+        "nodejs": "Node.js",
+        "mongodb": "MongoDB",
+        "uiux": "UI/UX",
+        "figma": "Figma",
+        "prototyping": "Prototyping",
+        "branding": "Branding",
+        "logoDesign": "Logo ontwerp",
+        "guidelines": "Richtlijnen",
+        "ecommerce": "E-Commerce",
+        "payment": "Betaling",
+        "analytics": "Analytics",
+        "customSolutions": "Aangepaste oplossingen",
+        "innovation": "Innovatie",
+        "consultation": "Consultatie"
+      }
+    },
     "features": {
       "title": "Ontworpen voor uitmuntendheid",
       "description": "Elke pixel telt. Elke regel code is belangrijk. We creëren digitale ervaringen met dezelfde aandacht voor detail die geweldig design definieert.",

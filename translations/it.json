@@ -48,6 +48,63 @@
       "learnMore": "Scopri di più",
       "getStarted": "Inizia"
     },
+    "showcase": {
+      "title": "I nostri lavori più recenti",
+      "creative": {
+        "title": "Soluzioni creative",
+        "description": "Esperienze digitali innovative che spingono oltre i confini."
+      },
+      "software": {
+        "title": "Sviluppo software",
+        "description": "Codice pulito ed efficiente che alimenta la tua visione."
+      },
+      "digitalArt": {
+        "title": "Arte digitale",
+        "description": "Visual mozzafiato che catturano e ispirano."
+      }
+    },
+    "carousel": {
+      "title": "Prodotti in evidenza",
+      "webApp": {
+        "title": "Suite di applicazioni web",
+        "description": "Una piattaforma completa di applicazioni web costruita con tecnologie moderne. Offre design responsive, elaborazione dati in tempo reale e un'esperienza utente senza soluzione di continuità."
+      },
+      "mobileApp": {
+        "title": "Design di app mobile",
+        "description": "Straordinari design di applicazioni mobili che combinano bellezza estetica con esperienza utente intuitiva. Ottimizzato per piattaforme iOS e Android."
+      },
+      "brandIdentity": {
+        "title": "Sistema di identità del marchio",
+        "description": "Pacchetti completi di identità del marchio che includono design del logo, palette di colori, tipografia e linee guida del marchio per una comunicazione visiva coerente."
+      },
+      "ecommerce": {
+        "title": "Piattaforma e-commerce",
+        "description": "Soluzione e-commerce completa con integrazione dei pagamenti, gestione dell'inventario e dashboard di analisi. Costruita per scalabilità e prestazioni."
+      },
+      "custom": {
+        "title": "Hai qualcosa di unico in mente?",
+        "description": "Non vedi esattamente quello che stai cercando? Amiamo affrontare sfide uniche! Dalle soluzioni software personalizzate alle esperienze digitali innovative, diamo vita alle tue idee più audaci.",
+        "letsTalk": "Parliamone!"
+      },
+      "learnMore": "Scopri di più",
+      "feature": {
+        "react": "React",
+        "nodejs": "Node.js",
+        "mongodb": "MongoDB",
+        "uiux": "UI/UX",
+        "figma": "Figma",
+        "prototyping": "Prototipazione",
+        "branding": "Branding",
+        "logoDesign": "Design del logo",
+        "guidelines": "Linee guida",
+        "ecommerce": "E-Commerce",
+        "payment": "Pagamento",
+        "analytics": "Analytics",
+        "customSolutions": "Soluzioni personalizzate",
+        "innovation": "Innovazione",
+        "consultation": "Consultazione"
+      }
+    },
     "features": {
       "title": "Progettato per l'eccellenza",
       "description": "Ogni pixel conta. Ogni riga di codice è importante. Creiamo esperienze digitali con la stessa attenzione ai dettagli che definisce un grande design.",
