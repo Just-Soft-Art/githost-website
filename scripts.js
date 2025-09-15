@@ -700,16 +700,36 @@ class ProductCarousel {
         const maxTime = 300; // Maximum time for swipe (ms)
         
         if (this.track) {
+            let startY = 0;
+            let isHorizontalSwipe = false;
+            
             this.track.addEventListener('touchstart', (e) => {
                 startX = e.touches[0].clientX;
+                startY = e.touches[0].pageY;
                 startTime = Date.now();
+                isHorizontalSwipe = false;
                 // Temporarily disable transitions for smooth dragging feel
                 this.track.style.transition = 'none';
             }, { passive: true });
             
             this.track.addEventListener('touchmove', (e) => {
-                // Prevent default scrolling behavior
-                e.preventDefault();
+                const currentX = e.touches[0].clientX;
+                const currentY = e.touches[0].pageY;
+                
+                // Calculate horizontal and vertical movement
+                const deltaX = Math.abs(currentX - startX);
+                const deltaY = Math.abs(currentY - startY);
+                
+                // If horizontal movement is greater than vertical and exceeds threshold,
+                // consider it a horizontal swipe
+                if (!isHorizontalSwipe && deltaX > deltaY && deltaX > 10) {
+                    isHorizontalSwipe = true;
+                }
+                
+                // Only prevent default scroll if it's a horizontal swipe
+                if (isHorizontalSwipe) {
+                    e.preventDefault();
+                }
             }, { passive: false });
             
             this.track.addEventListener('touchend', (e) => {
@@ -854,26 +874,30 @@ class WorldMapVisualization {
         
         // City coordinates (approximate screen positions)
         this.cities = [
-            { name: 'New York', x: 0.25, y: 0.35, clients: 45 },
-            { name: 'London', x: 0.48, y: 0.28, clients: 67 },
-            { name: 'Tokyo', x: 0.85, y: 0.4, clients: 32 },
-            { name: 'Sydney', x: 0.88, y: 0.75, clients: 23 },
-            { name: 'São Paulo', x: 0.35, y: 0.7, clients: 18 },
-            { name: 'Dubai', x: 0.58, y: 0.45, clients: 29 },
-            { name: 'Singapore', x: 0.78, y: 0.6, clients: 41 },
-            { name: 'Berlin', x: 0.52, y: 0.25, clients: 35 },
-            { name: 'Toronto', x: 0.22, y: 0.3, clients: 27 },
-            { name: 'Mumbai', x: 0.68, y: 0.48, clients: 39 },
-            { name: 'Los Angeles', x: 0.15, y: 0.42, clients: 52 },
-            { name: 'Stockholm', x: 0.52, y: 0.18, clients: 21 },
-            { name: 'Cape Town', x: 0.52, y: 0.8, clients: 16 },
-            { name: 'Seoul', x: 0.83, y: 0.38, clients: 28 },
-            { name: 'Kyiv', x: 0.56, y: 0.25, clients: 19 },
-            { name: 'Mexico City', x: 0.18, y: 0.48, clients: 24 },
-            { name: 'Cairo', x: 0.55, y: 0.42, clients: 15 },
-            { name: 'Bangkok', x: 0.75, y: 0.52, clients: 33 },
-            { name: 'Lagos', x: 0.48, y: 0.58, clients: 12 },
-            { name: 'Vancouver', x: 0.12, y: 0.25, clients: 22 }
+            // North America NA
+            { name: 'Montreal', x: 0.25, y: 0.2, clients: 5 },
+            { name: 'Toronto', x: 0.22, y: 0.3, clients: 2 },
+            { name: 'Vancouver', x: 0.12, y: 0.25, clients: 2 },
+            
+            // Europe
+            { name: 'London', x: 0.4, y: 0.15, clients: 1 },
+            { name: 'Berlin', x: 0.52, y: 0.25, clients: 2 },
+            { name: 'Paris', x: 0.47, y: 0.27, clients: 2 },
+            { name: 'Amsterdam', x: 0.49, y: 0.2, clients: 1 },
+            { name: 'Warsaw', x: 0.59, y: 0.26, clients: 5 },
+            { name: 'Kyiv', x: 0.7, y: 0.2, clients: 6 },
+            
+            // Asia-Pacific
+            { name: 'Tokyo', x: 0.85, y: 0.4, clients: 2 },
+            { name: 'Seoul', x: 0.78, y: 0.38, clients: 1 },
+            { name: 'Sydney', x: 0.84, y: 0.7, clients: 2 },
+            
+            // Middle East & Africa
+            { name: 'Dubai', x: 0.58, y: 0.45, clients: 1 },
+            
+            // Latin America
+            { name: 'Mexico City', x: 0.18, y: 0.48, clients: 1 },
+            { name: 'Buenos Aires', x: 0.20, y: 0.70, clients: 1 }
         ];
         
         this.init();
@@ -1199,7 +1223,7 @@ class WorldMapVisualization {
         
         // Add some random floating dots for ambiance
         for (let i = 0; i < 30; i++) {
-            const baseRadius = 1 + Math.random() * 2;
+            const baseRadius = 3 + Math.random() * 2;
             this.dots.push({
                 id: this.cities.length + i,
                 x: Math.random() * this.width,
