@@ -885,7 +885,7 @@ class WorldMapVisualization {
             { name: 'Paris', x: 0.47, y: 0.27, clients: 2 },
             { name: 'Amsterdam', x: 0.49, y: 0.2, clients: 1 },
             { name: 'Warsaw', x: 0.59, y: 0.26, clients: 5 },
-            { name: 'Kyiv', x: 0.7, y: 0.2, clients: 6 },
+            { name: 'Kyiv', x: 0.64, y: 0.2, clients: 6 },
             
             // Asia-Pacific
             { name: 'Tokyo', x: 0.85, y: 0.4, clients: 2 },
@@ -893,7 +893,7 @@ class WorldMapVisualization {
             { name: 'Sydney', x: 0.84, y: 0.7, clients: 2 },
             
             // Middle East & Africa
-            { name: 'Dubai', x: 0.58, y: 0.45, clients: 1 },
+            { name: 'Dubai', x: 0.71, y: 0.45, clients: 1 },
             
             // Latin America
             { name: 'Mexico City', x: 0.18, y: 0.48, clients: 1 },
